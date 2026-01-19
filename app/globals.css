@@ -17,3 +17,59 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Layout Grid: 1920px max width, 12 columns, 40px gap, 80px margin */
+.layout-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: 40px;
+  width: 100%;
+  max-width: 1920px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+/* Debug Layout: visualizing grid columns */
+.debug-layout {
+  position: relative;
+}
+
+.debug-layout::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 80px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: 40px;
+}
+
+.debug-layout-overlay {
+  /* For cases where we want a separate overlay component */
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 80px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: 40px;
+  height: 100vh;
+}
+
+.debug-col {
+  height: 100%;
+  border-left: 1px solid rgba(255, 0, 0, 0.15);
+  border-right: 1px solid rgba(255, 0, 0, 0.15);
+  background: rgba(255, 0, 0, 0.02);
+}
