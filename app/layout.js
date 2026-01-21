@@ -1,8 +1,5 @@
-import { Inter } from "next/font/google"; // Using Inter as it's close to the design
 import "./globals.css";
 import NavbarWrapper from "@/components/NavbarWrapper";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Yavuz Dağdelen - Portfolio",
@@ -12,7 +9,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} flex flex-col min-h-screen`}>
+      <head>
+        <link rel="stylesheet" href="https://use.typekit.net/foj2kuj.css" />
+      </head>
+      <body className="flex flex-col min-h-screen">
         <NavbarWrapper />
         <main className="flex-grow">
           {children}

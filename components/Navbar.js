@@ -16,7 +16,7 @@ export default function Navbar({ theme = 'light' }) {
     return (
         <nav className={`w-full fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${bgColor}`}>
             <div className={`w-full max-w-[1920px] mx-auto px-5 md:px-[80px] py-6 flex justify-between items-center border-b ${borderColor} relative`}>
-                <Link href="/" className={`text-xl font-medium ${textColor}`} onClick={() => setIsOpen(false)}>
+                <Link href="/" className={`text-xl font-extrabold tracking-tight ${textColor}`} onClick={() => setIsOpen(false)}>
                     Yavuz Dağdelen
                 </Link>
 
@@ -60,6 +60,6 @@ export default function Navbar({ theme = 'light' }) {
                     </Link>
                 </div>
             </div>
-        </nav>
+        </nav >
     );
 }

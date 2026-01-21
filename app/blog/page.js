@@ -1,4 +1,5 @@
 import BlogPostCard from '@/components/BlogPostCard';
+import Footer from '@/components/Footer';
 
 const posts = [
     {
@@ -17,7 +18,7 @@ const posts = [
 
 export default function Blog() {
     return (
-        <div className="w-full min-h-screen bg-white text-black pt-32 md:pt-48 pb-24 px-5 md:px-[80px] max-w-[1920px] mx-auto">
+        <div className="w-full min-h-screen bg-white text-black pt-32 md:pt-48 pb-0 px-5 md:px-[80px] max-w-[1920px] mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-12 gap-x-[40px] mb-32">
                 {/* Title Section - Cols 1-5 */}
                 <div className="col-span-1 md:col-span-5">
@@ -28,16 +29,18 @@ export default function Blog() {
             </div>
 
             {/* Posts Section - Vertical Stack */}
-            <div className="flex flex-col gap-16">
+            <div className="flex flex-col gap-16 mb-24">
                 {/* Align posts to grid if needed, or keeping them full width within the main container */}
                 <div className="grid grid-cols-1 md:grid-cols-12 gap-x-[40px]">
-                    <div className="col-span-1 md:col-span-8 flex flex-col gap-16">
+                    <div className="col-span-1 md:col-span-10 flex flex-col gap-16">
                         {posts.map((post) => (
                             <BlogPostCard key={post.slug} post={post} />
                         ))}
                     </div>
                 </div>
             </div>
+
+            <Footer />
         </div>
     );
 }

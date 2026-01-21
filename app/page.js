@@ -6,7 +6,7 @@ export default function Home() {
       {/* Main Content Area - Removing Grid/Sidebar offset to align left */}
       <div className="flex flex-col justify-between h-full w-full">
         <div>
-          <h1 className="text-3xl md:text-[7vw] leading-none font-bold tracking-tighter mt-10">
+          <h1 className="text-3xl md:text-[7vw] leading-none font-bold tracking-tighter mt-32">
             Merhaba<span className="align-top text-3xl md:text-6xl">*</span>
           </h1>
           <h2 className="text-3xl md:text-[7vw] leading-none font-bold tracking-tighter">

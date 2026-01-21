@@ -1,6 +1,8 @@
 import { projects } from '@/data/projects';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
+import Footer from '@/components/Footer';
+import ProjectCard from '@/components/ProjectCard';
 
 export async function generateStaticParams() {
     return projects.map((project) => ({
@@ -16,15 +18,20 @@ export default async function WorkDetails({ params }) {
         notFound();
     }
 
+    // Get 3 other projects for "More Work" section
+    const otherProjects = projects
+        .filter(p => p.slug !== id)
+        .slice(0, 4);
+
     return (
-        <div className="w-full min-h-screen bg-white text-black pt-32 md:pt-48 pb-24">
+        <div className="w-full min-h-screen bg-white text-black pt-32 md:pt-48 pb-0">
 
             {/* Header & Description Section (Standard Layout with Padding) */}
             <div className="px-5 md:px-[80px] max-w-[1920px] mx-auto mb-24 md:mb-32"> {/* Added bottom margin to separate from content */}
                 <div className="grid grid-cols-1 md:grid-cols-12 gap-x-[40px]">
                     {/* Left Column: Title & Meta */}
                     <div className="col-span-1 md:col-span-4 flex flex-col justify-between h-full"> {/* min-h to create spacing if description is short */}
-                        <h1 className="text-4xl md:text-4xl font-medium tracking-tight leading-none mb-12 md:mb-0">
+                        <h1 className="text-4xl md:text-4xl font-extrabold tracking-tight leading-none mb-12 md:mb-0">
                             {project.title}
                         </h1>
 
@@ -104,7 +111,27 @@ export default async function WorkDetails({ params }) {
                 })}
             </div>
 
+            <div className="px-5 md:px-[80px] mt-24">
+                {/* More Work Section */}
+                <div className="mb-32">
+                    <h2 className="text-4xl font-extrabold mb-28">More Work</h2>
+                    <div className="grid grid-cols-1 md:grid-cols-12 gap-x-[40px] gap-y-12">
+                        {otherProjects.map((p, index) => {
+                            // Layout: 6 - 3 - 3
+                            let colSpan = "md:col-span-3";
+                            if (index === 0) colSpan = "md:col-span-6";
 
+                            return (
+                                <div key={p.id} className={`col-span-12 md:col-span-3`}>
+                                    <ProjectCard project={p} />
+                                </div>
+                            );
+                        })}
+                    </div>
+                </div>
+
+                <Footer />
+            </div>
         </div>
     );
 }

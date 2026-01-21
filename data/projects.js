@@ -45,17 +45,7 @@ export const projects = [
     },
 
     // Poster Projects
-    {
-        id: 13,
-        title: 'Club Poster',
-        category: 'Poster',
-        description: 'Concert Poster',
-        slug: 'post1',
-        image: '/yavuz-portfolio/images/Poster/Club/Club_Thumbnail_Poster_GIF.gif',
-        colSpan: 4,
-        longDescription: 'Concert poster.',
-        details: []
-    },
+
     {
         id: 14,
         title: 'Fragments Of Life',
@@ -71,6 +61,17 @@ export const projects = [
             { type: 'image', src: '/yavuz-portfolio/images/Poster/FragmentsOfLife/FragmentsOfLife2.png', isFullscreen: false },
             { type: 'image', src: '/yavuz-portfolio/images/Poster/FragmentsOfLife/FragmentsOfLife3_EXTENDED.png', isFullscreen: true },
         ]
+    },
+    {
+        id: 13,
+        title: 'Club Poster',
+        category: 'Poster',
+        description: 'Concert Poster',
+        slug: 'post1',
+        image: '/yavuz-portfolio/images/Poster/Club/Club_Thumbnail_Poster_GIF.gif',
+        colSpan: 4,
+        longDescription: 'Concert poster.',
+        details: []
     },
     {
         id: 15,
