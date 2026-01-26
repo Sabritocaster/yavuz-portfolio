@@ -1,22 +1,35 @@
 'use client';
 
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
-export default function Navbar({ theme = 'light' }) {
+export default function Navbar({ theme = 'light', transparent = false }) {
     const [isOpen, setIsOpen] = useState(false);
 
     // Determines color based on theme
     const textColor = theme === 'dark' ? 'text-white' : 'text-black';
     const borderColor = theme === 'dark' ? 'border-white' : 'border-black';
-    const bgColor = theme === 'dark' ? 'bg-black' : 'bg-white';
+    // Ana sayfa için transparent arka plan, diğer sayfalar için normal
+    const bgColor = transparent ? 'bg-transparent' : (theme === 'dark' ? 'bg-black' : 'bg-white');
 
     const toggleMenu = () => setIsOpen(!isOpen);
 
+    // Menü açıkken scroll'u engelle
+    useEffect(() => {
+        if (isOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'unset';
+        }
+        return () => {
+            document.body.style.overflow = 'unset';
+        };
+    }, [isOpen]);
+
     return (
         <nav className={`w-full fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${bgColor}`}>
-            <div className={`w-full max-w-[1920px] mx-auto px-5 md:px-[80px] py-6 flex justify-between items-center border-b ${borderColor} relative`}>
-                <Link href="/" className={`text-xl font-extrabold tracking-tight ${textColor}`} onClick={() => setIsOpen(false)}>
+            <div className={`w-full max-w-[1920px] mx-auto px-5 md:px-[80px] py-4 md:py-6 flex justify-between items-center ${borderColor} relative`}> {/* border-b */}
+                <Link href="/" className={`text-lg md:text-xl font-extrabold tracking-tight ${textColor}`} onClick={() => setIsOpen(false)}>
                     Yavuz Dağdelen
                 </Link>
 
@@ -47,8 +60,8 @@ export default function Navbar({ theme = 'light' }) {
             </div>
 
             {/* Mobile Menu Overlay */}
-            <div className={`fixed inset-0 z-40 flex flex-col justify-start pt-32 px-4 transition-transform duration-500 ease-in-out ${isOpen ? 'translate-x-0' : 'translate-x-full'} md:hidden ${bgColor}`}>
-                <div className={`flex flex-col space-y-8 text-4xl font-medium ${textColor}`}>
+            <div className={`fixed inset-0 z-40 flex flex-col justify-start pt-24 px-5 transition-transform duration-500 ease-in-out ${isOpen ? 'translate-x-0' : 'translate-x-full'} md:hidden ${bgColor}`}>
+                <div className={`flex flex-col space-y-6 text-3xl font-medium ${textColor}`}>
                     <Link href="/work" onClick={toggleMenu} className="hover:opacity-70 transition-opacity">
                         Work
                     </Link>
@@ -60,6 +73,6 @@ export default function Navbar({ theme = 'light' }) {
                     </Link>
                 </div>
             </div>
-        </nav >
+        </nav>
     );
 }

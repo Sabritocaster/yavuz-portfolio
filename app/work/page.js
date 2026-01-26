@@ -22,24 +22,24 @@ export default function Work() {
     };
 
     return (
-        <div className="w-full min-h-screen bg-white text-black pt-32 lg:pt-48 pb-0">
+        <div className="w-full min-h-screen bg-white text-black pt-32 lg:pt-48 pb-0 overflow-x-hidden">
 
             {/* Top Section Container - Constrained to Grid */}
-            <div className="layout-grid debug-layout mb-32">
-                {/* Title Section - Spans 4 Columns */}
-                <div className="col-start-1 col-end-5">
-                    <h1 className="text-6xl md:text-8xl font-extrabold tracking-tight leading-none">
+            <div className="layout-grid mb-16 md:mb-32">
+                {/* Title Section - Full width */}
+                <div className="col-span-12">
+                    <h1 className="text-4xl md:text-6xl lg:text-8xl font-extrabold tracking-tight leading-none">
                         Selected<br />Projects
                     </h1>
                 </div>
 
-                {/* Button Grid - Spans 6 Columns (Cols 1-6) */}
-                <div className="col-start-1 col-end-7 grid grid-cols-6 gap-x-[40px] gap-y-4 mt-32 text-lg">
+                {/* Button Grid - Below title, spans 6 cols on desktop */}
+                <div className="col-span-12 md:col-span-6 grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-x-[40px] md:gap-y-4 mt-8 md:mt-16 text-base md:text-lg">
                     {categories.map((category) => (
                         <button
                             key={category}
                             onClick={() => scrollToCategory(category)}
-                            className="col-span-2 border border-black/20 py-4 text-center font-extrabold hover:border-black transition-colors"
+                            className="border border-black py-3 md:py-4 text-center font-extrabold hover:bg-black hover:text-white transition-all duration-300"
                         >
                             {category}
                         </button>
@@ -48,29 +48,29 @@ export default function Work() {
             </div>
 
             {/* Vertical Content Flow */}
-            <div className="flex flex-col gap-32 mb-32">
+            <div className="flex flex-col gap-16 md:gap-32 mb-16 md:mb-32">
                 {categories.map((category) => {
                     const categoryProjects = projects.filter(p => p.category === category);
                     // if (categoryProjects.length === 0) return null; // Logic removed to show empty categories
 
                     return (
                         <div key={category} id={category} className="scroll-mt-32">
-                            {/* Category Title - Column 1 (Constrained) */}
-                            <div className="layout-grid debug-layout mb-12">
-                                <h2 className="col-start-1 col-end-2 text-xl font-extrabold tracking-widest uppercase writing-vertical-lr md:writing-horizontal-tb transform rotate-180 md:rotate-0">
+                            {/* Category Title - Horizontal on all devices */}
+                            <div className="layout-grid mb-8 md:mb-12">
+                                <h2 className="col-span-12 md:col-span-2 text-lg md:text-xl font-extrabold tracking-widest uppercase">
                                     {category}
                                 </h2>
                             </div>
 
                             {/* Projects Grid */}
-                            <div className="layout-grid debug-layout gap-y-16 align-start"> {/* align-start ensures items don't stretch to max height in row if strictly using grid */}
+                            <div className="layout-grid gap-y-8 md:gap-y-16 items-start">
                                 {categoryProjects.map((project) => {
-                                    // Handle Full Width Breakout
+                                    // Handle Full Width Breakout - simplified for mobile
                                     if (project.isFullWidth) {
                                         return (
-                                            <div key={project.id} className="col-span-12 relative w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]">
+                                            <div key={project.id} className="col-span-12 -mx-5 md:mx-0 md:relative md:w-screen md:left-1/2 md:right-1/2 md:-ml-[50vw] md:-mr-[50vw]">
                                                 {/* Full Width Image/Card */}
-                                                <div className="w-full relative mb-16">
+                                                <div className="w-full relative mb-8 md:mb-16">
                                                     {project.image && (
                                                         <Image
                                                             src={project.image}
@@ -85,9 +85,9 @@ export default function Work() {
                                                     {/* Gradient Overlay */}
                                                     <div className="absolute inset-0 bg-black/20" />
 
-                                                    <div className="absolute bottom-8 left-0 right-0 px-5 md:px-[80px] max-w-[1920px] mx-auto text-white">
-                                                        <h3 className="text-4xl font-bold">{project.title}</h3>
-                                                        <p className="text-lg">{project.description}</p>
+                                                    <div className="absolute bottom-4 md:bottom-8 left-0 right-0 px-5 md:px-[80px] max-w-[1920px] mx-auto text-white">
+                                                        <h3 className="text-2xl md:text-4xl font-bold">{project.title}</h3>
+                                                        <p className="text-sm md:text-lg">{project.description}</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -101,10 +101,10 @@ export default function Work() {
                                     if (span === 4) spanClass = 'md:col-span-4';
                                     if (span === 6) spanClass = 'md:col-span-6';
                                     if (span === 8) spanClass = 'md:col-span-8';
-                                    if (span === 9) spanClass = 'md:col-span-9'; // Just in case
+                                    if (span === 9) spanClass = 'md:col-span-9';
 
                                     return (
-                                        <div key={project.id} className={`col-span-12 ${spanClass} h-fit`}> {/* h-fit to prevent grid items from stretching to row height */}
+                                        <div key={project.id} className={`col-span-12 ${spanClass} h-fit`}>
                                             <ProjectCard
                                                 project={project}
                                                 className="w-full h-full"

@@ -5,7 +5,10 @@ import Navbar from './Navbar';
 
 export default function NavbarWrapper() {
     const pathname = usePathname();
-    const theme = pathname === '/' ? 'dark' : 'light';
+    // Ana sayfa için dark tema (beyaz text) ve transparent arka plan
+    const isHome = pathname === '/';
+    const theme = isHome ? 'dark' : 'light';
+    const transparent = isHome;
 
-    return <Navbar theme={theme} />;
+    return <Navbar theme={theme} transparent={transparent} />;
 }
