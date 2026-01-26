@@ -1,6 +1,6 @@
 export default function About() {
     return (
-        <div className="w-full min-h-screen bg-white text-black pt-32 md:pt-48 pb-24 layout-grid overflow-x-hidden">
+        <div className="w-full min-h-screen bg-white text-black pt-32 md:pt-48 pb-24 layout-grid overflow-x-hidden font-bold">
 
             {/* Image Section - Cols 1-4 on Desktop, Full on Mobile */}
             <div className="w-full col-span-12 md:col-span-4 mb-8 md:mb-0">
@@ -26,9 +26,9 @@ export default function About() {
                 </p>
 
                 <div className="mt-auto">
-                    <p className="font-medium text-base md:text-lg">Ankara, Türkiye</p>
-                    <p className="font-medium text-base md:text-lg">Instagram</p>
-                    <p className="font-medium text-base md:text-lg">LinkedIn</p>
+                    <p className="text-base md:text-lg">Ankara, Türkiye</p>
+                    <p className="text-base md:text-lg">Instagram</p>
+                    <p className="text-base md:text-lg">LinkedIn</p>
                 </div>
             </div>
         </div>

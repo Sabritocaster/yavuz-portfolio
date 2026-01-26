@@ -24,6 +24,7 @@ body {
   font-family: area-normal, sans-serif;
   font-weight: 700;
   font-style: normal;
+  letter-spacing: -0.025em;
 }
 
 /* Sadece küçük 'a' harfi için ss02 */

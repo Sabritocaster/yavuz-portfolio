@@ -57,7 +57,7 @@ export default function Work() {
                         <div key={category} id={category} className="scroll-mt-32">
                             {/* Category Title - Horizontal on all devices */}
                             <div className="layout-grid mb-8 md:mb-12">
-                                <h2 className="col-span-12 md:col-span-2 text-lg md:text-xl font-extrabold tracking-widest uppercase">
+                                <h2 className="col-span-12 md:col-span-2 text-lg md:text-xl font-extrabold tracking-tight">
                                     {category}
                                 </h2>
                             </div>

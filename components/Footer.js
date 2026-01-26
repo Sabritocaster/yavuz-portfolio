@@ -3,14 +3,14 @@ import React from 'react';
 
 export default function Footer() {
     return (
-        <footer className="w-full bg-white text-black py-6 border-t border-gray-100 mt-auto">
+        <footer className="w-full bg-white text-black py-6 border-t border-gray-100 mt-auto font-extrabold">
             <div className="max-w-[1920px] mx-auto flex flex-row justify-between items-end gap-4 md:gap-8">
                 {/* Left Side: Copyright & Location */}
                 <div className="flex flex-col gap-1">
-                    <p className="font-medium text-base md:text-lg text-black">
+                    <p className="text-base md:text-lg text-black">
                         Yavuz Dagdelen © 2026
                     </p>
-                    <p className="font-medium text-base md:text-lg text-black">
+                    <p className="text-base md:text-lg text-black">
                         Ankara, Türkiye
                     </p>
                 </div>

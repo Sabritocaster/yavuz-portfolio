@@ -22,7 +22,7 @@ export default function Blog() {
             <div className="grid grid-cols-1 md:grid-cols-12 gap-x-5 md:gap-x-[40px] mb-16 md:mb-32">
                 {/* Title Section - Cols 1-5 */}
                 <div className="col-span-1 md:col-span-5">
-                    <h1 className="text-4xl md:text-6xl lg:text-8xl font-medium tracking-tight leading-none">
+                    <h1 className="text-4xl md:text-6xl lg:text-8xl font-extrabold leading-none">
                         My Blog
                     </h1>
                 </div>

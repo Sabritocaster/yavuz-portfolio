@@ -30,27 +30,27 @@ export default async function WorkDetails({ params }) {
             <div className="px-5 md:px-[80px] max-w-[1920px] mx-auto mb-12 md:mb-32">
                 <div className="grid grid-cols-1 md:grid-cols-12 gap-x-5 md:gap-x-[40px]">
                     {/* Left Column: Title & Meta */}
-                    <div className="col-span-1 md:col-span-4 flex flex-col justify-between h-full mb-6 md:mb-0">
-                        <h1 className="text-2xl md:text-4xl font-extrabold tracking-tight leading-none mb-6 md:mb-0">
+                    <div className="col-span-1 md:col-span-4 flex flex-col justify-between h-full mb-6 md:mb-0 font-extrabold">
+                        <h1 className="text-2xl md:text-4xl tracking-tight leading-none mb-6 md:mb-0">
                             {project.title}
                         </h1>
 
-                        <div className="flex flex-col gap-1 mt-auto">
-                            <p className="text-gray-400 text-base md:text-xl font-normal">
+                        <div className="flex flex-col gap-1 mt-auto font-bold">
+                            <p className="text-gray-400 text-base md:text-xl">
                                 {project.date || "2024"}
                             </p>
-                            <p className="text-gray-400 text-base md:text-xl font-normal">
+                            <p className="text-gray-400 text-base md:text-xl">
                                 {project.category}
                             </p>
                         </div>
                     </div>
 
                     {/* Right Column: Description */}
-                    <div className="col-span-1 md:col-start-5 md:col-span-6 flex flex-col gap-4 md:gap-8">
-                        <p className="text-base md:text-2xl leading-snug font-normal">
+                    <div className="col-span-1 md:col-start-5 md:col-span-6 flex flex-col gap-4 md:gap-8 font-bold">
+                        <p className="text-base md:text-2xl leading-snug">
                             {project.longDescription}
                         </p>
-                        <p className="text-base md:text-2xl leading-snug font-normal">
+                        <p className="text-base md:text-2xl leading-snug">
                             At the end of the 6-month design process we went through with Turknet,
                             we aimed to reflect the brand's modern and dynamic spirit in the new logo
                             and visual world that emerged.

@@ -12,15 +12,15 @@ export default function Home() {
         {/* Main Content Area */}
         <div className="flex flex-col justify-between h-[calc(100vh-6rem)] md:h-[calc(100vh-8rem)] w-full">
           <div className="mt-24">
-            <h1 className="text-4xl sm:text-5xl md:text-[7vw] leading-none font-bold tracking-tighter">
-              Merhaba<span className="align-top text-xl sm:text-2xl md:text-6xl">*</span>
+            <h1 className="text-4xl sm:text-5xl md:text-[7vw] leading-none font-extrabold tracking-tight">
+              Merhaba*
             </h1>
-            <h2 className="text-4xl sm:text-5xl md:text-[7vw] leading-tight md:leading-none font-bold tracking-tighter">
-              I <Link href="/work" className="relative inline-block text-white cursor-pointer pointer-events-auto after:content-[''] after:absolute after:w-full after:h-[3px] md:after:h-[6px] after:bg-white after:bottom-0 after:left-0 after:origin-left after:scale-x-100 hover:after:scale-x-0 after:transition-transform after:duration-500 after:ease-in-out">design</Link> & <Link href="/blog" className="relative inline-block text-white cursor-pointer pointer-events-auto after:content-[''] after:absolute after:w-full after:h-[3px] md:after:h-[6px] after:bg-white after:bottom-0 after:left-0 after:origin-left after:scale-x-100 hover:after:scale-x-0 after:transition-transform after:duration-500 after:ease-in-out">write</Link>.
+            <h2 className="text-4xl sm:text-5xl md:text-[7vw] leading-tight md:leading-none font-extrabold tracking-tight">
+              I <Link href="/work" className="underline hover:no-underline">design</Link> & <Link href="/blog" className="relative inline-block text-white cursor-pointer pointer-events-auto after:content-[''] after:absolute after:w-full after:h-[3px] md:after:h-[6px] after:bg-white after:bottom-0 after:left-0 after:origin-left after:scale-x-100 hover:after:scale-x-0 after:transition-transform after:duration-500 after:ease-in-out">write</Link>.
             </h2>
           </div>
 
-          <p className="text-xl md:text-3xl text-white mb-12"><span className="align-top text-lg md:text-2xl">*</span>Hello</p>
+          <p className="text-xl md:text-3xl text-white mb-32 md:mb-16 font-extrabold">*Hello</p>
         </div>
       </div>
     </div>
