@@ -34,7 +34,7 @@ export default function Work() {
                 </div>
 
                 {/* Button Grid - Below title, spans 6 cols on desktop */}
-                <div className="col-span-12 md:col-span-6 grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-x-[40px] md:gap-y-4 mt-8 md:mt-16 text-base md:text-lg">
+                <div className="col-span-12 md:col-span-6 grid grid-cols-2 lg:grid-cols-3 gap-3 md:gap-x-[40px] md:gap-y-4 mt-8 md:mt-16 text-base md:text-lg">
                     {categories.map((category) => (
                         <button
                             key={category}

@@ -20,7 +20,7 @@ export default function Home() {
             </h2>
           </div>
 
-          <p className="text-xl md:text-3xl text-white mb-32 md:mb-16 font-extrabold">*Hello</p>
+          <p className="text-xl md:text-3xl text-white pb-6 font-extrabold">*Hello</p>
         </div>
       </div>
     </div>

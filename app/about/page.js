@@ -7,7 +7,7 @@ export default function About() {
         <div className="w-full min-h-screen bg-white text-black pt-32 md:pt-48 pb-24 layout-grid overflow-x-hidden font-bold">
 
             {/* Image Section - Cols 1-4 on Desktop, Full on Mobile */}
-            <div className="w-full col-span-12 md:col-span-4 mb-8 md:mb-0">
+            <div className="w-full col-span-12 lg:col-span-4 mb-8 lg:mb-0">
                 {image?.src ? (
                     <img className="w-full aspect-square object-cover" src={image.src} alt={image.alt || 'Portrait'} />
                 ) : (
@@ -16,7 +16,7 @@ export default function About() {
             </div>
 
             {/* Content Section - Cols 5-10 on Desktop (Spanning 6 cols), Full on Mobile */}
-            <div className="w-full col-span-12 md:col-start-5 md:col-span-6 flex flex-col justify-center">
+            <div className="w-full col-span-12 lg:col-start-5 lg:col-span-6 flex flex-col justify-center">
                 {bio.map((paragraph, index) => (
                     <p
                         className={`text-base md:text-xl leading-relaxed ${index === bio.length - 1 ? 'mb-8 md:mb-12' : 'mb-4'}`}

@@ -50,11 +50,6 @@ export default async function WorkDetails({ params }) {
                         <p className="text-base md:text-2xl leading-snug">
                             {project.longDescription}
                         </p>
-                        <p className="text-base md:text-2xl leading-snug">
-                            At the end of the 6-month design process we went through with Turknet,
-                            we aimed to reflect the brand's modern and dynamic spirit in the new logo
-                            and visual world that emerged.
-                        </p>
                     </div>
                 </div>
             </div>
@@ -62,6 +57,50 @@ export default async function WorkDetails({ params }) {
             {/* Dynamic Details Section */}
             <div className="flex flex-col gap-12">
                 {project.details && project.details.map((item, index) => {
+                    if (item.type === 'video') {
+                        // Vimeo Video Embed
+                        if (item.isFullscreen) {
+                            return (
+                                <div key={index} className="w-full">
+                                    <div style={{ padding: '56.25% 0 0 0', position: 'relative' }}>
+                                        <iframe
+                                            src={`https://player.vimeo.com/video/${item.vimeoId}?badge=0&autopause=0&player_id=0&app_id=58479`}
+                                            frameBorder="0"
+                                            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+                                            referrerPolicy="strict-origin-when-cross-origin"
+                                            style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+                                            title={item.title || project.title}
+                                        />
+                                    </div>
+                                    {item.caption && (
+                                        <div className="px-5 md:px-[80px] max-w-[1920px] mx-auto mt-4">
+                                            <p className="text-sm text-gray-500">{item.caption}</p>
+                                        </div>
+                                    )}
+                                </div>
+                            );
+                        } else {
+                            return (
+                                <div key={index} className="px-5 md:px-[80px] max-w-[1920px] mx-auto w-full">
+                                    <div style={{ padding: '56.25% 0 0 0', position: 'relative' }}>
+                                        <iframe
+                                            src={`https://player.vimeo.com/video/${item.vimeoId}?badge=0&autopause=0&player_id=0&app_id=58479`}
+                                            frameBorder="0"
+                                            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+                                            referrerPolicy="strict-origin-when-cross-origin"
+                                            style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+                                            title={item.title || project.title}
+                                        />
+                                    </div>
+                                    {item.caption && (
+                                        <p className="mt-4 text-sm text-gray-500">
+                                            {item.caption}
+                                        </p>
+                                    )}
+                                </div>
+                            );
+                        }
+                    }
                     if (item.type === 'image') {
                         if (item.isFullscreen) {
                             // Fullscreen: No horizontal padding, 100vw
