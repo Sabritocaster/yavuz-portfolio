@@ -28,21 +28,21 @@ export default function Navbar({ theme = 'light', transparent = false }) {
     }, [isOpen]);
 
     return (
-        <nav className={`w-full fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${bgColor}`}>
-            <div className={`w-full z-99 max-w-[1920px] mx-auto px-5 md:px-[80px] py-4 md:py-6 flex justify-between items-center ${borderColor} relative`}> {/* border-b */}
-                <Link href="/" className={`text-lg md:text-xl font-extrabold tracking-tight ${textColor}`} onClick={() => setIsOpen(false)}>
+        <nav className={`w-full fixed top-0 left-0 right-0 z-50 ${bgColor}`}>
+            <div className={`w-full z-99 max-w-[1920px] mx-auto px-5 md:px-[5%] py-4 md:py-6 flex justify-between items-center ${borderColor} relative`}> {/* border-b */}
+                <Link href="/" className={`text-lg font-extrabold tracking-tight ${textColor}`} onClick={() => setIsOpen(false)}>
                     Yavuz Dağdelen
                 </Link>
 
                 {/* Desktop Navigation */}
                 <div className="hidden md:flex space-x-10">
-                    <Link href="/work" className={`text-xl font-medium hover:opacity-70 transition-opacity ${textColor}`}>
+                    <Link href="/work" className={`text-lg font-medium hover:opacity-70 transition-opacity ${textColor}`}>
                         Work
                     </Link>
-                    <Link href="/about" className={`text-xl font-medium hover:opacity-70 transition-opacity ${textColor}`}>
+                    <Link href="/about" className={`text-lg font-medium hover:opacity-70 transition-opacity ${textColor}`}>
                         About
                     </Link>
-                    <Link href="/blog" className={`text-xl font-medium hover:opacity-70 transition-opacity ${textColor}`}>
+                    <Link href="/blog" className={`text-lg font-medium hover:opacity-70 transition-opacity ${textColor}`}>
                         Blog
                     </Link>
                 </div>

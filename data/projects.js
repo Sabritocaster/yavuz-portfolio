@@ -18,6 +18,7 @@ export const projects = [
         category: 'Branding',
         description: 'Middle East Exhibition Platform',
         slug: 'brand2',
+        date: '2025',
         image: '/yavuz-portfolio/images/Branding/2_Düş/Düş_Thumbnail_Branding.jpg',
         colSpan: 4,
         longDescription: 'Identity design for Düş, a contemporary art platform focused on Middle Eastern art. The project features a cohesive visual system applied to event tickets and promotional assets, blending sharp and clear sensibilities with a focus on cultural exchange.',
@@ -55,7 +56,7 @@ export const projects = [
 
     // Editorial Projects
     {
-        id: 10,
+        id: 4,
         title: 'Leviathan',
         category: 'Editorial',
         description: 'Book Cover Design',
@@ -69,7 +70,7 @@ export const projects = [
         ]
     },
     {
-        id: 11,
+        id: 5,
         title: 'The Grapes of Wrath',
         category: 'Editorial',
         description: 'Book Cover Design',
@@ -83,7 +84,7 @@ export const projects = [
         ]
     },
     {
-        id: 12,
+        id: 6,
         title: 'The Great Migrations',
         category: 'Editorial',
         description: 'A Visual Encyclopedia',
@@ -100,7 +101,7 @@ export const projects = [
 
     // Poster Projects
     {
-        id: 14,
+        id: 7,
         title: 'Fragments of Life',
         category: 'Poster',
         description: 'Bilkent Fine Arts Exhibition',
@@ -116,7 +117,7 @@ export const projects = [
         ]
     },
     {
-        id: 13,
+        id: 8,
         title: 'Gra.Typog Society Event Posters',
         category: 'Poster',
         description: 'Visual Communication and Engagement',
@@ -130,7 +131,7 @@ export const projects = [
         ]
     },
     {
-        id: 15,
+        id: 9,
         title: 'Sibel Egemen Jazz Concert',
         category: 'Poster',
         description: 'Typographic Poster Project',
@@ -145,7 +146,7 @@ export const projects = [
 
     // Motion Projects
     {
-        id: 20,
+        id: 10,
         title: 'Squarespace Logo Animation',
         category: 'Motion',
         description: 'Motion Branding Study',
@@ -159,7 +160,7 @@ export const projects = [
         ]
     },
     {
-        id: 21,
+        id: 11,
         title: 'Radiohead\'s Faust Arp',
         category: 'Motion',
         description: 'Kinetic Typography Project',
@@ -172,7 +173,7 @@ export const projects = [
         ]
     },
     {
-        id: 22,
+        id: 12,
         title: 'Creativity in Each Drop',
         category: 'Motion',
         description: 'Cell Animation Course Project',
@@ -189,7 +190,7 @@ export const projects = [
 
     // Personal Projects
     {
-        id: 30,
+        id: 13,
         title: 'Two Lovers, Ömer and Macide',
         category: 'Personal',
         description: 'Digital Painting, 2024',
@@ -201,7 +202,7 @@ export const projects = [
         wip: true
     },
     {
-        id: 31,
+        id: 14,
         title: 'Boy and the Lamp',
         category: 'Personal',
         description: 'Color Study, 2025',
@@ -213,7 +214,7 @@ export const projects = [
         wip: true
     },
     {
-        id: 32,
+        id: 15,
         title: 'Girl, Western Ireland',
         category: 'Personal',
         description: 'Color Study on Dorothea Lange\'s Photo, 2026',

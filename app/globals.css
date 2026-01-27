@@ -41,20 +41,20 @@ body {
 .layout-grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  column-gap: 20px;
+  column-gap: 1.25%;
   width: 100%;
   max-width: 1920px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 1.25%;
+  padding-right: 1.25%;
 }
 
 @media (min-width: 768px) {
   .layout-grid {
-    column-gap: 40px;
-    padding-left: 80px;
-    padding-right: 80px;
+    column-gap: 2.5%;
+    padding-left: 5%;
+    padding-right: 5%;
   }
 }
 
@@ -72,16 +72,16 @@ body {
   width: 100%;
   max-width: 1920px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 1.25%;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  column-gap: 20px;
+  column-gap: 1.25%;
 }
 
 @media (min-width: 768px) {
   .debug-layout::after {
-    padding: 0 80px;
-    column-gap: 40px;
+    padding: 0 5%;
+    column-gap: 2.5%;
   }
 }
 
@@ -94,10 +94,10 @@ body {
   width: 100%;
   max-width: 1920px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 1.25%;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  column-gap: 20px;
+  column-gap: 1.25%;
   height: 100vh;
 }
 

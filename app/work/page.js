@@ -22,19 +22,19 @@ export default function Work() {
     };
 
     return (
-        <div className="w-full min-h-screen bg-white text-black pt-32 lg:pt-48 pb-0 overflow-x-hidden">
+        <div className="w-full min-h-screen bg-white text-black pt-32 lg:pt-42 pb-0 overflow-x-hidden px-5 md:px-0">
 
             {/* Top Section Container - Constrained to Grid */}
-            <div className="layout-grid mb-16 md:mb-32">
+            <div className="layout-grid mb-16 md:mb-32 mt-4">
                 {/* Title Section - Full width */}
                 <div className="col-span-12">
-                    <h1 className="text-4xl md:text-6xl lg:text-8xl font-extrabold tracking-tight leading-none">
+                    <h1 className="text-4xl md:text-[8vw] font-extrabold tracking-tight leading-none">
                         Selected<br />Projects
                     </h1>
                 </div>
 
                 {/* Button Grid - Below title, spans 6 cols on desktop */}
-                <div className="col-span-12 md:col-span-6 grid grid-cols-2 lg:grid-cols-3 gap-3 md:gap-x-[40px] md:gap-y-4 mt-8 md:mt-16 text-base md:text-lg">
+                <div className="col-span-12 md:col-span-6 grid grid-cols-2 lg:grid-cols-3 gap-3 md:gap-x-[2.5%] md:gap-y-4 mt-8 md:mt-16 text-base md:text-lg">
                     {categories.map((category) => (
                         <button
                             key={category}
@@ -63,7 +63,7 @@ export default function Work() {
                             </div>
 
                             {/* Projects Grid */}
-                            <div className="layout-grid gap-y-8 md:gap-y-16 items-start">
+                            <div className="layout-grid gap-y-10 md:gap-y-16 items-start">
                                 {categoryProjects.map((project) => {
                                     // Handle Full Width Breakout - simplified for mobile
                                     if (project.isFullWidth) {
@@ -85,7 +85,7 @@ export default function Work() {
                                                     {/* Gradient Overlay */}
                                                     <div className="absolute inset-0 bg-black/20" />
 
-                                                    <div className="absolute bottom-4 md:bottom-8 left-0 right-0 px-5 md:px-[80px] max-w-[1920px] mx-auto text-white">
+                                                    <div className="absolute bottom-4 md:bottom-8 left-0 right-0 px-5 md:px-[5%] max-w-[1920px] mx-auto text-white">
                                                         <h3 className="text-2xl md:text-4xl font-bold">{project.title}</h3>
                                                         <p className="text-sm md:text-lg">{project.description}</p>
                                                     </div>
@@ -118,7 +118,7 @@ export default function Work() {
                 })}
             </div>
 
-            <div className="px-5 md:px-[80px]">
+            <div className="px-5 md:px-[5%]">
                 <Footer />
             </div>
         </div>
