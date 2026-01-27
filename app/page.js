@@ -16,7 +16,7 @@ export default function Home() {
               Merhaba*
             </h1>
             <h2 className="text-4xl sm:text-5xl md:text-[7vw] leading-tight md:leading-none font-extrabold tracking-tight">
-              I <Link href="/work" className="underline hover:no-underline">design</Link> & <Link href="/blog" className="relative inline-block text-white cursor-pointer pointer-events-auto after:content-[''] after:absolute after:w-full after:h-[3px] md:after:h-[6px] after:bg-white after:bottom-0 after:left-0 after:origin-left after:scale-x-100 hover:after:scale-x-0 after:transition-transform after:duration-500 after:ease-in-out">write</Link>.
+              I <Link href="/work" className="text-white cursor-pointer pointer-events-auto underline decoration-white underline-offset-[6px] md:underline-offset-[10px] transition-colors duration-500 hover:decoration-transparent">design</Link> & <Link href="/blog" className="text-white cursor-pointer pointer-events-auto underline decoration-white underline-offset-[6px] md:underline-offset-[10px] transition-colors duration-500 hover:decoration-transparent">write</Link>.
             </h2>
           </div>
 

@@ -1,20 +1,6 @@
 import BlogPostCard from '@/components/BlogPostCard';
 import Footer from '@/components/Footer';
-
-const posts = [
-    {
-        slug: 'post-1',
-        title: 'Untum idelit ma se volorisci vollorist ipsunt pro quaeAtus, dinamdiemnem nocciem ta Seriaeliu',
-        date: 'January 20 2025',
-        excerpt: 'Natias autatia prest, qui officidus, consecusae. Veratem ipsametus, cul parunt quas porepta quaspis dolupti doles ut et reiume nectatur se quunt aliquae vellorrum exerchi ciusand ebist, quam assunt occusti.',
-    },
-    {
-        slug: 'post-2',
-        title: 'Another design perspective on minimalism',
-        date: 'February 10 2025',
-        excerpt: 'Veratem ipsametus, cul parunt quas porepta quaspis dolupti doles ut et reiume nectatur se quunt aliquae vellorrum exerchi ciusand ebist.',
-    },
-];
+import { blogPosts } from '@/data/blog';
 
 export default function Blog() {
     return (
@@ -33,7 +19,7 @@ export default function Blog() {
                 {/* Align posts to grid if needed, or keeping them full width within the main container */}
                 <div className="grid grid-cols-1 md:grid-cols-12 gap-x-5 md:gap-x-[40px]">
                     <div className="col-span-1 md:col-span-10 flex flex-col gap-8 md:gap-16">
-                        {posts.map((post) => (
+                        {blogPosts.map((post) => (
                             <BlogPostCard key={post.slug} post={post} />
                         ))}
                     </div>
