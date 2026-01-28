@@ -12,10 +12,10 @@ export default function Home() {
         {/* Main Content Area */}
         <div className="mt-4">
           <h1 className="text-4xl md:text-[8vw] leading-none font-extrabold tracking-tight">
-            Merhaba*
+            Merh<span className="glyph-a">a</span>b<span className="glyph-a">a</span>*
           </h1>
           <h2 className="text-4xl md:text-[8vw] leading-tight md:leading-none font-extrabold tracking-tight">
-            I <Link href="/work" className="text-white cursor-pointer pointer-events-auto underline decoration-white underline-offset-[6px] md:underline-offset-[10px] transition-colors duration-500 hover:decoration-transparent">design</Link> & <Link href="/blog" className="text-white cursor-pointer pointer-events-auto underline decoration-white underline-offset-[6px] md:underline-offset-[10px] transition-colors duration-500 hover:decoration-transparent">write</Link>.
+            I <Link href="/work" className="text-white cursor-pointer pointer-events-auto underline decoration-white underline-offset-[6px] md:underline-offset-[10px] transition-colors duration-500 hover:decoration-transparent"><span className="glyph-d">d</span>esign</Link> & <Link href="/blog" className="text-white cursor-pointer pointer-events-auto underline decoration-white underline-offset-[6px] md:underline-offset-[10px] transition-colors duration-500 hover:decoration-transparent">write</Link>.
           </h2>
         </div>
 

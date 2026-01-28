@@ -13,7 +13,7 @@ export default function ProjectCard({ project, className = "" }) {
                 ) : (
                     <div className={`w-full aspect-[4/3] bg-gray-400 transition-colors duration-300 ${!project.wip ? 'group-hover:bg-gray-500' : ''}`} />
                 )}
-                { (project.wip && !project.category === 'Personal') && (
+                { (project.wip && project.category !== 'Personal') && (
                     <div className="absolute top-2 right-2 bg-black text-white text-xs font-bold px-2 py-1">
                         WIP
                     </div>
