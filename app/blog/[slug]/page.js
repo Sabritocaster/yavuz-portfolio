@@ -14,7 +14,7 @@ export default async function BlogPost({ params }) {
     }
 
     return (
-        <div className="w-full min-h-screen bg-white text-black pt-32 md:pt-48 pb-0 px-5 lg:px-[5%] max-w-[1920px] mx-auto flex flex-col justify-between overflow-x-hidden">
+        <div className="w-full min-h-screen bg-white text-black pt-32 md:pt-48 pb-0 px-5 lg:px-[5%] mx-auto flex flex-col justify-between overflow-x-hidden">
             <div className="grid grid-cols-1 md:grid-cols-12 gap-x-5 md:gap-x-[2.5%] mb-16 md:mb-32">
                 <div className="col-span-1 md:col-start-3 md:col-end-11 lg:col-start-4 lg:col-end-10">
                     <h1 className="text-2xl md:text-4xl lg:text-5xl font-extrabold mb-4">{post.title}</h1>

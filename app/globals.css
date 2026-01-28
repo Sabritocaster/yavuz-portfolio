@@ -37,17 +37,32 @@ body {
   font-feature-settings: "ss01" 1;
 }
 
-/* Layout Grid: 1920px max width, 12 columns, responsive padding */
+/* Mobile viewport height fix */
+.h-dvh {
+  height: 100vh; /* fallback */
+  height: 100dvh;
+}
+
+.min-h-dvh {
+  min-height: 100vh; /* fallback */
+  min-height: 100dvh;
+}
+
+/* Safe area padding for notched phones */
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 2rem);
+}
+
+/* Layout Grid: 12 columns, responsive padding aligned with navbar */
 .layout-grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   column-gap: 1.25%;
   width: 100%;
-  max-width: 1920px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 1.25%;
-  padding-right: 1.25%;
+  padding-left: 1.25rem; /* 20px = px-5 */
+  padding-right: 1.25rem;
 }
 
 @media (min-width: 768px) {
@@ -70,9 +85,8 @@ body {
   pointer-events: none;
   z-index: 9999;
   width: 100%;
-  max-width: 1920px;
   margin: 0 auto;
-  padding: 0 1.25%;
+  padding: 0 1.25rem;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   column-gap: 1.25%;
@@ -92,9 +106,8 @@ body {
   pointer-events: none;
   z-index: 9999;
   width: 100%;
-  max-width: 1920px;
   margin: 0 auto;
-  padding: 0 1.25%;
+  padding: 0 1.25rem;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   column-gap: 1.25%;
@@ -103,8 +116,8 @@ body {
 
 @media (min-width: 768px) {
   .debug-layout-overlay {
-    padding: 0 80px;
-    column-gap: 40px;
+    padding: 0 5%;
+    column-gap: 2.5%;
   }
 }
 

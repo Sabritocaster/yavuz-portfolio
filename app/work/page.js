@@ -41,7 +41,7 @@ export default function Work() {
     };
 
     return (
-        <div className="w-full min-h-screen bg-white text-black pt-32 lg:pt-42 pb-0 overflow-x-hidden px-5 md:px-0">
+        <div className="w-full min-h-screen bg-white text-black pt-32 lg:pt-42 pb-0 overflow-x-hidden">
 
             {/* Top Section Container - Constrained to Grid */}
             <div className="layout-grid mb-16 md:mb-32 mt-4">
@@ -104,7 +104,7 @@ export default function Work() {
                                                     {/* Gradient Overlay */}
                                                     <div className="absolute inset-0 bg-black/20" />
 
-                                                    <div className="absolute bottom-4 md:bottom-8 left-0 right-0 px-5 md:px-[5%] max-w-[1920px] mx-auto text-white">
+                                                    <div className="absolute bottom-4 md:bottom-8 left-0 right-0 px-5 md:px-[5%] mx-auto text-white">
                                                         <h3 className="text-2xl md:text-4xl font-bold">{project.title}</h3>
                                                         <p className="text-sm md:text-lg">{project.description}</p>
                                                     </div>
@@ -137,9 +137,7 @@ export default function Work() {
                 })}
             </div>
 
-            <div className="px-5 md:px-[5%]">
-                <Footer />
-            </div>
+            <Footer />
         </div>
     );
 }

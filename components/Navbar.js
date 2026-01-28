@@ -29,7 +29,7 @@ export default function Navbar({ theme = 'light', transparent = false }) {
 
     return (
         <nav className={`w-full fixed top-0 left-0 right-0 z-50 ${bgColor}`}>
-            <div className={`w-full z-99 max-w-[1920px] mx-auto px-5 md:px-[5%] py-4 md:py-5 flex justify-between items-center ${borderColor} relative`}> {/* border-b */}
+            <div className={`w-full z-99 mx-auto px-5 md:px-[5%] py-4 md:py-5 flex justify-between items-center ${borderColor} relative`}> {/* border-b */}
                 <Link href="/" className={`text-lg font-extrabold tracking-tight ${textColor}`} onClick={() => setIsOpen(false)}>
                     Yavuz Dağdelen
                 </Link>

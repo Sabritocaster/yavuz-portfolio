@@ -30,7 +30,7 @@ export default async function WorkDetails({ params }) {
         <div className="w-full min-h-screen bg-white text-black pt-32 md:pt-48 pb-0 overflow-x-hidden">
 
             {/* Header & Description Section (Standard Layout with Padding) */}
-            <div className="px-5 md:px-[5%] max-w-[1920px] mx-auto mb-12 md:mb-32">
+            <div className="px-5 md:px-[5%] mb-12 md:mb-32">
                 <div className="grid grid-cols-1 md:grid-cols-12 gap-x-5 md:gap-x-[2.5%]">
                     {/* Left Column: Title & Meta */}
                     <div className="col-span-1 md:col-span-4 flex flex-col justify-between h-full mb-6 md:mb-0 font-extrabold">
@@ -76,7 +76,7 @@ export default async function WorkDetails({ params }) {
                                         />
                                     </div>
                                     {item.caption && (
-                                        <div className="px-5 md:px-[5%] max-w-[1920px] mx-auto mt-4">
+                                        <div className="px-5 md:px-[5%] mt-4">
                                             <p className="text-sm text-gray-500">{item.caption}</p>
                                         </div>
                                     )}
@@ -84,7 +84,7 @@ export default async function WorkDetails({ params }) {
                             );
                         } else {
                             return (
-                                <div key={index} className="px-5 md:px-[5%] max-w-[1920px] mx-auto w-full">
+                                <div key={index} className="px-5 md:px-[5%] w-full">
                                     <div style={{ padding: '56.25% 0 0 0', position: 'relative' }}>
                                         <iframe
                                             src={`https://player.vimeo.com/video/${item.vimeoId}?badge=0&autopause=0&player_id=0&app_id=58479`}
@@ -119,7 +119,7 @@ export default async function WorkDetails({ params }) {
                                         unoptimized={item.src.endsWith('.gif')}
                                     />
                                     {item.caption && (
-                                        <div className="px-5 md:px-[5%] max-w-[1920px] mx-auto mt-4">
+                                        <div className="px-5 md:px-[5%] mt-4">
                                             <p className="text-sm text-gray-500">{item.caption}</p>
                                         </div>
                                     )}
@@ -128,7 +128,7 @@ export default async function WorkDetails({ params }) {
                         } else {
                             // Standard: With Navbar Padding (80px), No Sidebar
                             return (
-                                <div key={index} className="px-5 md:px-[5%] max-w-[1920px] mx-auto w-full">
+                                <div key={index} className="px-5 md:px-[5%] w-full">
                                     <div className="w-full">
                                         <Image
                                             src={item.src}
@@ -167,9 +167,9 @@ export default async function WorkDetails({ params }) {
                         })}
                     </div>
                 </div>
-
-                <Footer />
             </div>
+
+            <Footer />
         </div>
     );
 }

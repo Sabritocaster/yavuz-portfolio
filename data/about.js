@@ -9,6 +9,6 @@ export const aboutContent = {
         'A love for bold, functional design and digital art drives my work. I enjoy finding the balance between technical structure and artistic freedom.',
         'In my free time, I enjoy walking, chatting with friends, and discovering new places and tastes.',
     ],
-    location: 'Gdańsk, Poland',
-    socials: ['Instagram', 'LinkedIn'],
+    location: 'Ankara, Türkiye',
+    socials: ['Instagram', 'yavuz.mountain@gmail.com'],
 };
