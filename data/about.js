@@ -1,6 +1,6 @@
 export const aboutContent = {
     image: {
-        src: '/yavuz-portfolio/images/About.jpg',
+        src: '/images/About.jpg',
         alt: 'Yavuz Dağdelen Portrait',
     },
     bio: [
