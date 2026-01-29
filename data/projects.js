@@ -155,7 +155,7 @@ export const projects = [
         colSpan: 4,
         longDescription: 'Created for a motion design course, this project focuses on a logo animation that embodies the brand\'s core identity. The animation visualizes the concept of responsiveness across web and mobile platforms, fluidly transforming into the final Squarespace logo. The sound design for this piece was composed by Başarasa.',
         details: [
-            { type: 'video', vimeoId: '1157896469', title: 'Squarespace Logo Animation', isFullscreen: true },
+            { type: 'video', vimeoId: '1157896469', title: 'Squarespace Logo Animation', isFullscreen: false },
             { type: 'image', src: '/yavuz-portfolio/images/Motion/1_Sqaurespace/Squarespace1.jpg', isFullscreen: false },
         ]
     },
@@ -169,7 +169,7 @@ export const projects = [
         colSpan: 4,
         longDescription: 'This project explores the features of Adobe After Effects through a visual reinterpretation of Radiohead\'s "Faust Arp." The design utilizes the England signage font—featured on the original album cover—to create a dynamic, continuous typographic flow that is synchronized with the song\'s rhythm and feeling.',
         details: [
-            { type: 'video', vimeoId: '1157895724', title: 'Radiohead - Faust Arp | Kinetic Typography', isFullscreen: true },
+            { type: 'video', vimeoId: '1157895724', title: 'Radiohead - Faust Arp | Kinetic Typography', isFullscreen: false },
         ]
     },
     {
@@ -182,7 +182,7 @@ export const projects = [
         colSpan: 4,
         longDescription: 'This project aims to show the function of the ink tool in an engaging way. I developed the character "Inky" to perform a rhythmic dance while showing the tool\'s purpose. These frames were hand-drawn, blending traditional animation techniques with digital tools.',
         details: [
-            { type: 'video', vimeoId: '1157894926', title: 'Creativity in Each Drop', isFullscreen: true },
+            { type: 'video', vimeoId: '1157894926', title: 'Creativity in Each Drop', isFullscreen: false },
             { type: 'image', src: '/yavuz-portfolio/images/Motion/3_Inky/Inky1_EXTENDED.jpg', isFullscreen: true },
             { type: 'image', src: '/yavuz-portfolio/images/Motion/3_Inky/Inky2_EXTENDED.jpg', isFullscreen: true },
         ]
