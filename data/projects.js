@@ -98,8 +98,8 @@ export const projects = [
         longDescription: 'This project provides a visual record of significant human migrations across different continents. Each global movement is categorized and symbolized by a specific color-coding system, creating a navigational structure. The layout integrates historical data with custom graphics, maps, and photography to explain these journeys.',
         details: [
             { type: 'image', src: '/images/Editorial/3_Encylopedia/Encylopedia1.jpg', isFullscreen: false },
-            { type: 'image', src: '/images/Editorial/3_Encylopedia/Encylopedia2.jpg', isFullscreen: true },
-            { type: 'image', src: '/images/Editorial/3_Encylopedia/Encylopedia3.jpg', isFullscreen: false },
+            { type: 'image', src: '/images/Editorial/3_Encylopedia/Encylopedia2.jpg', isFullscreen: false },
+            { type: 'image', src: '/images/Editorial/3_Encylopedia/Encylopedia3.jpg', isFullscreen: true },
         ]
     },
 
