@@ -239,8 +239,9 @@ export const projects = [
     id: 6,
     title: 'Parasite, A Visual Novel', // Adjust title if needed
     category: 'Personal',
-    description: 'Game Project Created Within 48 Hours, 2026',
+    description: 'Game Project Created Within 48 Hours',
     slug: 'personal4',
+    date: '2025',
     image: '/images/Personal/Parasite_Thumbnail_GIF_Personal.gif',
     colSpan: 4,
     longDescription: `This visual novel was created in 48 hours for the Bilkent Game Development and Animation Club's Game Jam, based on the theme "Parasite." 
