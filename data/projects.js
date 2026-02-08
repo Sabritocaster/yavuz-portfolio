@@ -236,25 +236,27 @@ export const projects = [
         wip: true
     },
     {
-        id: 16,
-        title: 'Parasite, A Visual Novel',
-        category: 'Personal',
-        description: 'Game Project Created Within 48 Hours, 2026',
-        slug: 'personal4',
-        image: '/images/Personal/Parasite3_GIF.gif',
-        colSpan: 3,
-        longDescription: 'This visual novel was created in 48 hours for the Bilkent Game Development and Animation Club's Game Jam, based on the theme "Parasite.\n
-        As a team, we chose to use the concept of a parasite as a metaphor for how people can infect someone's life, fundamentally altering their worldview. 
-        In the game, the player’s dialogue choices change the protagonist's perspective: an optimistic attitude leads toward an undistorted path, while nihilistic views begin to twist the character's perception of the world.
-\nVisuals: Reyyan Fidan & Yavuz Dağdelen | Programming: Melih Uçan | Sound Design: Başar Asa
-You can play the game via this [GitHub link].',
-       details: [
-            { type: 'video', vimeoId: '1163063394', title: 'Parasite: Visual Novel Project – Ambience Loop', isFullscreen: false },
-            { type: 'image', src: '/images/Personal/Parasite1.jpg', isFullscreen: false },
-            { type: 'image', src: '/images/Personal/Parasite2_GIF.gif', isFullscreen: false },
-        ],
-        wip: false
-    },
+    id: 6,
+    title: 'Parasite, A Visual Novel', // Adjust title if needed
+    category: 'Personal',
+    description: 'Game Project Created Within 48 Hours, 2026',
+    slug: 'personal4',
+    image: '/images/Personal/Parasite3_GIF.gif',
+    colSpan: 3,
+    longDescription: `This visual novel was created in 48 hours for the Bilkent Game Development and Animation Club's Game Jam, based on the theme "Parasite." 
+
+As a team, we chose to use the concept of a parasite as a metaphor for how people can infect someone's life, fundamentally altering their worldview. 
+
+In the game, the player’s dialogue choices change the protagonist's perspective: an optimistic attitude leads toward an undistorted path, while nihilistic views begin to twist the character's perception of the world.
+
+Visuals: Reyyan Fidan & Yavuz Dağdelen | Programming: Melih Uçan | Sound Design: Başar Asa`,
+    details: [
+        { type: 'video', vimeoId: '1163063394', title: 'Parasite: Visual Novel Project – Ambience Loop', isFullscreen: false },
+        { type: 'image', src: '/images/Personal/Parasite1.jpg', isFullscreen: false },
+        { type: 'image', src: '/images/Personal/Parasite2_GIF.gif', isFullscreen: false },
+    ],
+    wip: false
+},
 ];
 
 export const categories = ['Branding', 'Editorial', 'Poster', 'Motion', 'Personal'];
