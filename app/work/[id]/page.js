@@ -50,7 +50,7 @@ export default async function WorkDetails({ params }) {
 
                     {/* Right Column: Description */}
                     <div className="col-span-1 md:col-start-5 md:col-span-6 flex flex-col gap-4 md:gap-8 font-bold">
-                        <p className="text-base md:text-2xl leading-snug">
+                        <p className="text-base md:text-2xl leading-snug white-space-pre-wrap">
                             {project.longDescription}
                         </p>
                     </div>
