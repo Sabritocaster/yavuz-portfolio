@@ -252,7 +252,7 @@ export const projects = [
 
 Visuals: Reyyan Fidan & Yavuz Dağdelen | Programming: Melih Uçan | Sound Design: Başar Asa`,
     details: [
-        { type: 'video', vimeoId: '1163063394', title: 'Parasite: Visual Novel Project – Ambience Loop', isFullscreen: false },
+        { type: 'video', vimeoId: '1163088423', title: 'Parasite: Visual Novel Project – Ambience Loop', isFullscreen: false },
         { type: 'image', src: '/images/Personal/Parasite1.jpg', isFullscreen: false },
         { type: 'image', src: '/images/Personal/Parasite2_GIF.gif', isFullscreen: false },
     ],
