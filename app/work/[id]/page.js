@@ -4,6 +4,53 @@ import Image from 'next/image';
 import Footer from '@/components/Footer';
 import ProjectCard from '@/components/ProjectCard';
 
+function renderLinkifiedLine(line, lineIndex) {
+    const tokenRegex = /\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)|(https?:\/\/[^\s]+)/g;
+    const nodes = [];
+    let lastIndex = 0;
+    let match;
+
+    while ((match = tokenRegex.exec(line)) !== null) {
+        if (match.index > lastIndex) {
+            nodes.push(line.slice(lastIndex, match.index));
+        }
+
+        const href = match[2] || match[3];
+        const label = match[1] || match[3];
+
+        nodes.push(
+            <a
+                key={`link-${lineIndex}-${match.index}`}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline underline-offset-4 break-all"
+            >
+                {label}
+            </a>
+        );
+
+        lastIndex = tokenRegex.lastIndex;
+    }
+
+    if (lastIndex < line.length) {
+        nodes.push(line.slice(lastIndex));
+    }
+
+    return nodes.length > 0 ? nodes : line;
+}
+
+function renderLongDescription(text = '') {
+    const lines = text.split('\n');
+
+    return lines.map((line, lineIndex) => (
+        <span key={`line-${lineIndex}`}>
+            {renderLinkifiedLine(line, lineIndex)}
+            {lineIndex < lines.length - 1 && <br />}
+        </span>
+    ));
+}
+
 export async function generateStaticParams() {
     return projects.map((project) => ({
         id: project.slug,
@@ -50,8 +97,8 @@ export default async function WorkDetails({ params }) {
 
                     {/* Right Column: Description */}
                     <div className="col-span-1 md:col-start-5 md:col-span-6 flex flex-col gap-4 md:gap-8 font-bold">
-                        <p className="text-base md:text-2xl leading-snug white-space-pre-wrap">
-                            {project.longDescription}
+                        <p className="text-base md:text-2xl leading-snug whitespace-pre-wrap break-words">
+                            {renderLongDescription(project.longDescription)}
                         </p>
                     </div>
                 </div>
