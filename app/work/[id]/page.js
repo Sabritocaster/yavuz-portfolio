@@ -1,8 +1,38 @@
 import { projects } from '@/data/projects';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
+import { cache } from 'react';
 import Footer from '@/components/Footer';
 import ProjectCard from '@/components/ProjectCard';
+
+const DEFAULT_VIDEO_ASPECT_RATIO = '16 / 9';
+
+const getVimeoAspectRatio = cache(async (vimeoId) => {
+    if (!vimeoId) {
+        return DEFAULT_VIDEO_ASPECT_RATIO;
+    }
+
+    try {
+        const oEmbedUrl = `https://vimeo.com/api/oembed.json?url=${encodeURIComponent(`https://vimeo.com/${vimeoId}`)}`;
+        const response = await fetch(oEmbedUrl, { next: { revalidate: 86400 } });
+
+        if (!response.ok) {
+            return DEFAULT_VIDEO_ASPECT_RATIO;
+        }
+
+        const data = await response.json();
+        const width = Number(data?.width);
+        const height = Number(data?.height);
+
+        if (!Number.isFinite(width) || !Number.isFinite(height) || width <= 0 || height <= 0) {
+            return DEFAULT_VIDEO_ASPECT_RATIO;
+        }
+
+        return `${width} / ${height}`;
+    } catch {
+        return DEFAULT_VIDEO_ASPECT_RATIO;
+    }
+});
 
 function renderLinkifiedLine(line, lineIndex) {
     const tokenRegex = /\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)|(https?:\/\/[^\s]+)/g;
@@ -73,6 +103,12 @@ export default async function WorkDetails({ params }) {
         otherProjects.push(projects[nextIndex]);
     }
 
+    const videoItems = (project.details || []).filter((item) => item.type === 'video' && item.vimeoId);
+    const aspectRatioEntries = await Promise.all(
+        videoItems.map(async (item) => [item.vimeoId, await getVimeoAspectRatio(item.vimeoId)])
+    );
+    const videoAspectRatios = Object.fromEntries(aspectRatioEntries);
+
     return (
         <div className="w-full min-h-screen bg-white text-black pt-32 md:pt-48 pb-0 overflow-x-hidden">
 
@@ -108,11 +144,13 @@ export default async function WorkDetails({ params }) {
             <div className="flex flex-col gap-12">
                 {project.details && project.details.map((item, index) => {
                     if (item.type === 'video') {
+                        const videoAspectRatio = videoAspectRatios[item.vimeoId] || DEFAULT_VIDEO_ASPECT_RATIO;
+
                         // Vimeo Video Embed
                         if (item.isFullscreen) {
                             return (
                                 <div key={index} className="w-full">
-                                    <div style={{ padding: '56.25% 0 0 0', position: 'relative' }}>
+                                    <div style={{ position: 'relative', aspectRatio: videoAspectRatio }}>
                                         <iframe
                                             src={`https://player.vimeo.com/video/${item.vimeoId}?badge=0&autopause=0&player_id=0&app_id=58479`}
                                             frameBorder="0"
@@ -132,7 +170,7 @@ export default async function WorkDetails({ params }) {
                         } else {
                             return (
                                 <div key={index} className="px-5 md:px-[5%] w-full">
-                                    <div style={{ padding: '56.25% 0 0 0', position: 'relative' }}>
+                                    <div style={{ position: 'relative', aspectRatio: videoAspectRatio }}>
                                         <iframe
                                             src={`https://player.vimeo.com/video/${item.vimeoId}?badge=0&autopause=0&player_id=0&app_id=58479`}
                                             frameBorder="0"
