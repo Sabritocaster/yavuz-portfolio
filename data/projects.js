@@ -244,8 +244,7 @@ export const projects = [
     date: '2025',
     image: '/images/Personal/Parasite_Thumbnail_GIF_Personal.gif',
     colSpan: 4,
-   longDescription: `This visual novel was created in 48 hours for the Bilkent Game Development and Animation Club's Game Jam, based on the theme "Parasite." 
-   As a team, we chose to use the concept of a parasite as a metaphor for how people can infect someone's life, fundamentally altering their worldview. 
+   longDescription: `This visual novel was created in 48 hours for the Bilkent Game Development and Animation Club's Game Jam, based on the theme "Parasite." As a team, we chose to use the concept of a parasite as a metaphor for how people can infect someone's life, fundamentally altering their worldview. 
    
 Visuals: Reyyan Fidan & Yavuz Dağdelen | Programming: Melih Uçan | Sound Design: Başar Asa`,
     details: [
