@@ -255,7 +255,7 @@ export default function FluidBackground({ className = '' }) {
           layer: velocityState,
           vectorSpacing: 10,
           vectorScale: 2.5,
-          color: [255, 255, 255], // White vectors on red background
+          color: [0, 0, 0], // White vectors on red background
         });
 
         animationRef.current = requestAnimationFrame(animate);
