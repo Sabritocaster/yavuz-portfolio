@@ -11,7 +11,7 @@ export default function Navbar({ theme = 'light', transparent = false }) {
     const borderColor = theme === 'dark' ? 'border-black' : 'border-black';
     // Ana sayfa için transparent arka plan, diğer sayfalar için normal
     const bgColor = transparent ? 'bg-transparent' : (theme === 'dark' ? 'bg-black' : 'bg-white');
-    const navColor = theme === 'dark' ? 'bg-black' : 'bg-white';
+    const navColor = transparent ? 'bg-black' : (theme === 'dark' ? 'bg-black' : 'bg-white');
 
     const toggleMenu = () => setIsOpen(!isOpen);
 
