@@ -213,7 +213,7 @@ export const projects = [
     },
     {
         id: 14,
-        title: 'Boy and the Lamp',
+        title: 'Boy and the Lamb',
         category: 'Personal',
         description: 'Color Study, 2025',
         slug: 'personal2',
