@@ -8,13 +8,13 @@ import { projects, categories } from '@/data/projects';
 import Footer from '@/components/Footer';
 
 export default function Work() {
-    const scrollAnimationFrameRef = useRef(null);
+    const scrollTimeoutRef = useRef(null);
 
-    // Clean up animation on unmount
+    // Clean up timeout on unmount
     useEffect(() => {
         return () => {
-            if (scrollAnimationFrameRef.current) {
-                cancelAnimationFrame(scrollAnimationFrameRef.current);
+            if (scrollTimeoutRef.current) {
+                clearTimeout(scrollTimeoutRef.current);
             }
             document.body.style.pointerEvents = '';
         };
@@ -27,43 +27,22 @@ export default function Work() {
             const elementPosition = element.getBoundingClientRect().top;
             const targetPosition = elementPosition + window.scrollY - offset;
             
-            const startPosition = window.scrollY;
-            const distance = targetPosition - startPosition;
-            if (distance === 0) return;
-
-            // Cancel any ongoing scroll animation
-            if (scrollAnimationFrameRef.current) {
-                cancelAnimationFrame(scrollAnimationFrameRef.current);
+            if (scrollTimeoutRef.current) {
+                clearTimeout(scrollTimeoutRef.current);
             }
 
-            const duration = 400; // Snappy and fast scroll to feel lag-free
-            let startTime = null;
-
-            // Disable hover/pointer events on body during the scroll animation
-            // to prevent style recalcs and layout/paint lag caused by hovering cards
+            // Temporarily disable hover states during native smooth scroll to prevent lag
             document.body.style.pointerEvents = 'none';
 
-            const easeOutCubic = (t) => {
-                return 1 - Math.pow(1 - t, 3);
-            };
+            window.scrollTo({
+                top: targetPosition,
+                behavior: 'smooth'
+            });
 
-            const step = (currentTime) => {
-                if (startTime === null) startTime = currentTime;
-                const timeElapsed = currentTime - startTime;
-                const progress = Math.min(timeElapsed / duration, 1);
-                const easedProgress = easeOutCubic(progress);
-
-                window.scrollTo(0, startPosition + distance * easedProgress);
-
-                if (timeElapsed < duration) {
-                    scrollAnimationFrameRef.current = requestAnimationFrame(step);
-                } else {
-                    document.body.style.pointerEvents = '';
-                    scrollAnimationFrameRef.current = null;
-                }
-            };
-
-            scrollAnimationFrameRef.current = requestAnimationFrame(step);
+            scrollTimeoutRef.current = setTimeout(() => {
+                document.body.style.pointerEvents = '';
+                scrollTimeoutRef.current = null;
+            }, 800);
         }
     };
 
