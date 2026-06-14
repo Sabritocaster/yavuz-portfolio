@@ -38,8 +38,8 @@ export default function FluidBackground({ className = '' }) {
     canvas.height = height;
 
     try {
-      // Initialize GPU Composer
-      const composer = new GPUComposer({ canvas });
+      // Initialize GPU Composer with yellow clear color (#ffd400)
+      const composer = new GPUComposer({ canvas, clearValue: [1.0, 0.831, 0.0, 1] });
       composerRef.current = composer;
 
       // Init velocity state at lower resolution for performance
@@ -250,12 +250,15 @@ export default function FluidBackground({ className = '' }) {
           output: velocityState,
         });
 
+        // Clear screen to white before drawing vectors
+        composer.clear();
+
         // Render velocity as vector field (this is the "Velocity" render mode)
         composer.drawLayerAsVectorField({
           layer: velocityState,
           vectorSpacing: 10,
           vectorScale: 2.5,
-          color: [255, 255, 255], // White vectors on red background
+          color: [0, 0, 0], // Black vectors
         });
 
         animationRef.current = requestAnimationFrame(animate);
@@ -375,7 +378,7 @@ export default function FluidBackground({ className = '' }) {
   return (
     <canvas
       ref={canvasRef}
-      className={`${className} bg-[#FF0000]`}
+      className={`${className} bg-[#ffd400]`}
       style={{ touchAction: 'none' }}
     />
   );

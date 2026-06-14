@@ -1,5 +1,6 @@
 'use client';
 
+import { useRef, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import ProjectCard from '@/components/ProjectCard';
@@ -7,36 +8,62 @@ import { projects, categories } from '@/data/projects';
 import Footer from '@/components/Footer';
 
 export default function Work() {
+    const scrollAnimationFrameRef = useRef(null);
+
+    // Clean up animation on unmount
+    useEffect(() => {
+        return () => {
+            if (scrollAnimationFrameRef.current) {
+                cancelAnimationFrame(scrollAnimationFrameRef.current);
+            }
+            document.body.style.pointerEvents = '';
+        };
+    }, []);
+
     const scrollToCategory = (category) => {
         const element = document.getElementById(category);
         if (element) {
             const offset = 80; // Adjust for header height/spacing
             const elementPosition = element.getBoundingClientRect().top;
-            const targetPosition = elementPosition + window.pageYOffset - offset;
-            const startPosition = window.pageYOffset;
+            const targetPosition = elementPosition + window.scrollY - offset;
+            
+            const startPosition = window.scrollY;
             const distance = targetPosition - startPosition;
-            const duration = 1200; // Animasyon süresi (ms) - daha yüksek = daha yavaş
+            if (distance === 0) return;
+
+            // Cancel any ongoing scroll animation
+            if (scrollAnimationFrameRef.current) {
+                cancelAnimationFrame(scrollAnimationFrameRef.current);
+            }
+
+            const duration = 400; // Snappy and fast scroll to feel lag-free
             let startTime = null;
 
-            // Easing fonksiyonu - yavaş başla, yavaş bitir
-            const easeInOutCubic = (t) => {
-                return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+            // Disable hover/pointer events on body during the scroll animation
+            // to prevent style recalcs and layout/paint lag caused by hovering cards
+            document.body.style.pointerEvents = 'none';
+
+            const easeOutCubic = (t) => {
+                return 1 - Math.pow(1 - t, 3);
             };
 
-            const animation = (currentTime) => {
+            const step = (currentTime) => {
                 if (startTime === null) startTime = currentTime;
                 const timeElapsed = currentTime - startTime;
                 const progress = Math.min(timeElapsed / duration, 1);
-                const easedProgress = easeInOutCubic(progress);
-                
+                const easedProgress = easeOutCubic(progress);
+
                 window.scrollTo(0, startPosition + distance * easedProgress);
-                
+
                 if (timeElapsed < duration) {
-                    requestAnimationFrame(animation);
+                    scrollAnimationFrameRef.current = requestAnimationFrame(step);
+                } else {
+                    document.body.style.pointerEvents = '';
+                    scrollAnimationFrameRef.current = null;
                 }
             };
 
-            requestAnimationFrame(animation);
+            scrollAnimationFrameRef.current = requestAnimationFrame(step);
         }
     };
 
