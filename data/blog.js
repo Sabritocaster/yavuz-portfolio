@@ -21,7 +21,7 @@ export const blogPosts = [
                 alt: 'Erasmus Sunumu',
                 caption: 'Arkadaşım Melih ile birlikte hazırladığımız sunum.'
             },
-            'Tüm bu zorlukların yanında erasmus hayatınızdaki finansal durumlar var:',
+            'Tüm bu zorlukların yanında erasmus hayatınızdaki finansal durumlar da var:',
             {
                 type: 'list',
                 items: [
