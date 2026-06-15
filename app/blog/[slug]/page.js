@@ -72,7 +72,7 @@ export default async function BlogPost({ params }) {
                                                 width={0}
                                                 height={0}
                                                 sizes="100vw"
-                                                className="w-full h-auto object-cover rounded-xl border border-gray-100 shadow-sm max-h-[600px] hover:shadow-md transition-shadow duration-300"
+                                                className="w-full h-auto object-cover max-h-[600px]"
                                             />
                                             {block.caption && (
                                                 <figcaption className="text-xs md:text-sm text-gray-500 mt-3 text-left w-full italic font-normal tracking-tight px-1">
