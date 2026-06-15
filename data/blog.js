@@ -6,7 +6,7 @@ export const blogPosts = [
         excerpt: '2025-2026 bahar döneminde Academy of Fine Arts in Gdańsk’ta tamamladığım Erasmus sürecime dair hazırlık aşamaları, vize süreçleri, yurt konaklaması, akademi eğitimi ve sosyal hayat tecrübelerimi içeren bir rehber.',
         heroImage: '/images/blog-erasmus-gdansk/erasmus-gdansk-hero.jpg',
         content: [
-            'Merhabalar, ben 2025-2026 bahar döneminde Academy of Fine Arts in Gdańsk’ta (Gdańsk Güzel Sanatlar Akademisi) Erasmus sürecimi sonlandırmak üzereyim. Derslerim henüz bitmişken ve Türkiye\'deki beyaz yaka hayatıma devam etmeden önce buradaki tecrübelerimi aktardığım ve Erasmus’a gideceklere yol gösterebilecek bir yazı kaleme almak istedim.',
+            'Merhabalar, 2025-2026 bahar döneminde Academy of Fine Arts in Gdańsk’ta (Gdańsk Güzel Sanatlar Akademisi) Erasmus sürecimi sonlandırmak üzereyim. Derslerim henüz bitmişken ve Türkiye\'deki beyaz yaka hayatıma devam etmeden önce buradaki tecrübelerimi aktardığım ve Erasmus’a gideceklere yol gösterebilecek bir yazı kaleme almak istedim.',
             'Bu yazıda Erasmus’a hazırlık sürecinden Polonya’daki yaşama, Gdańsk’tan Academy of Fine Arts’taki eğitimeme uzanan deneyimimden bahsedeceğim. Yazıyı yazmaktaki temel amacım, hazırlık yaparken karşılaştığım bilgi kirliliğine ve iletişimsizliklere bir nebze de olsa çare bulabilmektir. Buna karşın yazıdaki çoğu noktanın kendi perspektifimden çıkmış öznel yargılar olduğunu da hatırlatmak isterim.',
             
             { type: 'h2', text: 'Erasmus’a Gidebilmek ve Bilkent Prosedürleri' },
