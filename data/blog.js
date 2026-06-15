@@ -1,7 +1,7 @@
 export const blogPosts = [
     {
         slug: 'erasmus-gdansk-academy-fine-arts',
-        title: 'Polonya, Gdańsk \'ta Erasmus: Hazırlık Süreçleri, Academy of Fine Arts ve Deneyimlerim',
+        title: 'Polonya, Gdańsk\'ta Erasmus: Hazırlık Süreçleri, Academy of Fine Arts ve Deneyimlerim',
         date: '15 June 2026',
         excerpt: '2025-2026 bahar döneminde Academy of Fine Arts in Gdańsk’ta tamamladığım Erasmus sürecime dair hazırlık aşamaları, vize süreçleri, yurt konaklaması, akademi eğitimi ve sosyal hayat tecrübelerimi içeren bir rehber.',
         heroImage: '/images/blog-erasmus-gdansk/erasmus-gdansk-hero.jpg',
