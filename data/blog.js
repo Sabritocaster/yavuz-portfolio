@@ -9,7 +9,7 @@ export const blogPosts = [
             'Merhabalar, ben 2025-2026 bahar döneminde Academy of Fine Arts in Gdańsk’ta (Gdańsk Güzel Sanatlar Akademisi) Erasmus sürecimi sonlandırmak üzereyim. Derslerim henüz bitmişken ve Türkiye\'deki beyaz yaka hayatıma devam etmeden önce buradaki tecrübelerimi aktardığım ve Erasmus’a gideceklere yol gösterebilecek bir yazı kaleme almak istedim.',
             'Bu yazıda Erasmus’a hazırlık sürecinden Polonya’daki yaşama, Gdańsk’tan Academy of Fine Arts’taki eğitimeme uzanan deneyimimden bahsedeceğim. Yazıyı yazmaktaki temel amacım, hazırlık yaparken karşılaştığım bilgi kirliliğine ve iletişimsizliklere bir nebze de olsa çare bulabilmektir. Buna karşın yazıdaki çoğu noktanın kendi perspektifimden çıkmış öznel yargılar olduğunu da hatırlatmak isterim.',
             
-            { type: 'h2', text: '1. Erasmus’a Gidebilmek ve Bilkent Prosedürleri' },
+            { type: 'h2', text: 'Erasmus’a Gidebilmek ve Bilkent Prosedürleri' },
             'Bu kısımda Bilkent Üniversitesi\'ndeki süreçlerden bahsedeceğim, bu yüzden farklı bir üniversitedeyseniz Erasmus işleyişi değişiklik gösterebilir.',
             'Bilkent\'te Erasmus’a gitmeden önce ciddi bir süzgeçten geçiyorsunuz. Genel not ortalamanız (GPA) ve İngilizce yeterlilik notunuz hesaplanarak 100 üzerinden bir puan belirleniyor. Çıkan puanınıza göre de Erasmus koordinatörünüz rehberliğinde tercihlerinizi yapıyorsunuz. Bu süreçte koordinatörünüze sık sık danışmanızı ve fikir almanızı kesinlikle öneririm ve puanlama sisteminin detaylarını Bilkent’in web sitesinden kontrol edebilirsiniz.',
             'Bu Erasmus öğrenci seçim süreci, maalesef Bilkent’in bazı bölümlerinde pek de hoş olmayan bir rekabete dönüşebiliyor. Bir takım bölümlerde oldukça az sayıda okul ve kontenjan bulunduğundan onlarca kişinin arasından sıyrılabilmek için ortalamanızın ve İngilizce notunuzun zirvede (tercihen bölüm birincisi) olması gerekiyor.',
@@ -25,17 +25,17 @@ export const blogPosts = [
             {
                 type: 'list',
                 items: [
-                    'Hibe Dağılımı: Erasmus listesine girseniz bile, bölüm içinde not ortalaması yüksek olan ilk %50\'lik kısım hibeden yararlanabiliyor, geri kalanlar hibe alamıyor. Yine belirtmeliyim ki bu Bilkent\'e uygulanan tarife, hibe dağılımı üniversiteden üniversiteye farklılık gösterebilir',
+                    'Hibe Dağılımı: Erasmus listesine girseniz bile, bölüm içinde not ortalaması yüksek olan ilk %50\'lik kısım hibeden yararlanabiliyor, geri kalanlar hibe alamıyor. Yine belirtmeliyim ki bu Bilkent\'e uygulanan tarife, hibe dağılımı üniversiteden üniversiteye farklılık gösterebilir.',
                     'Burs Durumu: Eğer ücretli okuyorsanız Bilkent’e dönem ücretini yatırmaya devam ediyorsunuz. Ancak kapsamlı bursluysanız Bilkent yurdunda kalmadığınız için aylık ek burs hakkını da elde edebiliyorsunuz. Ben şanslıydım, Bilkent bursu ve Erasmus hibesiyle birlikte aylık yaklaşık 1000 Euro destek alabildim ki bu gerçekten hayat kurtaran bir meblağ oldu.'
                 ]
             },
 
-            { type: 'h2', text: '2. Vize Süreci: Tat Kaçıran Süreç' },
+            { type: 'h2', text: 'Vize Süreci: Tat Kaçıran Süreç' },
             'Okul aşamasını geçtikten sonra işin en yıpratıcı noktası kesinlikle vize süreciydi. Kabul mektubumu oldukça geç gönderen karşı okul yüzünden VFS Global’de vize randevusu bulmak tam bir işkenceye dönüştü. Haftalarca randevu kovalamak ve okula gidiş tarihi yaklaştıkça artan stres pek tatsızdı.',
             'Her sabah bilgisayar başında sayfa yenilemek, sisteme üst üste girmeye çalıştığım için VFS sitesinden IP engeli yemek inanılmaz yorucuydu. Okulumuzdaki Polonyalı hocam aracılığıyla Ankara Polonya Büyükelçisi ile iletişime geçme çabalarım da sonuçsuz kalınca mecburen bir aracı acente ile anlaşmak zorunda kaldım. Acente bir hafta içinde randevu buldu, başvurumu yaptım ve ocak ayının ortasına doğru vizemi aldım.',
             'Yaşadığım bu zorlukları aklınıza gelebilecek her türlü devlet kademesine ve şikayet merciine ilettim. Kendisinden “hizmet” almak zorunda bırakıldığım acenteyi de vize piyasasındaki usulsüzlükleri açığa çıkaran gazetecilere paylaştım. Benden sonra gidecek öğrenciler Polonya’nın bu sorunlu VFS sisteminden zarar görmesin diye elimden geleni yapmaya çalıştım. Umarım sizin işiniz rast gider de bu fırsatçı acentelere para kaptırmadan işinizi halledersiniz.',
 
-            { type: 'h2', text: '3. Gdańsk ve Polonya’da Yaşam' },
+            { type: 'h2', text: 'Gdańsk ve Polonya’da Yaşam' },
             'Polonya’ya geldiğim ilk haftalar hava -15 dereceydi. Sürekli buz tutan yolların yanında kapalı ve gri gökyüzü, ilk başta Polonya\'ya geldiğime beni pişman etti. Şansıma son 13 yılın en sert kışına denk gelmiştim. Tabii kış mevsiminin bu buruk havası herkesi aynı etkilemiyordur; örneğin buradaki hocalarımdan Adam Pękalski, kapalı havaların kendisini mutlu ettiğinden bahsetmişti. Bana pek ters bir durum. Ankara’nın gri iklimine alışkın birilerini bile buranın gökyüzü zaman zaman yorabilir. Eğer hava durumu ruh halinizi doğrudan etkiliyorsa Polonya ilk aylarda yüzünüzü pek güldürmeyebilir.',
             {
                 type: 'image',
@@ -77,13 +77,13 @@ export const blogPosts = [
                 ]
             },
 
-            { type: 'h2', text: '4. Yurt ve Konaklama Deneyimim' },
+            { type: 'h2', text: 'Yurt ve Konaklama Deneyimim' },
             'Bilkent’teki üst dönemlerimden bilgi alarak gitmeye karar verdiğim Gdańsk Milestone yurdunda iki kişilik bir apart dairede kaldım. Oda arkadaşımla bir şekilde iyi anlaştık ancak bu yurdun kesinlikle aylık 500 Euro gibi fiyatları hak ettiğini düşünmüyorum.',
             'Yurtta ciddi bir yönetim ve ses problemi var. İspanyol komşularımın gece yarısı saat 2’de başlayan parti hayatları yüzünden günlerce uykusuz kaldım ve yurt görevlileri bu duruma hiçbir şekilde müdahale etmedi. Yurt adeta devasa bir İspanyol partisi diyebilirim, özellikle çarşamba günleri düzenledikleri büyük partiler yüzünden uykusuzluğa kendimi alıştırmak zorunda kaldım.',
             'Küçük odalar, yüksek sesli komşular ve fahiş fiyat göz önüne alındığında, Gdańsk’a gelecek birine önerim kiralık daire bakması yönünde olur. 2 veya 3 kişi birleşip bir daire tuttuğunuzda hem 500 Euro\'dan daha az öder hem arkadaşlarınızı rahatça evinize çağırabilir hem de geceleri huzurla uyuyabilirsiniz. Bütün bunlara karşın Milestone yurdundaki içten ve güler yüzlü resepsiyon görevlisi ablalarıma teşekkür ederim.',
 
-            { type: 'h2', text: '5. Academy of Fine Arts in Gdańsk' },
-            'Bilkent Üniversitesi\'ndeki değerli hocalarım Marek Brzozowski ve Orhan Kavas\'tan etkilenip Polish School of Poster (Polonya Afiş Okulu) üzerine epey merak salmıştım. Bu yüzden Erasmus tercih vakti geldiğinde Polonya’ya kabul edildiğim için çok mutluyum.',
+            { type: 'h2', text: 'Academy of Fine Arts in Gdańsk' },
+            'Bilkent Üniversitesi\'ndeki sayın hocalarım Marek Brzozowski ve Orhan Kavas\'tan etkilenip Polish School of Poster (Polonya Afiş Okulu) üzerine epey merak salmıştım. Bu yüzden Erasmus tercih vakti geldiğinde Polonya’ya kabul edildiğim için çok mutluyum.',
             {
                 type: 'image',
                 src: '/images/blog-erasmus-gdansk/academy-building.jpg',
@@ -100,7 +100,7 @@ export const blogPosts = [
             },
             'Renk kullanımı, görsel hiyerarşi, ne tasarladığının bilincinde olmak ve optik tipografi gibi konularda Türkiye\'de kolay erişemeyeceğimi düşündüğüm bakış açıları edindim. Ayrıca hocaların benim gösterdiğim ilgi karşısında merakımı tatmin etmek için ne kadar çabaladıklarını görmek büyük bir mutluluktu. Diğer bir yandan bu okulun akademik yoğunluğu Bilkent ile kıyaslanınca oldukça hafif, derslere devam ettiğiniz ve işleriniz haftalık geribildirim aldığınız sürece yüksek notlar almak oldukça ulaşılabilir.',
 
-            { type: 'h2', text: '6. Sosyal Hayat ve Arkadaşlıklar' },
+            { type: 'h2', text: 'Sosyal Hayat ve Arkadaşlıklar' },
             'Gdańsk’a gelmeden önce üniversitenin atadığı Erasmus Buddy\'m benimle iletişime geçmişti. Kendisi son derece cana yakın ve yardımsever biriydi, umarım sizin yolunuz da iyi arkadaşlarla kesişir.',
             'İlk birkaç haftalık alışma sürecinin ardından sınıftaki arkadaşlarımla iletişim kurmaya başladım. Polonya’daki dönemdaşlarım neredeyse tamamı çok iyi İngilizce konuşuyor ve ilgi alanlarımız beklediğimden çok daha fazla uyuşuyordu. Ancak gösterdiğim çabaya rağmen Polonyalı öğrencilerle derin bağlar kuramadım, aramızda hep mesafeli bir saygı vardı, bu yüzden okul dışında pek görüşme fırsatımız olmadı. Bu konu benim sosyal beceriksizliğim de olabilir.',
             'Buna karşın Polonya’dayken en sıkı fıkı olduğum grup Çek ve Slovak arkadaşlarım oldu. İlgi alanlarımızın uyuştuğu bu harika insanlarla pek çok gezi düzenledik, kamplara gittik. Doğaya ve farklı kültürlere olan merakları, saygılı tutumları ve yüksek hitabetleri beni çok etkiledi. Onlarla vakit geçirebildiğim için şanslıyım, umarım bu arkadaşlıklarımız Polonya ile sınırlı kalmaz.',
