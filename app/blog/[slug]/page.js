@@ -75,7 +75,7 @@ export default async function BlogPost({ params }) {
                                                 className="w-full h-auto object-cover max-h-[600px]"
                                             />
                                             {block.caption && (
-                                                <figcaption className="text-xs md:text-sm text-gray-500 mt-3 text-left w-full italic font-normal tracking-tight px-1">
+                                                <figcaption className="text-xs md:text-sm text-gray-500 mt-3 text-left w-full font-normal tracking-tight px-1">
                                                     {block.caption}
                                                 </figcaption>
                                             )}
