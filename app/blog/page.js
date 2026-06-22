@@ -2,6 +2,11 @@ import BlogPostCard from '@/components/BlogPostCard';
 import Footer from '@/components/Footer';
 import { blogPosts } from '@/data/blog';
 
+export const metadata = {
+    title: 'Blog — Yavuz Dağdelen',
+    description: 'Thoughts, processes, and stories behind the design works of Yavuz Dağdelen.',
+};
+
 export default function Blog() {
     return (
         <div className="w-full min-h-screen bg-white text-black pt-32 lg:pt-42 pb-0 overflow-x-hidden flex flex-col">

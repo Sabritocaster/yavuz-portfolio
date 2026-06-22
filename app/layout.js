@@ -5,8 +5,8 @@ import Script from "next/script";
 const GA_MEASUREMENT_ID = "G-V200GR36GV"; // Replace with your Google Analytics ID
 
 export const metadata = {
-  title: "Yavuz Dağdelen - Portfolio",
-  description: "Graphic Designer Portfolio",
+  title: "Yavuz Dağdelen",
+  description: "Portfolio and Blog.",
 };
 
 export default function RootLayout({ children }) {
