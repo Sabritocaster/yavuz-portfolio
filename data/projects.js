@@ -102,10 +102,29 @@ export const projects = [
             { type: 'image', src: '/images/Editorial/3_Encylopedia/Encylopedia3.jpg', isFullscreen: true },
         ]
     },
+    {
+        id: 7,
+        title: 'Master of Polish Poster',
+        category: 'Editorial',
+        description: 'A Pocket Archive',
+        slug: 'edit4',
+        date: '2026',
+        image: '/images/Editorial/4_MasterOfPolishPoster/Master_of_Polish_Poster_Thumbnail_GIF.gif',
+        colSpan: 6,
+        longDescription: "During my Erasmus experience, I had the opportunity to further study Polish Poster Design. I became fascinated by it, which led me to create a small encyclopedia under the supervision of Ada Pawlikowska. This project features several Polish poster masters, showcasing their work alongside short biographies. Rather than an authoritative primary source, it was developed as an informal student passion project from a foreigner's perspective.",
+        details: [
+            { type: 'image', src: '/images/Editorial/4_MasterOfPolishPoster/Master_of_Polish_Poster1.jpg', isFullscreen: false },
+            { type: 'image', src: '/images/Editorial/4_MasterOfPolishPoster/Master_of_Polish_Poster2.jpg', isFullscreen: false },
+            { type: 'image', src: '/images/Editorial/4_MasterOfPolishPoster/Master_of_Polish_Poster3.jpg', isFullscreen: false },
+            { type: 'image', src: '/images/Editorial/4_MasterOfPolishPoster/Master_of_Polish_Poster4.jpg', isFullscreen: false },
+            { type: 'image', src: '/images/Editorial/4_MasterOfPolishPoster/Master_of_Polish_Poster5.jpg', isFullscreen: false },
+            { type: 'image', src: '/images/Editorial/4_MasterOfPolishPoster/Master_of_Polish_Poster6.jpg', isFullscreen: false },
+        ]
+    },
 
     // Poster Projects
     {
-        id: 7,
+        id: 8,
         title: 'Fragments of Life',
         category: 'Poster',
         description: 'Bilkent Fine Arts Exhibition',
@@ -122,7 +141,7 @@ export const projects = [
         ]
     },
     {
-        id: 8,
+        id: 9,
         title: 'Gra.Typog Society Event Posters',
         category: 'Poster',
         description: 'Visual Communication and Engagement',
@@ -137,7 +156,7 @@ export const projects = [
         ]
     },
     {
-        id: 9,
+        id: 10,
         title: 'Sibel Egemen Jazz Concert',
         category: 'Poster',
         description: 'Typographic Poster Project',
@@ -153,7 +172,7 @@ export const projects = [
 
     // Motion Projects
     {
-        id: 10,
+        id: 11,
         title: 'Squarespace Logo Animation',
         category: 'Motion',
         description: 'Motion Branding Study',
@@ -168,7 +187,7 @@ export const projects = [
         ]
     },
     {
-        id: 11,
+        id: 12,
         title: 'Radiohead\'s Faust Arp',
         category: 'Motion',
         description: 'Kinetic Typography Project',
@@ -182,7 +201,7 @@ export const projects = [
         ]
     },
     {
-        id: 12,
+        id: 13,
         title: 'Creativity in Each Drop',
         category: 'Motion',
         description: 'Cell Animation Course Project',
@@ -200,7 +219,7 @@ export const projects = [
 
     // Personal Projects
     {
-        id: 13,
+        id: 14,
         title: 'Two Lovers, Ömer and Macide',
         category: 'Personal',
         description: 'Digital Painting, 2024',
@@ -212,7 +231,7 @@ export const projects = [
         wip: true
     },
     {
-        id: 14,
+        id: 15,
         title: 'Boy and the Lamb',
         category: 'Personal',
         description: 'Color Study, 2025',
@@ -224,7 +243,7 @@ export const projects = [
         wip: true
     },
     {
-        id: 15,
+        id: 16,
         title: 'Girl, Western Ireland',
         category: 'Personal',
         description: 'Color Study on Dorothea Lange\'s Photo, 2026',
@@ -236,7 +255,7 @@ export const projects = [
         wip: true
     },
     {
-    id: 6,
+    id: 17,
     title: 'Parasite, A Visual Novel', // Adjust title if needed
     category: 'Personal',
     description: 'Game Project Created Within 48 Hours',
