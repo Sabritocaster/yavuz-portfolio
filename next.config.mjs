@@ -3,6 +3,7 @@ const nextConfig = {
   output: 'export',
   // Base path for GitHub Pages project site
   basePath: '/yavuz-portfolio',
+  trailingSlash: true,
   images: {
     unoptimized: true,
   },

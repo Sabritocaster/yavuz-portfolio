@@ -6,6 +6,22 @@ export async function generateStaticParams() {
     return blogPosts.map((post) => ({ slug: post.slug }));
 }
 
+export async function generateMetadata({ params }) {
+    const { slug } = await params;
+    const post = blogPosts.find((item) => item.slug === slug);
+
+    if (!post) {
+        return {
+            title: 'Post Not Found',
+        };
+    }
+
+    return {
+        title: `${post.title} — Yavuz Dağdelen`,
+        description: post.excerpt,
+    };
+}
+
 export default async function BlogPost({ params }) {
     const { slug } = await params;
     const post = blogPosts.find((item) => item.slug === slug);

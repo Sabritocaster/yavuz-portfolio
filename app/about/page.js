@@ -2,6 +2,11 @@ import { aboutContent } from '@/data/about';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
 
+export const metadata = {
+    title: 'About — Yavuz Dağdelen',
+    description: 'Learn more about Yavuz Dağdelen, graphic designer and writer.',
+};
+
 export default function About() {
     const { image, bio, location, socials } = aboutContent;
 
