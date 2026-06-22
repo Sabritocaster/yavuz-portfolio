@@ -111,14 +111,14 @@ export const projects = [
         date: '2026',
         image: '/images/Editorial/4_MasterOfPolishPoster/Master_of_Polish_Poster_Thumbnail_GIF.gif',
         colSpan: 6,
-        longDescription: "During my Erasmus experience, I had the opportunity to further study Polish Poster Design. I became fascinated by it, which led me to create a small encyclopedia under the supervision of Ada Pawlikowska. This project features several Polish poster masters, showcasing their work alongside short biographies. Rather than an authoritative primary source, it was developed as an informal student passion project from a foreigner's perspective.",
+        longDescription: "During my Erasmus experience, I had the opportunity to further study Polish Poster Design. I became fascinated by it, which led me to create a small encyclopedia under the supervision of Ada Pawlikowska. This project features several Polish poster masters, showcasing their work alongside short biographies.",
         details: [
             { type: 'image', src: '/images/Editorial/4_MasterOfPolishPoster/Master_of_Polish_Poster1.jpg', isFullscreen: false },
             { type: 'image', src: '/images/Editorial/4_MasterOfPolishPoster/Master_of_Polish_Poster2.jpg', isFullscreen: false },
-            { type: 'image', src: '/images/Editorial/4_MasterOfPolishPoster/Master_of_Polish_Poster3.jpg', isFullscreen: false },
-            { type: 'image', src: '/images/Editorial/4_MasterOfPolishPoster/Master_of_Polish_Poster4.jpg', isFullscreen: false },
-            { type: 'image', src: '/images/Editorial/4_MasterOfPolishPoster/Master_of_Polish_Poster5.jpg', isFullscreen: false },
-            { type: 'image', src: '/images/Editorial/4_MasterOfPolishPoster/Master_of_Polish_Poster6.jpg', isFullscreen: false },
+            { type: 'image', src: '/images/Editorial/4_MasterOfPolishPoster/Master_of_Polish_Poster3.jpg', isFullscreen: true },
+            { type: 'image', src: '/images/Editorial/4_MasterOfPolishPoster/Master_of_Polish_Poster4.jpg', isFullscreen: true },
+            { type: 'image', src: '/images/Editorial/4_MasterOfPolishPoster/Master_of_Polish_Poster5.jpg', isFullscreen: true },
+            { type: 'image', src: '/images/Editorial/4_MasterOfPolishPoster/Master_of_Polish_Poster6.jpg', isFullscreen: true },
         ]
     },
 
