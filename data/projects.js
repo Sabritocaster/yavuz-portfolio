@@ -162,12 +162,41 @@ export const projects = [
         description: 'Typographic Poster Project',
         slug: 'post3',
         date: '2025',
-        image: '/images/Poster/3_SibelEgemen/SibelEgemen_Thumbnail_Poster.png',
+        image: '/SibelEgemenUpdated.jpg',
         colSpan: 4,
+        clickable: false,
         longDescription: 'Developed as part of a typographic course assignment, this poster pays tribute to artist Sibel Egemen. The design captures a nostalgic atmosphere that reflects her musical identity, combining visual depth with a commitment to simplicity.',
         details: [
             { type: 'image', src: '/images/Poster/3_SibelEgemen/SibelEgemen1.jpg', isFullscreen: false },
         ]
+    },
+
+    // New Social Propaganda Posters
+    {
+        id: 18,
+        title: 'Family',
+        category: 'Poster',
+        description: 'Social Propaganda Poster',
+        slug: 'family',
+        date: '2025',
+        image: '/Family.jpg',
+        colSpan: 4,
+        clickable: false,
+        longDescription: 'Social propaganda poster titled "Family".',
+        details: []
+    },
+    {
+        id: 19,
+        title: 'Together',
+        category: 'Poster',
+        description: 'Social Propaganda Poster',
+        slug: 'together',
+        date: '2025',
+        image: '/Together.jpg',
+        colSpan: 4,
+        clickable: false,
+        longDescription: 'Social propaganda poster titled "Together".',
+        details: []
     },
 
     // Motion Projects
@@ -254,27 +283,6 @@ export const projects = [
         details: [],
         wip: true
     },
-    {
-    id: 17,
-    title: 'Parasite, A Visual Novel', // Adjust title if needed
-    category: 'Personal',
-    description: 'Game Project Created Within 48 Hours',
-    slug: 'personal4',
-    date: '2025',
-    image: '/images/Personal/Parasite_Thumbnail_GIF_Personal.gif',
-    colSpan: 4,
-   longDescription: `This visual novel was created in 48 hours for the Bilkent Game Development and Animation Club's Game Jam, based on the theme "Parasite." As a team, we chose to use the concept of a parasite as a metaphor for how people can infect someone's life, fundamentally altering their worldview. 
-   
-Visuals: Reyyan Fidan & Yavuz Dağdelen
-Programming: Melih Uçan
-Sound Design: Başar Asa`,
-    details: [
-        { type: 'video', vimeoId: '1163088423', title: 'Parasite: Visual Novel Project – Ambience Loop', isFullscreen: false },
-        { type: 'image', src: '/images/Personal/Parasite1.jpg', isFullscreen: false },
-        { type: 'image', src: '/images/Personal/Parasite2_GIF.gif', isFullscreen: false },
-    ],
-    wip: false
-},
 ];
 
 export const categories = ['Branding', 'Editorial', 'Poster', 'Motion', 'Personal'];

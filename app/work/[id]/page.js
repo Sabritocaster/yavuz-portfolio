@@ -82,7 +82,7 @@ function renderLongDescription(text = '') {
 }
 
 export async function generateStaticParams() {
-    return projects.map((project) => ({
+    return projects.filter(p => p.clickable !== false).map((project) => ({
         id: project.slug,
     }));
 }
