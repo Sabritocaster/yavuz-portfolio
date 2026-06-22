@@ -115,10 +115,10 @@ export const projects = [
         details: [
             { type: 'image', src: '/images/Editorial/4_MasterOfPolishPoster/Master_of_Polish_Poster1.jpg', isFullscreen: false },
             { type: 'image', src: '/images/Editorial/4_MasterOfPolishPoster/Master_of_Polish_Poster2.jpg', isFullscreen: false },
-            { type: 'image', src: '/images/Editorial/4_MasterOfPolishPoster/Master_of_Polish_Poster3.jpg', isFullscreen: true },
-            { type: 'image', src: '/images/Editorial/4_MasterOfPolishPoster/Master_of_Polish_Poster4.jpg', isFullscreen: true },
-            { type: 'image', src: '/images/Editorial/4_MasterOfPolishPoster/Master_of_Polish_Poster5.jpg', isFullscreen: true },
-            { type: 'image', src: '/images/Editorial/4_MasterOfPolishPoster/Master_of_Polish_Poster6.jpg', isFullscreen: true },
+            { type: 'image', src: '/images/Editorial/4_MasterOfPolishPoster/Master_of_Polish_Poster3.jpg', isFullscreen: false },
+            { type: 'image', src: '/images/Editorial/4_MasterOfPolishPoster/Master_of_Polish_Poster4.jpg', isFullscreen: false },
+            { type: 'image', src: '/images/Editorial/4_MasterOfPolishPoster/Master_of_Polish_Poster5.jpg', isFullscreen: false },
+            { type: 'image', src: '/images/Editorial/4_MasterOfPolishPoster/Master_of_Polish_Poster6.jpg', isFullscreen: false },
         ]
     },
 
