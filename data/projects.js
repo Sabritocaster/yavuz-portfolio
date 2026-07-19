@@ -2,15 +2,21 @@ export const projects = [
     // Branding Projects
     {
         id: 1,
-        title: 'Most',
+        title: 'Most Solution',
         category: 'Branding',
         description: 'Automotive Efficiency Solutions',
         slug: 'brand1',
+        date: '2026',
         image: '/images/Branding/1_Most/Most_Thumbnail_Branding.jpg',
         colSpan: 6,
-        longDescription: 'Brand identity design for Most, an automotive efficiency solutions company.',
-        details: [],
-        wip: true
+        longDescription: 'I delivered a complete branding and digital package for Most Solution, an automotive chip tuning, DPF, and injector maintenance company. The project included designing their corporate identity, banners, business cards, and a cost-effective merchandise line using branded stickers, alongside a dynamic website that actively calculates and showcases vehicle efficiency improvements.',
+        details: [
+            { type: 'image', src: '/images/Branding/1_Most/MostPhoto1.jpg', isFullscreen: false },
+            { type: 'image', src: '/images/Branding/1_Most/MostPhoto2.jpg', isFullscreen: false },
+            { type: 'image', src: '/images/Branding/1_Most/MostPhoto3.jpg', isFullscreen: false },
+            { type: 'image', src: '/images/Branding/1_Most/MostPhoto4.jpg', isFullscreen: false },
+            { type: 'image', src: '/images/Branding/1_Most/MostPhoto5.png', isFullscreen: false },
+        ]
     },
     {
         id: 2,
