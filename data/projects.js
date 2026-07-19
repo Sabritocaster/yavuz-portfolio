@@ -15,7 +15,7 @@ export const projects = [
             { type: 'image', src: '/images/Branding/1_Most/MostPhoto2.jpg', isFullscreen: false },
             { type: 'image', src: '/images/Branding/1_Most/MostPhoto3.jpg', isFullscreen: false },
             { type: 'image', src: '/images/Branding/1_Most/MostPhoto4.jpg', isFullscreen: false },
-            { type: 'image', src: '/images/Branding/1_Most/MostPhoto5.png', isFullscreen: false },
+            { type: 'image', src: '/images/Branding/1_Most/MostPhoto5.jpg', isFullscreen: true },
         ]
     },
     {
