@@ -60,6 +60,22 @@ export const projects = [
             { type: 'image', src: '/images/Branding/3_Biyocesitlilik/Biyocesitlik9.jpg', isFullscreen: false },
         ]
     },
+    {
+        id: 20,
+        title: 'Logos 2026',
+        category: 'Branding',
+        description: 'Selected Marks & Identity Systems',
+        slug: 'brand4',
+        date: '2026',
+        image: '/images/Branding/4_Logos/Logos_Thumbnail.gif',
+        colSpan: 3,
+        longDescription: 'A curated collection of logos developed throughout 2026.',
+        details: [
+            { type: 'image', src: '/images/Branding/4_Logos/1_TAU_Extended.png', isFullscreen: true },
+            { type: 'image', src: '/images/Branding/4_Logos/2_Backyard_Extended.png', isFullscreen: true },
+            { type: 'image', src: '/images/Branding/4_Logos/3_SanArt_Extended.png', isFullscreen: true },
+        ]
+    },
 
     // Editorial Projects
     {
