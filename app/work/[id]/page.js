@@ -116,12 +116,12 @@ export default async function WorkDetails({ params }) {
             <div className="px-5 md:px-[5%] mb-12 md:mb-32">
                 <div className="grid grid-cols-1 md:grid-cols-12 gap-x-5 md:gap-x-[2.5%]">
                     {/* Left Column: Title & Meta */}
-                    <div className="col-span-1 md:col-span-4 flex flex-col justify-between h-full min-h-[160px] md:min-h-[260px] mb-6 md:mb-0 font-extrabold">
+                    <div className="col-span-1 md:col-span-4 flex flex-col justify-between h-full md:min-h-[140px] mb-6 md:mb-0 font-extrabold">
                         <h1 className="text-2xl md:text-4xl tracking-tight">
                             {project.title}
                         </h1>
 
-                        <div className="flex flex-col gap-1 mt-auto pt-8 md:pt-16 font-bold mb-6 md:mb-0">
+                        <div className="flex flex-col gap-1 mt-auto md:pt-6 font-bold mb-6 md:mb-0">
                             <p className="text-gray-400 text-base md:text-xl">
                                 {project.date || "2024"}
                             </p>
