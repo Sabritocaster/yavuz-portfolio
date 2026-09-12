@@ -8,7 +8,7 @@ export const projects = [
         slug: 'brand1',
         date: '2026',
         image: '/images/Branding/1_Most/Most_Thumbnail_Branding.jpg',
-        colSpan: 6,
+        colSpan: 3,
         longDescription: 'I delivered a complete branding and digital package for Most Solution, an automotive chip tuning, DPF, and injector maintenance company. The project included designing their corporate identity, banners, business cards, and a cost-effective merchandise line using branded stickers, alongside a dynamic website that actively calculates and showcases vehicle efficiency improvements.',
         details: [
             { type: 'image', src: '/images/Branding/1_Most/MostPhoto1.jpg', isFullscreen: false },
@@ -16,26 +16,6 @@ export const projects = [
             { type: 'image', src: '/images/Branding/1_Most/MostPhoto3.jpg', isFullscreen: false },
             { type: 'image', src: '/images/Branding/1_Most/MostPhoto4.jpg', isFullscreen: false },
             { type: 'image', src: '/images/Branding/1_Most/MostPhoto5.jpg', isFullscreen: true },
-        ]
-    },
-    {
-        id: 2,
-        title: 'Düş',
-        category: 'Branding',
-        description: 'Middle East Exhibition Platform',
-        slug: 'brand2',
-        date: '2024',
-        image: '/images/Branding/2_Düş/Düş_Thumbnail_Branding.jpg',
-        colSpan: 3,
-        longDescription: 'Identity design for Düş, a contemporary art platform focused on Middle Eastern art. The project features a cohesive visual system applied to event tickets and promotional assets, blending sharp and clear sensibilities with a focus on cultural exchange.',
-        details: [
-            { type: 'image', src: '/images/Branding/2_Düş/Düş1.jpg', isFullscreen: false },
-            { type: 'image', src: '/images/Branding/2_Düş/Düş2_EXTENDED.jpg', isFullscreen: true },
-            { type: 'image', src: '/images/Branding/2_Düş/Düş3.jpg', isFullscreen: false },
-            { type: 'image', src: '/images/Branding/2_Düş/Düş4.jpg', isFullscreen: false },
-            { type: 'image', src: '/images/Branding/2_Düş/Düş5.gif', isFullscreen: false },
-            { type: 'image', src: '/images/Branding/2_Düş/Düş6.jpg', isFullscreen: false },
-            { type: 'image', src: '/images/Branding/2_Düş/Düş7.jpg', isFullscreen: false },
         ]
     },
     {
@@ -61,6 +41,26 @@ export const projects = [
         ]
     },
     {
+        id: 2,
+        title: 'Düş',
+        category: 'Branding',
+        description: 'Middle East Exhibition Platform',
+        slug: 'brand2',
+        date: '2024',
+        image: '/images/Branding/2_Düş/Düş_Thumbnail_Branding.jpg',
+        colSpan: 3,
+        longDescription: 'Identity design for Düş, a contemporary art platform focused on Middle Eastern art. The project features a cohesive visual system applied to event tickets and promotional assets, blending sharp and clear sensibilities with a focus on cultural exchange.',
+        details: [
+            { type: 'image', src: '/images/Branding/2_Düş/Düş1.jpg', isFullscreen: false },
+            { type: 'image', src: '/images/Branding/2_Düş/Düş2_EXTENDED.jpg', isFullscreen: true },
+            { type: 'image', src: '/images/Branding/2_Düş/Düş3.jpg', isFullscreen: false },
+            { type: 'image', src: '/images/Branding/2_Düş/Düş4.jpg', isFullscreen: false },
+            { type: 'image', src: '/images/Branding/2_Düş/Düş5.gif', isFullscreen: false },
+            { type: 'image', src: '/images/Branding/2_Düş/Düş6.jpg', isFullscreen: false },
+            { type: 'image', src: '/images/Branding/2_Düş/Düş7.jpg', isFullscreen: false },
+        ]
+    },
+    {
         id: 20,
         title: 'Logos 2026',
         category: 'Branding',
@@ -70,6 +70,7 @@ export const projects = [
         image: '/images/Branding/4_Logos/Logos_Thumbnail.gif',
         colSpan: 3,
         longDescription: 'A curated collection of logos developed throughout 2026.',
+        noImageGap: true,
         details: [
             { type: 'image', src: '/images/Branding/4_Logos/1_TAU_Extended.png', isFullscreen: true },
             { type: 'image', src: '/images/Branding/4_Logos/2_Backyard_Extended.png', isFullscreen: true },

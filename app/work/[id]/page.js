@@ -116,12 +116,12 @@ export default async function WorkDetails({ params }) {
             <div className="px-5 md:px-[5%] mb-12 md:mb-32">
                 <div className="grid grid-cols-1 md:grid-cols-12 gap-x-5 md:gap-x-[2.5%]">
                     {/* Left Column: Title & Meta */}
-                    <div className="col-span-1 md:col-span-4 flex flex-col justify-between h-full mb-6 md:mb-0 font-extrabold">
+                    <div className="col-span-1 md:col-span-4 flex flex-col justify-between h-full min-h-[160px] md:min-h-[260px] mb-6 md:mb-0 font-extrabold">
                         <h1 className="text-2xl md:text-4xl tracking-tight">
                             {project.title}
                         </h1>
 
-                        <div className="flex flex-col gap-1 mt-auto font-bold mb-6 md:mb-0">
+                        <div className="flex flex-col gap-1 mt-auto pt-8 md:pt-16 font-bold mb-6 md:mb-0">
                             <p className="text-gray-400 text-base md:text-xl">
                                 {project.date || "2024"}
                             </p>
@@ -141,7 +141,7 @@ export default async function WorkDetails({ params }) {
             </div>
 
             {/* Dynamic Details Section */}
-            <div className="flex flex-col gap-12">
+            <div className={`flex flex-col ${project.noImageGap ? 'gap-0' : 'gap-12'}`}>
                 {project.details && project.details.map((item, index) => {
                     if (item.type === 'video') {
                         const videoAspectRatio = videoAspectRatios[item.vimeoId] || DEFAULT_VIDEO_ASPECT_RATIO;
@@ -193,14 +193,14 @@ export default async function WorkDetails({ params }) {
                         if (item.isFullscreen) {
                             // Fullscreen: No horizontal padding, 100vw
                             return (
-                                <div key={index} className="w-full">
+                                <div key={index} className="w-full block leading-none">
                                     <Image
                                         src={item.src}
                                         alt={`${project.title} detail ${index + 1}`}
                                         width={0}
                                         height={0}
                                         sizes="100vw"
-                                        className="w-full h-auto object-cover"
+                                        className="w-full h-auto object-cover block"
                                         unoptimized={item.src.endsWith('.gif')}
                                     />
                                     {item.caption && (
