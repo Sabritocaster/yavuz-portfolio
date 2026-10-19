@@ -2,7 +2,7 @@ export const blogPosts = [
     {
         slug: '2026-spring-photos',
         title: '2026 Spring Photos',
-        date: '28 June 2026',
+        date: '19 October 2026',
         excerpt: 'Photos I took during the spring of 2026, which was an amazing season.',
         heroImage: '/images/blog-2026-spring-photos/hero-thumbnail.jpg',
         content: [
@@ -17,7 +17,7 @@ export const blogPosts = [
                 type: 'image',
                 src: '/images/blog-2026-spring-photos/sopot-dscf5973.jpg',
                 alt: 'Sopot pier',
-                caption: 'Cold Baltic sea and the pier.'
+                caption: 'Ice under the pier.'
             },
             {
                 type: 'image',
@@ -31,12 +31,12 @@ export const blogPosts = [
                     {
                         src: '/images/blog-2026-spring-photos/westerplatte-dscf6013.jpg',
                         alt: 'Trees by the harbor',
-                        caption: 'Trees by the harbor.'
+                        caption: 'The lighthouse.'
                     },
                     {
                         src: '/images/blog-2026-spring-photos/westerplatte-dscf6059.jpg',
                         alt: 'Path to the monument',
-                        caption: 'Path to the monument.'
+                        caption: 'The monument.'
                     }
                 ]
             },
@@ -44,7 +44,7 @@ export const blogPosts = [
                 type: 'image',
                 src: '/images/blog-2026-spring-photos/westerplatte-dscf6047.jpg',
                 alt: 'Harbor entrance',
-                caption: 'Harbor entrance.'
+                caption: 'The ruins of WW2.'
             },
             {
                 type: 'image-grid',
@@ -52,12 +52,12 @@ export const blogPosts = [
                     {
                         src: '/images/blog-2026-spring-photos/gdansk-dscf6143.jpg',
                         alt: 'Old houses in Gdańsk',
-                        caption: 'Old houses in Gdańsk.'
+                        caption: 'The lady in dark blue and orange.'
                     },
                     {
                         src: '/images/blog-2026-spring-photos/gdansk-dscf6254.jpg',
                         alt: 'Street in the old town',
-                        caption: 'Street in the old town.'
+                        caption: 'Vivid blue colored signs.'
                     }
                 ]
             },
@@ -65,25 +65,25 @@ export const blogPosts = [
                 type: 'image',
                 src: '/images/blog-2026-spring-photos/gdansk-dscf6221.jpg',
                 alt: 'Motława river',
-                caption: 'Motława river.'
+                caption: 'Gdansk streets.'
             },
             {
                 type: 'image',
                 src: '/images/blog-2026-spring-photos/italy-15.03-venice-1.jpg',
                 alt: 'Grand Canal, Venice',
-                caption: 'Grand Canal, Venice.'
+                caption: 'Venice boat trip.'
             },
             {
                 type: 'image',
                 src: '/images/blog-2026-spring-photos/italy-15.03-venice-2.jpg',
                 alt: 'Boats in the lagoon',
-                caption: 'Boats in the lagoon, Venice.'
+                caption: "Doge's Palace."
             },
             {
                 type: 'image',
                 src: '/images/blog-2026-spring-photos/italy-16.03-venice-3.jpg',
                 alt: 'Small bridge in Venice',
-                caption: 'Small bridge in Venice.'
+                caption: 'Golden fresco.'
             },
             {
                 type: 'image-grid',
@@ -91,64 +91,50 @@ export const blogPosts = [
                     {
                         src: '/images/blog-2026-spring-photos/italy-16.03-venice-4.jpg',
                         alt: 'Quiet canal in Venice',
-                        caption: 'Quiet canal in Venice.'
+                        caption: 'Yellow tones.'
                     },
                     {
                         src: '/images/blog-2026-spring-photos/italy-17.03-florence.jpg',
                         alt: 'Street in Florence',
-                        caption: 'Street in Florence.'
+                        caption: 'Us.'
                     }
                 ]
             },
             {
                 type: 'image',
-                src: '/images/blog-2026-spring-photos/italy-18.03-milan-1.jpg',
-                alt: 'Courtyard in Milan',
-                caption: 'Courtyard in Milan.',
-                isPortrait: true
-            },
-            {
-                type: 'image',
                 src: '/images/blog-2026-spring-photos/italy-18.03-milan-2.jpg',
                 alt: 'Milan in the evening',
-                caption: 'Milan in the evening.'
+                caption: 'Soft raindrops.'
             },
             {
                 type: 'image',
                 src: '/images/blog-2026-spring-photos/stuttgart-dscf8281.jpg',
                 alt: 'View of Stuttgart',
-                caption: 'View of Stuttgart from the hill.'
+                caption: 'Cafe in Stuttgart.'
             },
             {
                 type: 'image',
                 src: '/images/blog-2026-spring-photos/stuttgart-dscf8277.jpg',
                 alt: 'Building in Stuttgart',
-                caption: 'Building in Stuttgart.',
-                isPortrait: true
-            },
-            {
-                type: 'image',
-                src: '/images/blog-2026-spring-photos/france-paris-1.jpg',
-                alt: 'Seine river, Paris',
-                caption: 'Seine river, Paris.'
+                caption: 'Building in Stuttgart.'
             },
             {
                 type: 'image',
                 src: '/images/blog-2026-spring-photos/france-paris-2.jpg',
                 alt: 'Street in Paris',
-                caption: 'Street in Paris.'
+                caption: 'Glass sails.'
             },
             {
                 type: 'image',
                 src: '/images/blog-2026-spring-photos/france-paris-4.jpg',
                 alt: 'Evening light in Paris',
-                caption: 'Evening light in Paris.'
+                caption: 'Bois de Boulogne.'
             },
             {
                 type: 'image',
                 src: '/images/blog-2026-spring-photos/france-monstsaint-michel-1.jpg',
                 alt: 'Mont-Saint-Michel',
-                caption: 'Mont-Saint-Michel from afar.'
+                caption: 'Lonely cat in Mont-Saint-Michel.'
             },
             {
                 type: 'image-grid',
@@ -156,12 +142,12 @@ export const blogPosts = [
                     {
                         src: '/images/blog-2026-spring-photos/france-monstsaint-michel-2.jpg',
                         alt: 'Stone stairs inside the abbey',
-                        caption: 'Stone stairs inside the abbey.'
+                        caption: 'The couple.'
                     },
                     {
                         src: '/images/blog-2026-spring-photos/france-monstsaint-michel-5.jpg',
                         alt: 'Abbey walls and arches',
-                        caption: 'Abbey walls and arches.'
+                        caption: 'Chill cows.'
                     }
                 ]
             },
@@ -169,26 +155,26 @@ export const blogPosts = [
                 type: 'image',
                 src: '/images/blog-2026-spring-photos/france-monstsaint-michel-3.jpg',
                 alt: 'Low tide around Mont-Saint-Michel',
-                caption: 'Low tide around Mont-Saint-Michel.'
+                caption: 'Incredible light play reflecting on the stones.'
             },
             {
                 type: 'image',
                 src: '/images/blog-2026-spring-photos/france-monstsaint-michel-4.jpg',
                 alt: 'Water channels on the sand',
-                caption: 'Water channels on the sand.'
+                caption: 'Mont-Saint-Michel before the sun goes down.'
             },
             {
                 type: 'image',
                 src: '/images/blog-2026-spring-photos/france-monstsaint-michel-6.jpg',
                 alt: 'View from the abbey walls',
-                caption: 'View from the abbey walls.',
-                isPortrait: true
+                caption: 'The humble mill.',
+                isPortrait: false
             },
             {
                 type: 'image',
                 src: '/images/blog-2026-spring-photos/malbork-dscf93161.jpg',
                 alt: 'Malbork Castle across the river',
-                caption: 'Malbork Castle across the river.'
+                caption: 'Around Malbork Castle.'
             },
             {
                 type: 'image',
@@ -201,7 +187,7 @@ export const blogPosts = [
                 type: 'image',
                 src: '/images/blog-2026-spring-photos/leba-dscf9509.jpg',
                 alt: 'Sand dunes in Łeba',
-                caption: 'Sand dunes in Łeba.'
+                caption: 'Trees bending in dunes.'
             },
             {
                 type: 'image',
@@ -215,12 +201,12 @@ export const blogPosts = [
                     {
                         src: '/images/blog-2026-spring-photos/leba-dscf9526.jpg',
                         alt: 'Trees covered by sand',
-                        caption: 'Trees covered by sand.'
+                        caption: 'Katya looks so cool.'
                     },
                     {
                         src: '/images/blog-2026-spring-photos/leba-dscf9535.jpg',
                         alt: 'Dune meeting the forest',
-                        caption: 'Sand dune meeting the forest.'
+                        caption: 'Nice looking pattern.'
                     }
                 ]
             },
@@ -228,20 +214,20 @@ export const blogPosts = [
                 type: 'image',
                 src: '/images/blog-2026-spring-photos/leba-dscf9546.jpg',
                 alt: 'Walking on the dunes',
-                caption: 'Walking on the dunes.'
+                caption: 'Me, it was cold.'
             },
             {
                 type: 'image',
                 src: '/images/blog-2026-spring-photos/leba-dscf9568.jpg',
                 alt: 'Dunes and Baltic sea',
-                caption: 'Dunes and the Baltic sea.'
+                caption: 'They are doing something, I am not sure.'
             },
             {
                 type: 'image',
                 src: '/images/blog-2026-spring-photos/leba-dscf9592.jpg',
                 alt: 'Grass on the dunes',
-                caption: 'Grass on the dunes.',
-                isPortrait: true
+                caption: 'The thing among the trees.',
+                isPortrait: false
             },
             {
                 type: 'image-grid',
@@ -249,12 +235,12 @@ export const blogPosts = [
                     {
                         src: '/images/blog-2026-spring-photos/hel-dscf9461.jpg',
                         alt: 'Path through the forest',
-                        caption: 'Path through the forest in Hel.'
+                        caption: 'The sapling is shining bright.'
                     },
                     {
                         src: '/images/blog-2026-spring-photos/hel-dscf9785.jpg',
                         alt: 'Walkway to the beach',
-                        caption: 'Walkway to the beach.'
+                        caption: 'Unknown red object.'
                     }
                 ]
             },
@@ -262,13 +248,13 @@ export const blogPosts = [
                 type: 'image',
                 src: '/images/blog-2026-spring-photos/hel-dscf9801.jpg',
                 alt: 'Beach in Hel',
-                caption: 'Beach on the Hel Peninsula.'
+                caption: 'Klara and Tyna chilling.'
             },
             {
                 type: 'image',
                 src: '/images/blog-2026-spring-photos/owidz-dscf0486.jpg',
                 alt: 'Old fort in Owidz',
-                caption: 'Old wooden fort in Owidz.'
+                caption: 'We took the canoe.'
             }
         ],
     },
