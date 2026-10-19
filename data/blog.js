@@ -3,10 +3,10 @@ export const blogPosts = [
         slug: '2026-spring-photos',
         title: '2026 Spring Photos',
         date: '19 October 2026',
-        excerpt: 'Photos I took during the spring of 2026, which was an amazing season.',
+        excerpt: 'Photos taken during the spring of 2026, an amazing season.',
         heroImage: '/images/blog-2026-spring-photos/hero-thumbnail.jpg',
         content: [
-            'Photos I took during the spring of 2026, which was an amazing season.',
+            'Photos taken during the spring of 2026, an amazing season.',
             {
                 type: 'image',
                 src: '/images/blog-2026-spring-photos/sopot-dscf5903.jpg',
