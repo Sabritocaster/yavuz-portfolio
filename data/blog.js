@@ -1,5 +1,278 @@
 export const blogPosts = [
     {
+        slug: '2026-spring-photos',
+        title: '2026 Spring Photos',
+        date: '28 June 2026',
+        excerpt: 'Photos I took during the spring of 2026, which was an amazing season.',
+        heroImage: '/images/blog-2026-spring-photos/hero-thumbnail.jpg',
+        content: [
+            'Photos I took during the spring of 2026, which was an amazing season.',
+            {
+                type: 'image',
+                src: '/images/blog-2026-spring-photos/sopot-dscf5903.jpg',
+                alt: 'Sopot beach',
+                caption: 'Sopot beach in winter.'
+            },
+            {
+                type: 'image',
+                src: '/images/blog-2026-spring-photos/sopot-dscf5973.jpg',
+                alt: 'Sopot pier',
+                caption: 'Cold Baltic sea and the pier.'
+            },
+            {
+                type: 'image',
+                src: '/images/blog-2026-spring-photos/westerplatte-dscf6005.jpg',
+                alt: 'Westerplatte shore',
+                caption: 'Westerplatte shore.'
+            },
+            {
+                type: 'image-grid',
+                images: [
+                    {
+                        src: '/images/blog-2026-spring-photos/westerplatte-dscf6013.jpg',
+                        alt: 'Trees by the harbor',
+                        caption: 'Trees by the harbor.'
+                    },
+                    {
+                        src: '/images/blog-2026-spring-photos/westerplatte-dscf6059.jpg',
+                        alt: 'Path to the monument',
+                        caption: 'Path to the monument.'
+                    }
+                ]
+            },
+            {
+                type: 'image',
+                src: '/images/blog-2026-spring-photos/westerplatte-dscf6047.jpg',
+                alt: 'Harbor entrance',
+                caption: 'Harbor entrance.'
+            },
+            {
+                type: 'image-grid',
+                images: [
+                    {
+                        src: '/images/blog-2026-spring-photos/gdansk-dscf6143.jpg',
+                        alt: 'Old houses in Gdańsk',
+                        caption: 'Old houses in Gdańsk.'
+                    },
+                    {
+                        src: '/images/blog-2026-spring-photos/gdansk-dscf6254.jpg',
+                        alt: 'Street in the old town',
+                        caption: 'Street in the old town.'
+                    }
+                ]
+            },
+            {
+                type: 'image',
+                src: '/images/blog-2026-spring-photos/gdansk-dscf6221.jpg',
+                alt: 'Motława river',
+                caption: 'Motława river.'
+            },
+            {
+                type: 'image',
+                src: '/images/blog-2026-spring-photos/italy-15.03-venice-1.jpg',
+                alt: 'Grand Canal, Venice',
+                caption: 'Grand Canal, Venice.'
+            },
+            {
+                type: 'image',
+                src: '/images/blog-2026-spring-photos/italy-15.03-venice-2.jpg',
+                alt: 'Boats in the lagoon',
+                caption: 'Boats in the lagoon, Venice.'
+            },
+            {
+                type: 'image',
+                src: '/images/blog-2026-spring-photos/italy-16.03-venice-3.jpg',
+                alt: 'Small bridge in Venice',
+                caption: 'Small bridge in Venice.'
+            },
+            {
+                type: 'image-grid',
+                images: [
+                    {
+                        src: '/images/blog-2026-spring-photos/italy-16.03-venice-4.jpg',
+                        alt: 'Quiet canal in Venice',
+                        caption: 'Quiet canal in Venice.'
+                    },
+                    {
+                        src: '/images/blog-2026-spring-photos/italy-17.03-florence.jpg',
+                        alt: 'Street in Florence',
+                        caption: 'Street in Florence.'
+                    }
+                ]
+            },
+            {
+                type: 'image',
+                src: '/images/blog-2026-spring-photos/italy-18.03-milan-1.jpg',
+                alt: 'Courtyard in Milan',
+                caption: 'Courtyard in Milan.',
+                isPortrait: true
+            },
+            {
+                type: 'image',
+                src: '/images/blog-2026-spring-photos/italy-18.03-milan-2.jpg',
+                alt: 'Milan in the evening',
+                caption: 'Milan in the evening.'
+            },
+            {
+                type: 'image',
+                src: '/images/blog-2026-spring-photos/stuttgart-dscf8281.jpg',
+                alt: 'View of Stuttgart',
+                caption: 'View of Stuttgart from the hill.'
+            },
+            {
+                type: 'image',
+                src: '/images/blog-2026-spring-photos/stuttgart-dscf8277.jpg',
+                alt: 'Building in Stuttgart',
+                caption: 'Building in Stuttgart.',
+                isPortrait: true
+            },
+            {
+                type: 'image',
+                src: '/images/blog-2026-spring-photos/france-paris-1.jpg',
+                alt: 'Seine river, Paris',
+                caption: 'Seine river, Paris.'
+            },
+            {
+                type: 'image',
+                src: '/images/blog-2026-spring-photos/france-paris-2.jpg',
+                alt: 'Street in Paris',
+                caption: 'Street in Paris.'
+            },
+            {
+                type: 'image',
+                src: '/images/blog-2026-spring-photos/france-paris-4.jpg',
+                alt: 'Evening light in Paris',
+                caption: 'Evening light in Paris.'
+            },
+            {
+                type: 'image',
+                src: '/images/blog-2026-spring-photos/france-monstsaint-michel-1.jpg',
+                alt: 'Mont-Saint-Michel',
+                caption: 'Mont-Saint-Michel from afar.'
+            },
+            {
+                type: 'image-grid',
+                images: [
+                    {
+                        src: '/images/blog-2026-spring-photos/france-monstsaint-michel-2.jpg',
+                        alt: 'Stone stairs inside the abbey',
+                        caption: 'Stone stairs inside the abbey.'
+                    },
+                    {
+                        src: '/images/blog-2026-spring-photos/france-monstsaint-michel-5.jpg',
+                        alt: 'Abbey walls and arches',
+                        caption: 'Abbey walls and arches.'
+                    }
+                ]
+            },
+            {
+                type: 'image',
+                src: '/images/blog-2026-spring-photos/france-monstsaint-michel-3.jpg',
+                alt: 'Low tide around Mont-Saint-Michel',
+                caption: 'Low tide around Mont-Saint-Michel.'
+            },
+            {
+                type: 'image',
+                src: '/images/blog-2026-spring-photos/france-monstsaint-michel-4.jpg',
+                alt: 'Water channels on the sand',
+                caption: 'Water channels on the sand.'
+            },
+            {
+                type: 'image',
+                src: '/images/blog-2026-spring-photos/france-monstsaint-michel-6.jpg',
+                alt: 'View from the abbey walls',
+                caption: 'View from the abbey walls.',
+                isPortrait: true
+            },
+            {
+                type: 'image',
+                src: '/images/blog-2026-spring-photos/malbork-dscf93161.jpg',
+                alt: 'Malbork Castle across the river',
+                caption: 'Malbork Castle across the river.'
+            },
+            {
+                type: 'image',
+                src: '/images/blog-2026-spring-photos/malbork-dscf9327.jpg',
+                alt: 'Inside Malbork Castle',
+                caption: 'Inside the castle courtyard.',
+                isPortrait: true
+            },
+            {
+                type: 'image',
+                src: '/images/blog-2026-spring-photos/leba-dscf9509.jpg',
+                alt: 'Sand dunes in Łeba',
+                caption: 'Sand dunes in Łeba.'
+            },
+            {
+                type: 'image',
+                src: '/images/blog-2026-spring-photos/leba-dscf9515.jpg',
+                alt: 'Sand ripples',
+                caption: 'Sand ripples made by wind.'
+            },
+            {
+                type: 'image-grid',
+                images: [
+                    {
+                        src: '/images/blog-2026-spring-photos/leba-dscf9526.jpg',
+                        alt: 'Trees covered by sand',
+                        caption: 'Trees covered by sand.'
+                    },
+                    {
+                        src: '/images/blog-2026-spring-photos/leba-dscf9535.jpg',
+                        alt: 'Dune meeting the forest',
+                        caption: 'Sand dune meeting the forest.'
+                    }
+                ]
+            },
+            {
+                type: 'image',
+                src: '/images/blog-2026-spring-photos/leba-dscf9546.jpg',
+                alt: 'Walking on the dunes',
+                caption: 'Walking on the dunes.'
+            },
+            {
+                type: 'image',
+                src: '/images/blog-2026-spring-photos/leba-dscf9568.jpg',
+                alt: 'Dunes and Baltic sea',
+                caption: 'Dunes and the Baltic sea.'
+            },
+            {
+                type: 'image',
+                src: '/images/blog-2026-spring-photos/leba-dscf9592.jpg',
+                alt: 'Grass on the dunes',
+                caption: 'Grass on the dunes.',
+                isPortrait: true
+            },
+            {
+                type: 'image-grid',
+                images: [
+                    {
+                        src: '/images/blog-2026-spring-photos/hel-dscf9461.jpg',
+                        alt: 'Path through the forest',
+                        caption: 'Path through the forest in Hel.'
+                    },
+                    {
+                        src: '/images/blog-2026-spring-photos/hel-dscf9785.jpg',
+                        alt: 'Walkway to the beach',
+                        caption: 'Walkway to the beach.'
+                    }
+                ]
+            },
+            {
+                type: 'image',
+                src: '/images/blog-2026-spring-photos/hel-dscf9801.jpg',
+                alt: 'Beach in Hel',
+                caption: 'Beach on the Hel Peninsula.'
+            },
+            {
+                type: 'image',
+                src: '/images/blog-2026-spring-photos/owidz-dscf0486.jpg',
+                alt: 'Old fort in Owidz',
+                caption: 'Old wooden fort in Owidz.'
+            }
+        ],
+    },
+{
         slug: 'erasmus-gdansk-academy-fine-arts',
         title: 'Polonya, Gdańsk\'ta Erasmus: Hazırlık Süreçleri, Academy of Fine Arts ve Deneyimlerim',
         date: '15 June 2026',

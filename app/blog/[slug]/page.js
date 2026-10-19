@@ -80,15 +80,16 @@ export default async function BlogPost({ params }) {
                                         </p>
                                     );
                                 case 'image':
+                                    const isPortrait = Boolean(block.isPortrait);
                                     return (
-                                        <figure className="my-10 flex flex-col items-center w-full" key={`${post.slug}-${index}`}>
+                                        <figure className={`my-10 flex flex-col items-center w-full ${isPortrait ? 'max-w-md mx-auto' : ''}`} key={`${post.slug}-${index}`}>
                                             <Image
                                                 src={block.src}
                                                 alt={block.alt || 'Blog image'}
                                                 width={0}
                                                 height={0}
-                                                sizes="100vw"
-                                                className="w-full h-auto object-cover max-h-[600px]"
+                                                sizes={isPortrait ? "(max-width: 768px) 100vw, 50vw" : "100vw"}
+                                                className={`w-full h-auto object-cover ${isPortrait ? '' : 'max-h-[600px]'}`}
                                             />
                                             {block.caption && (
                                                 <figcaption className="text-xs md:text-sm text-gray-500 mt-3 text-left w-full font-normal tracking-tight px-1">
@@ -96,6 +97,28 @@ export default async function BlogPost({ params }) {
                                                 </figcaption>
                                             )}
                                         </figure>
+                                    );
+                                case 'image-grid':
+                                    return (
+                                        <div className="my-10 grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 w-full" key={`${post.slug}-${index}`}>
+                                            {block.images.map((imgItem, imgIdx) => (
+                                                <figure key={imgIdx} className="flex flex-col items-center w-full">
+                                                    <Image
+                                                        src={imgItem.src}
+                                                        alt={imgItem.alt || 'Blog image'}
+                                                        width={0}
+                                                        height={0}
+                                                        sizes="(max-width: 768px) 100vw, 50vw"
+                                                        className="w-full h-auto object-cover"
+                                                    />
+                                                    {imgItem.caption && (
+                                                        <figcaption className="text-xs md:text-sm text-gray-500 mt-3 text-left w-full font-normal tracking-tight px-1">
+                                                            {imgItem.caption}
+                                                        </figcaption>
+                                                    )}
+                                                </figure>
+                                            ))}
+                                        </div>
                                     );
                                 case 'list':
                                     return (
