@@ -1,7 +1,7 @@
 export const blogPosts = [
     {
         slug: '2026-spring-photos',
-        title: '2026 Spring Photos',
+        title: 'Photos taken during the spring of 2026, an amazing season.',
         date: '19 October 2026',
         excerpt: 'Photos taken during the spring of 2026, an amazing season.',
         heroImage: '/images/blog-2026-spring-photos/hero-thumbnail.jpg',
@@ -31,12 +31,12 @@ export const blogPosts = [
                     {
                         src: '/images/blog-2026-spring-photos/westerplatte-dscf6013.jpg',
                         alt: 'Trees by the harbor',
-                        caption: 'The lighthouse.'
+                        caption: 'Lighthouse.'
                     },
                     {
                         src: '/images/blog-2026-spring-photos/westerplatte-dscf6059.jpg',
                         alt: 'Path to the monument',
-                        caption: 'The monument.'
+                        caption: 'Monument.'
                     }
                 ]
             },
@@ -44,7 +44,7 @@ export const blogPosts = [
                 type: 'image',
                 src: '/images/blog-2026-spring-photos/westerplatte-dscf6047.jpg',
                 alt: 'Harbor entrance',
-                caption: 'The ruins of WW2.'
+                caption: 'Ruins of WWII.'
             },
             {
                 type: 'image-grid',
@@ -52,20 +52,20 @@ export const blogPosts = [
                     {
                         src: '/images/blog-2026-spring-photos/gdansk-dscf6143.jpg',
                         alt: 'Old houses in Gdańsk',
-                        caption: 'The lady in dark blue and orange.'
+                        caption: 'Lady in dark blue and orange.'
                     },
                     {
                         src: '/images/blog-2026-spring-photos/gdansk-dscf6254.jpg',
                         alt: 'Street in the old town',
-                        caption: 'Vivid blue colored signs.'
+                        caption: 'Vivid blue signs.'
                     }
                 ]
             },
             {
                 type: 'image',
                 src: '/images/blog-2026-spring-photos/gdansk-dscf6221.jpg',
-                alt: 'Motława river',
-                caption: 'Gdansk streets.'
+                alt: 'Motława River',
+                caption: 'Gdańsk streets.'
             },
             {
                 type: 'image',
@@ -110,13 +110,13 @@ export const blogPosts = [
                 type: 'image',
                 src: '/images/blog-2026-spring-photos/stuttgart-dscf8281.jpg',
                 alt: 'View of Stuttgart',
-                caption: 'Cafe in Stuttgart.'
+                caption: 'Café in Stuttgart.'
             },
             {
                 type: 'image',
                 src: '/images/blog-2026-spring-photos/stuttgart-dscf8277.jpg',
-                alt: 'Building in Stuttgart',
-                caption: 'Building in Stuttgart.'
+                alt: 'Esat and Ela',
+                caption: 'Esat and Ela.'
             },
             {
                 type: 'image',
@@ -142,7 +142,7 @@ export const blogPosts = [
                     {
                         src: '/images/blog-2026-spring-photos/france-monstsaint-michel-2.jpg',
                         alt: 'Stone stairs inside the abbey',
-                        caption: 'The couple.'
+                        caption: 'Couple.'
                     },
                     {
                         src: '/images/blog-2026-spring-photos/france-monstsaint-michel-5.jpg',
@@ -161,14 +161,13 @@ export const blogPosts = [
                 type: 'image',
                 src: '/images/blog-2026-spring-photos/france-monstsaint-michel-4.jpg',
                 alt: 'Water channels on the sand',
-                caption: 'Mont-Saint-Michel before the sun goes down.'
+                caption: 'Mont-Saint-Michel before sunset.'
             },
             {
                 type: 'image',
                 src: '/images/blog-2026-spring-photos/france-monstsaint-michel-6.jpg',
                 alt: 'View from the abbey walls',
-                caption: 'The humble mill.',
-                isPortrait: false
+                caption: 'Humble mill.'
             },
             {
                 type: 'image',
@@ -180,20 +179,19 @@ export const blogPosts = [
                 type: 'image',
                 src: '/images/blog-2026-spring-photos/malbork-dscf9327.jpg',
                 alt: 'Inside Malbork Castle',
-                caption: 'Inside the castle courtyard.',
-                isPortrait: true
+                caption: 'Inside the castle courtyard.'
             },
             {
                 type: 'image',
                 src: '/images/blog-2026-spring-photos/leba-dscf9509.jpg',
                 alt: 'Sand dunes in Łeba',
-                caption: 'Trees bending in dunes.'
+                caption: 'Trees bending in the dunes.'
             },
             {
                 type: 'image',
                 src: '/images/blog-2026-spring-photos/leba-dscf9515.jpg',
                 alt: 'Sand ripples',
-                caption: 'Sand ripples made by wind.'
+                caption: 'Sand ripples shaped by the wind.'
             },
             {
                 type: 'image-grid',
@@ -219,15 +217,14 @@ export const blogPosts = [
             {
                 type: 'image',
                 src: '/images/blog-2026-spring-photos/leba-dscf9568.jpg',
-                alt: 'Dunes and Baltic sea',
+                alt: 'Dunes and Baltic Sea',
                 caption: 'They are doing something, I am not sure.'
             },
             {
                 type: 'image',
                 src: '/images/blog-2026-spring-photos/leba-dscf9592.jpg',
                 alt: 'Grass on the dunes',
-                caption: 'The thing among the trees.',
-                isPortrait: false
+                caption: 'Structure among the trees.'
             },
             {
                 type: 'image-grid',
@@ -235,7 +232,7 @@ export const blogPosts = [
                     {
                         src: '/images/blog-2026-spring-photos/hel-dscf9461.jpg',
                         alt: 'Path through the forest',
-                        caption: 'The sapling is shining bright.'
+                        caption: 'Sapling shining bright.'
                     },
                     {
                         src: '/images/blog-2026-spring-photos/hel-dscf9785.jpg',

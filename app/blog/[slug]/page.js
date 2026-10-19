@@ -89,7 +89,7 @@ export default async function BlogPost({ params }) {
                                                 width={0}
                                                 height={0}
                                                 sizes={isPortrait ? "(max-width: 768px) 100vw, 50vw" : "100vw"}
-                                                className={`w-full h-auto object-cover ${isPortrait ? '' : 'max-h-[600px]'}`}
+                                                className="w-full h-auto object-cover"
                                             />
                                             {block.caption && (
                                                 <figcaption className="text-xs md:text-sm text-gray-500 mt-3 text-left w-full font-normal tracking-tight px-1">
