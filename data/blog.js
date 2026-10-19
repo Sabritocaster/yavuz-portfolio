@@ -155,7 +155,7 @@ export const blogPosts = [
                 type: 'image',
                 src: '/images/blog-2026-spring-photos/france-monstsaint-michel-3.jpg',
                 alt: 'Low tide around Mont-Saint-Michel',
-                caption: 'Incredible light play reflecting on the stones.'
+                caption: 'Sunlight reflecting on the stones.'
             },
             {
                 type: 'image',
@@ -179,7 +179,7 @@ export const blogPosts = [
                 type: 'image',
                 src: '/images/blog-2026-spring-photos/malbork-dscf9327.jpg',
                 alt: 'Inside Malbork Castle',
-                caption: 'Inside the castle courtyard.'
+                caption: 'Outside the castle courtyard.'
             },
             {
                 type: 'image',
@@ -224,7 +224,7 @@ export const blogPosts = [
                 type: 'image',
                 src: '/images/blog-2026-spring-photos/leba-dscf9592.jpg',
                 alt: 'Grass on the dunes',
-                caption: 'Structure among the trees.'
+                caption: 'The creature among the trees.'
             },
             {
                 type: 'image-grid',
