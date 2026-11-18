@@ -11,7 +11,7 @@ export default function About() {
     const { image, bio, location, socials } = aboutContent;
 
     return (
-        <div className="w-full min-h-screen bg-white text-black pt-32 md:pt-48 overflow-x-hidden font-bold flex flex-col">
+        <div className="w-full min-h-screen bg-white text-black pt-32 md:pt-48 overflow-x-clip font-bold flex flex-col">
             <div className="layout-grid mb-16 md:mb-32">
                 {/* Image Section - Cols 1-4 on Desktop, Full on Mobile */}
                 <div className="w-full col-span-12 lg:col-span-4 mb-8 lg:mb-0">

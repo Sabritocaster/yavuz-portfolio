@@ -8,46 +8,22 @@ import { projects, categories } from '@/data/projects';
 import Footer from '@/components/Footer';
 
 export default function Work() {
-    const scrollTimeoutRef = useRef(null);
-
-    // Clean up timeout on unmount
-    useEffect(() => {
-        return () => {
-            if (scrollTimeoutRef.current) {
-                clearTimeout(scrollTimeoutRef.current);
-            }
-            document.body.style.pointerEvents = '';
-        };
-    }, []);
-
     const scrollToCategory = (category) => {
         const element = document.getElementById(category);
         if (element) {
             const offset = 80; // Adjust for header height/spacing
             const elementPosition = element.getBoundingClientRect().top;
             const targetPosition = elementPosition + window.scrollY - offset;
-            
-            if (scrollTimeoutRef.current) {
-                clearTimeout(scrollTimeoutRef.current);
-            }
-
-            // Temporarily disable hover states during native smooth scroll to prevent lag
-            document.body.style.pointerEvents = 'none';
 
             window.scrollTo({
                 top: targetPosition,
                 behavior: 'smooth'
             });
-
-            scrollTimeoutRef.current = setTimeout(() => {
-                document.body.style.pointerEvents = '';
-                scrollTimeoutRef.current = null;
-            }, 800);
         }
     };
 
     return (
-        <div className="w-full min-h-screen bg-white text-black pt-32 lg:pt-42 pb-0 overflow-x-hidden">
+        <div className="w-full min-h-screen bg-white text-black pt-32 lg:pt-42 pb-0 overflow-x-clip">
 
             {/* Top Section Container - Constrained to Grid */}
             <div className="layout-grid mb-16 md:mb-32 mt-4">

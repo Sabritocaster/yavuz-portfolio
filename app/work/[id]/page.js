@@ -110,7 +110,7 @@ export default async function WorkDetails({ params }) {
     const videoAspectRatios = Object.fromEntries(aspectRatioEntries);
 
     return (
-        <div className="w-full min-h-screen bg-white text-black pt-32 md:pt-48 pb-0 overflow-x-hidden">
+        <div className="w-full min-h-screen bg-white text-black pt-32 md:pt-48 pb-0 overflow-x-clip">
 
             {/* Header & Description Section (Standard Layout with Padding) */}
             <div className="px-5 md:px-[5%] mb-12 md:mb-32">
