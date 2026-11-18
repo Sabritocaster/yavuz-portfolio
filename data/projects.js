@@ -154,7 +154,7 @@ export const projects = [
         slug: 'post1',
         date: '2025',
         image: '/images/Poster/1_FragmentsOfLife/FragmentsOfLife_Thumbnail_Poster_GIF.gif',
-        colSpan: 12,
+        colSpan: 3,
         isFullWidth: false,
         longDescription: 'Commissioned by the Bilkent Fine Arts department, this project involved developing a visual identity that symbolizes the fragments of human experience. The resulting series of posters maintains a unified identity while showcasing various interpretations. This was a collaborative project created by Melih Uçan, Reyyan Fidan, Erdem Bozdemir, and Yavuz Dağdelen.',
         details: [
@@ -171,7 +171,7 @@ export const projects = [
         slug: 'szymon',
         date: '2025',
         image: '/images/Poster/Szymon_Poster.jpg',
-        colSpan: 4,
+        colSpan: 3,
         clickable: false,
         longDescription: 'Workshop poster designed for Szymon Szymankiewicz\'s Poster Design Workshop at Bilkent University.',
         details: []
@@ -184,7 +184,7 @@ export const projects = [
         slug: 'family',
         date: '2025',
         image: '/images/Poster/Family_Poster.jpg',
-        colSpan: 4,
+        colSpan: 3,
         clickable: false,
         longDescription: 'Social propaganda poster titled "Family".',
         details: []
@@ -197,7 +197,7 @@ export const projects = [
         slug: 'together',
         date: '2025',
         image: '/images/Poster/Together_Poster.jpg',
-        colSpan: 4,
+        colSpan: 3,
         clickable: false,
         longDescription: 'Social propaganda poster titled "Together".',
         details: []
