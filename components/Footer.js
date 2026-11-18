@@ -3,7 +3,7 @@ import React from 'react';
 
 export default function Footer() {
     return (
-        <footer className="w-full bg-white text-black pb-12 pb-safe mt-auto font-extrabold px-5 md:px-[5%]">
+        <footer className="w-full bg-white text-black mt-auto font-extrabold px-5 md:px-[5%] pb-[calc(4rem+env(safe-area-inset-bottom,0px))] md:pb-[calc(6rem+env(safe-area-inset-bottom,0px))]">
             <div className="border-t border-black pt-6"></div>
             <div className="flex flex-row justify-between items-stretch gap-4 md:gap-8">
                 {/* Left Side: Copyright & Location */}

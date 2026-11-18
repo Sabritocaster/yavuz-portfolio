@@ -58,7 +58,7 @@ body.is-yellow-page {
 
 /* Safe area padding for notched phones */
 .pb-safe {
-  padding-bottom: env(safe-area-inset-bottom, 2rem);
+  padding-bottom: max(2rem, env(safe-area-inset-bottom, 2rem));
 }
 
 /* Layout Grid: 12 columns, responsive padding aligned with navbar */
