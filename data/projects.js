@@ -177,19 +177,6 @@ export const projects = [
         details: []
     },
     {
-        id: 18,
-        title: 'Family',
-        category: 'Poster',
-        description: 'Social Propaganda Poster',
-        slug: 'family',
-        date: '2025',
-        image: '/images/Poster/Family_Poster.jpg',
-        colSpan: 3,
-        clickable: false,
-        longDescription: 'Social propaganda poster titled "Family".',
-        details: []
-    },
-    {
         id: 19,
         title: 'Together',
         category: 'Poster',
@@ -200,6 +187,19 @@ export const projects = [
         colSpan: 3,
         clickable: false,
         longDescription: 'Social propaganda poster titled "Together".',
+        details: []
+    },
+    {
+        id: 18,
+        title: 'Family',
+        category: 'Poster',
+        description: 'Social Propaganda Poster',
+        slug: 'family',
+        date: '2025',
+        image: '/images/Poster/Family_Poster.jpg',
+        colSpan: 3,
+        clickable: false,
+        longDescription: 'Social propaganda poster titled "Family".',
         details: []
     },
 
