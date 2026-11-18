@@ -5,11 +5,10 @@
   --foreground: #171717;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Force light color scheme and white canvas */
+html {
+  color-scheme: light;
+  background-color: #ffffff;
 }
 
 /* Yatay taşmayı engelle */
@@ -21,11 +20,17 @@ body {
 
 body {
   color: var(--foreground);
-  background: var(--background);
+  background-color: var(--background);
   font-family: area-normal, sans-serif;
   font-weight: 700;
   font-style: normal;
   letter-spacing: -0.025em;
+}
+
+/* Yellow background for home page and 404 page */
+html.is-yellow-page,
+body.is-yellow-page {
+  background-color: #ffd400 !important;
 }
 
 /* Sadece küçük 'a' harfi için ss02 */

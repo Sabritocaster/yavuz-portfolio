@@ -16,7 +16,7 @@ export default function About() {
                 {/* Image Section - Cols 1-4 on Desktop, Full on Mobile */}
                 <div className="w-full col-span-12 lg:col-span-4 mb-8 lg:mb-0">
                     {image?.src ? (
-                        <img className="w-full aspect-square object-cover" src={image.src} alt={image.alt || 'Portrait'} />
+                        <img className="w-full aspect-square object-cover" src={image.src} alt={image.alt || 'Portrait'} decoding="async" />
                     ) : (
                         <div className="w-full aspect-square bg-gray-400"></div>
                     )}

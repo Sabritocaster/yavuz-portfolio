@@ -154,7 +154,7 @@ export const projects = [
         slug: 'post1',
         date: '2025',
         image: '/images/Poster/1_FragmentsOfLife/FragmentsOfLife_Thumbnail_Poster_GIF.gif',
-        colSpan: 4,
+        colSpan: 12,
         isFullWidth: false,
         longDescription: 'Commissioned by the Bilkent Fine Arts department, this project involved developing a visual identity that symbolizes the fragments of human experience. The resulting series of posters maintains a unified identity while showcasing various interpretations. This was a collaborative project created by Melih Uçan, Reyyan Fidan, Erdem Bozdemir, and Yavuz Dağdelen.',
         details: [
@@ -164,37 +164,18 @@ export const projects = [
         ]
     },
     {
-        id: 9,
-        title: 'Gra.Typog Society Event Posters',
+        id: 20,
+        title: 'Szymon Szymankiewicz Poster Design Workshop',
         category: 'Poster',
-        description: 'Visual Communication and Engagement',
-        slug: 'post2',
-        date: '2024-2025',
-        image: '/images/Poster/2_Club/Club_Thumbnail_Poster_GIF.gif',
-        colSpan: 4,
-        longDescription: 'Created for the Bilkent Graphic Design and Typography Society, these posters were designed to maximize event attendance through attention-grabbing visuals. To effectively attract attention from a distance, the series uses bold typography and minimalist layouts, delivering clear information through simplicity often developed in short timeframes.',
-        details: [
-            { type: 'image', src: '/images/Poster/2_Club/Club1.jpg', isFullscreen: false },
-            { type: 'image', src: '/images/Poster/2_Club/Club2_EXTENDED.jpg', isFullscreen: true },
-        ]
-    },
-    {
-        id: 10,
-        title: 'Sibel Egemen Jazz Concert',
-        category: 'Poster',
-        description: 'Typographic Poster Project',
-        slug: 'post3',
+        description: 'Bilkent University FADA',
+        slug: 'szymon',
         date: '2025',
-        image: '/SibelEgemenUpdated.jpg',
+        image: '/images/Poster/Szymon_Poster.jpg',
         colSpan: 4,
         clickable: false,
-        longDescription: 'Developed as part of a typographic course assignment, this poster pays tribute to artist Sibel Egemen. The design captures a nostalgic atmosphere that reflects her musical identity, combining visual depth with a commitment to simplicity.',
-        details: [
-            { type: 'image', src: '/images/Poster/3_SibelEgemen/SibelEgemen1.jpg', isFullscreen: false },
-        ]
+        longDescription: 'Workshop poster designed for Szymon Szymankiewicz\'s Poster Design Workshop at Bilkent University.',
+        details: []
     },
-
-    // New Social Propaganda Posters
     {
         id: 18,
         title: 'Family',
@@ -202,7 +183,7 @@ export const projects = [
         description: 'Social Propaganda Poster',
         slug: 'family',
         date: '2025',
-        image: '/Family.jpg',
+        image: '/images/Poster/Family_Poster.jpg',
         colSpan: 4,
         clickable: false,
         longDescription: 'Social propaganda poster titled "Family".',
@@ -215,7 +196,7 @@ export const projects = [
         description: 'Social Propaganda Poster',
         slug: 'together',
         date: '2025',
-        image: '/Together.jpg',
+        image: '/images/Poster/Together_Poster.jpg',
         colSpan: 4,
         clickable: false,
         longDescription: 'Social propaganda poster titled "Together".',

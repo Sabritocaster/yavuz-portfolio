@@ -10,6 +10,8 @@ export default function ProjectCard({ project, className = "" }) {
                     <img
                         src={project.image}
                         alt={project.title}
+                        loading="lazy"
+                        decoding="async"
                         className={`w-full h-auto object-cover transition-opacity duration-500 block ${isInteractive ? 'group-hover:opacity-90' : 'opacity-90'}`}
                     />
                 ) : (

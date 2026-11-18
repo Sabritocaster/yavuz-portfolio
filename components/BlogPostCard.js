@@ -10,6 +10,7 @@ export default function BlogPostCard({ post }) {
                         src={post.heroImage}
                         alt={post.title}
                         fill
+                        sizes="(max-width: 768px) 100vw, 33vw"
                         className="object-cover transition-opacity duration-500 group-hover:opacity-90"
                     />
                 )}
