@@ -203,6 +203,38 @@ export const projects = [
         details: []
     },
 
+    // UI/UX Projects
+    {
+        id: 22,
+        title: 'Emir Furkan Tekkalmaz',
+        category: 'UI/UX',
+        description: 'Artist Portfolio Website',
+        slug: 'emir-furkan-tekkalmaz',
+        date: '2026',
+        image: '/images/UI_UX/Emir_Furkan_Tekkalmaz/Thumb_1.mp4',
+        colSpan: 6,
+        longDescription: 'A minimalist, responsive portfolio website designed and developed for contemporary painter Emir Furkan Tekkalmaz. The platform features fluid typography, dynamic light and dark theme synchronization, custom artwork gallery navigation, and immersive interactive viewports.',
+        details: [
+            { type: 'video', src: '/images/UI_UX/Emir_Furkan_Tekkalmaz/Scroll_2_FULL.mp4', isFullscreen: true },
+            { type: 'image', src: '/images/UI_UX/Emir_Furkan_Tekkalmaz/Long_Scroll_3_FULL.jpg', isFullscreen: true },
+            { type: 'video', src: '/images/UI_UX/Emir_Furkan_Tekkalmaz/Mode_4_FULL.mp4', isFullscreen: true },
+        ]
+    },
+    {
+        id: 21,
+        title: 'Coral Blast',
+        category: 'UI/UX',
+        description: 'Casual Mobile Game UI/UX',
+        slug: 'coral-blast',
+        date: '2026',
+        image: '/images/UI_UX/Coral_Blast/Coral_Blast_Thumb_WIP.jpg',
+        colSpan: 6,
+        longDescription: 'UI/UX design and asset development for Coral Blast, an arcade-style casual mobile game.',
+        details: [],
+        wip: true,
+        clickable: false
+    },
+
     // Motion Projects
     {
         id: 11,
@@ -249,44 +281,6 @@ export const projects = [
             { type: 'image', src: '/images/Motion/3_Inky/Inky2_EXTENDED.jpg', isFullscreen: true },
         ]
     },
-
-    // Personal Projects
-    {
-        id: 14,
-        title: 'Two Lovers, Ömer and Macide',
-        category: 'Personal',
-        description: 'Digital Painting, 2024',
-        slug: 'personal1',
-        image: '/images/Personal/1.jpg',
-        colSpan: 4,
-        longDescription: 'A digital painting exploring the relationship between two lovers, Ömer and Macide.',
-        details: [],
-        wip: true
-    },
-    {
-        id: 15,
-        title: 'Boy and the Lamb',
-        category: 'Personal',
-        description: 'Color Study, 2025',
-        slug: 'personal2',
-        image: '/images/Personal/2.jpg',
-        colSpan: 4,
-        longDescription: 'A color study exploring light and shadow through the relationship between a boy and a lamp.',
-        details: [],
-        wip: true
-    },
-    {
-        id: 16,
-        title: 'Girl, Western Ireland',
-        category: 'Personal',
-        description: 'Color Study on Dorothea Lange\'s Photo, 2026',
-        slug: 'personal3',
-        image: '/images/Personal/3.jpg',
-        colSpan: 4,
-        longDescription: 'A color study based on Dorothea Lange\'s iconic photography, exploring the visual language of documentary photography.',
-        details: [],
-        wip: true
-    },
 ];
 
-export const categories = ['Branding', 'Editorial', 'Poster', 'Motion', 'Personal'];
+export const categories = ['Branding', 'Editorial', 'Poster', 'UI/UX', 'Motion'];

@@ -3,19 +3,32 @@ import Link from 'next/link';
 export default function ProjectCard({ project, className = "" }) {
     const isInteractive = !project.wip && project.clickable !== false;
 
+    const isVideo = project.image && (project.image.endsWith('.mp4') || project.image.endsWith('.webm'));
+
     const CardContent = () => (
         <>
             <div className="w-full relative mb-2 md:mb-4 overflow-hidden">
                 {project.image ? (
-                    <img
-                        src={project.image}
-                        alt={project.title}
-                        className={`w-full h-auto object-cover transition-opacity duration-500 block ${isInteractive ? 'group-hover:opacity-90' : 'opacity-90'}`}
-                    />
+                    isVideo ? (
+                        <video
+                            src={project.image}
+                            autoPlay
+                            loop
+                            muted
+                            playsInline
+                            className={`w-full h-auto object-cover transition-opacity duration-500 block ${isInteractive ? 'group-hover:opacity-90' : 'opacity-90'}`}
+                        />
+                    ) : (
+                        <img
+                            src={project.image}
+                            alt={project.title}
+                            className={`w-full h-auto object-cover transition-opacity duration-500 block ${isInteractive ? 'group-hover:opacity-90' : 'opacity-90'}`}
+                        />
+                    )
                 ) : (
                     <div className={`w-full aspect-[4/3] bg-gray-400 transition-colors duration-300 ${isInteractive ? 'group-hover:bg-gray-500' : ''}`} />
                 )}
-                {(project.wip && project.category !== 'Personal') && (
+                {project.wip && (
                     <div className="absolute top-2 right-2 bg-black text-white text-xs font-bold px-2 py-1">
                         WIP
                     </div>

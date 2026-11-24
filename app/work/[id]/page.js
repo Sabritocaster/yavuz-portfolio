@@ -144,51 +144,95 @@ export default async function WorkDetails({ params }) {
             <div className={`flex flex-col ${project.noImageGap ? 'gap-0' : 'gap-12'}`}>
                 {project.details && project.details.map((item, index) => {
                     if (item.type === 'video') {
-                        const videoAspectRatio = videoAspectRatios[item.vimeoId] || DEFAULT_VIDEO_ASPECT_RATIO;
+                        if (item.vimeoId) {
+                            const videoAspectRatio = videoAspectRatios[item.vimeoId] || DEFAULT_VIDEO_ASPECT_RATIO;
 
-                        // Vimeo Video Embed
-                        if (item.isFullscreen) {
-                            return (
-                                <div key={index} className="w-full">
-                                    <div style={{ position: 'relative', aspectRatio: videoAspectRatio }}>
-                                        <iframe
-                                            src={`https://player.vimeo.com/video/${item.vimeoId}?badge=0&autopause=0&player_id=0&app_id=58479`}
-                                            frameBorder="0"
-                                            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-                                            referrerPolicy="strict-origin-when-cross-origin"
-                                            loading="lazy"
-                                            style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
-                                            title={item.title || project.title}
-                                        />
-                                    </div>
-                                    {item.caption && (
-                                        <div className="px-5 md:px-[5%] mt-4">
-                                            <p className="text-sm text-gray-500">{item.caption}</p>
+                            // Vimeo Video Embed
+                            if (item.isFullscreen) {
+                                return (
+                                    <div key={index} className="w-full">
+                                        <div style={{ position: 'relative', aspectRatio: videoAspectRatio }}>
+                                            <iframe
+                                                src={`https://player.vimeo.com/video/${item.vimeoId}?badge=0&autopause=0&player_id=0&app_id=58479`}
+                                                frameBorder="0"
+                                                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+                                                referrerPolicy="strict-origin-when-cross-origin"
+                                                loading="lazy"
+                                                style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+                                                title={item.title || project.title}
+                                            />
                                         </div>
-                                    )}
-                                </div>
-                            );
-                        } else {
-                            return (
-                                <div key={index} className="px-5 md:px-[5%] w-full">
-                                    <div style={{ position: 'relative', aspectRatio: videoAspectRatio }}>
-                                        <iframe
-                                            src={`https://player.vimeo.com/video/${item.vimeoId}?badge=0&autopause=0&player_id=0&app_id=58479`}
-                                            frameBorder="0"
-                                            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-                                            referrerPolicy="strict-origin-when-cross-origin"
-                                            loading="lazy"
-                                            style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
-                                            title={item.title || project.title}
-                                        />
+                                        {item.caption && (
+                                            <div className="px-5 md:px-[5%] mt-4">
+                                                <p className="text-sm text-gray-500">{item.caption}</p>
+                                            </div>
+                                        )}
                                     </div>
-                                    {item.caption && (
-                                        <p className="mt-4 text-sm text-gray-500">
-                                            {item.caption}
-                                        </p>
-                                    )}
-                                </div>
-                            );
+                                );
+                            } else {
+                                return (
+                                    <div key={index} className="px-5 md:px-[5%] w-full">
+                                        <div style={{ position: 'relative', aspectRatio: videoAspectRatio }}>
+                                            <iframe
+                                                src={`https://player.vimeo.com/video/${item.vimeoId}?badge=0&autopause=0&player_id=0&app_id=58479`}
+                                                frameBorder="0"
+                                                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+                                                referrerPolicy="strict-origin-when-cross-origin"
+                                                loading="lazy"
+                                                style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+                                                title={item.title || project.title}
+                                            />
+                                        </div>
+                                        {item.caption && (
+                                            <p className="mt-4 text-sm text-gray-500">
+                                                {item.caption}
+                                            </p>
+                                        )}
+                                    </div>
+                                );
+                            }
+                        }
+
+                        if (item.src) {
+                            if (item.isFullscreen) {
+                                return (
+                                    <div key={index} className="w-full block leading-none">
+                                        <video
+                                            src={item.src}
+                                            autoPlay
+                                            loop
+                                            muted
+                                            playsInline
+                                            className="w-full h-auto object-cover block"
+                                        />
+                                        {item.caption && (
+                                            <div className="px-5 md:px-[5%] mt-4">
+                                                <p className="text-sm text-gray-500">{item.caption}</p>
+                                            </div>
+                                        )}
+                                    </div>
+                                );
+                            } else {
+                                return (
+                                    <div key={index} className="px-5 md:px-[5%] w-full">
+                                        <div className="w-full">
+                                            <video
+                                                src={item.src}
+                                                autoPlay
+                                                loop
+                                                muted
+                                                playsInline
+                                                className="w-full h-auto object-cover"
+                                            />
+                                            {item.caption && (
+                                                <p className="mt-4 text-sm text-gray-500">
+                                                    {item.caption}
+                                                </p>
+                                            )}
+                                        </div>
+                                    </div>
+                                );
+                            }
                         }
                     }
                     if (item.type === 'image') {
