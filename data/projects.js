@@ -215,7 +215,6 @@ export const projects = [
         colSpan: 6,
         longDescription: 'A minimalist, responsive portfolio website designed and developed for contemporary painter Emir Furkan Tekkalmaz. The platform features fluid typography, dynamic light and dark theme synchronization, custom artwork gallery navigation, and immersive interactive viewports.',
         details: [
-            { type: 'video', src: '/images/UI_UX/Emir_Furkan_Tekkalmaz/Scroll_2_FULL.mp4', isFullscreen: true },
             { type: 'image', src: '/images/UI_UX/Emir_Furkan_Tekkalmaz/Long_Scroll_3_FULL.jpg', isFullscreen: true },
             { type: 'video', src: '/images/UI_UX/Emir_Furkan_Tekkalmaz/Mode_4_FULL.mp4', isFullscreen: true },
         ]
@@ -231,7 +230,6 @@ export const projects = [
         colSpan: 6,
         longDescription: 'UI/UX design and asset development for Coral Blast, an arcade-style casual mobile game.',
         details: [],
-        wip: true,
         clickable: false
     },
 
