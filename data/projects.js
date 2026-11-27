@@ -227,7 +227,7 @@ export const projects = [
         slug: 'cashif',
         date: '2026',
         image: '/images/UI_UX/Cashif/Cashif_Website_Mockup.webp',
-        imageAlt: 'Cashif landing page on an iPad and Cashif Instagram post on an iPhone, with the purple 3D logo',
+        imageAlt: 'Cashif landing page on an iPad with the purple 3D logo, and a Cashif Instagram post on an iPhone announcing BTM pre-incubation acceptance',
         colSpan: 6,
         seoDescription: 'Brand identity, landing page and social media design for Cashif, a gamified financial literacy and stock market simulation app.',
         keywords: ['Cashif', 'cashif app', 'fintech branding', 'financial literacy app', 'borsa simülasyonu', 'finansal okuryazarlık', 'landing page design', 'UI/UX design', 'Yavuz Dağdelen'],
