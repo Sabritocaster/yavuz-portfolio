@@ -1,5 +1,22 @@
 import Link from 'next/link';
 import FluidBackground from '@/components/FluidBackground';
+import { SITE_DESCRIPTION, baseOpenGraph, baseTwitter } from '@/lib/seo';
+
+export const metadata = {
+  alternates: { canonical: '/' },
+  openGraph: {
+    ...baseOpenGraph,
+    type: 'website',
+    url: '/',
+    title: 'Yavuz Dağdelen',
+    description: SITE_DESCRIPTION,
+  },
+  twitter: {
+    ...baseTwitter,
+    title: 'Yavuz Dağdelen',
+    description: SITE_DESCRIPTION,
+  },
+};
 
 export default function Home() {
   return (

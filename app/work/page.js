@@ -1,29 +1,57 @@
-'use client';
-
-import { useRef, useEffect } from 'react';
-import Link from 'next/link';
 import Image from 'next/image';
 import ProjectCard from '@/components/ProjectCard';
+import CategoryButtons from '@/components/CategoryButtons';
 import { projects, categories } from '@/data/projects';
 import Footer from '@/components/Footer';
+import { SITE_URL, PERSON_ID, absoluteUrl, projectImage, baseOpenGraph, baseTwitter, JsonLd } from '@/lib/seo';
+
+const WORK_DESCRIPTION =
+    'Selected branding, editorial, poster and motion projects by Yavuz Dağdelen.';
+
+export const metadata = {
+    title: 'Work — Yavuz Dağdelen',
+    description: WORK_DESCRIPTION,
+    alternates: { canonical: '/work/' },
+    openGraph: {
+        ...baseOpenGraph,
+        type: 'website',
+        url: '/work/',
+        title: 'Work — Yavuz Dağdelen',
+        description: WORK_DESCRIPTION,
+    },
+    twitter: {
+        ...baseTwitter,
+        title: 'Work — Yavuz Dağdelen',
+        description: WORK_DESCRIPTION,
+    },
+};
+
+const linkedProjects = projects.filter((p) => !p.wip && p.clickable !== false);
+
+const workJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    '@id': `${SITE_URL}/work/#collection`,
+    url: `${SITE_URL}/work/`,
+    name: 'Work — Yavuz Dağdelen',
+    description: WORK_DESCRIPTION,
+    author: { '@id': PERSON_ID },
+    mainEntity: {
+        '@type': 'ItemList',
+        itemListElement: linkedProjects.map((project, index) => ({
+            '@type': 'ListItem',
+            position: index + 1,
+            url: `${SITE_URL}/work/${project.slug}/`,
+            name: project.title,
+            image: absoluteUrl(projectImage(project)),
+        })),
+    },
+};
 
 export default function Work() {
-    const scrollToCategory = (category) => {
-        const element = document.getElementById(category);
-        if (element) {
-            const offset = 80; // Adjust for header height/spacing
-            const elementPosition = element.getBoundingClientRect().top;
-            const targetPosition = elementPosition + window.scrollY - offset;
-
-            window.scrollTo({
-                top: targetPosition,
-                behavior: 'smooth'
-            });
-        }
-    };
-
     return (
         <div className="w-full min-h-screen bg-white text-black pt-32 lg:pt-42 pb-0 overflow-x-clip">
+            <JsonLd data={workJsonLd} />
 
             {/* Top Section Container - Constrained to Grid */}
             <div className="layout-grid mb-16 md:mb-32 mt-4">
@@ -35,17 +63,7 @@ export default function Work() {
                 </div>
 
                 {/* Button Grid - Below title, spans 6 cols on desktop */}
-                <div className="col-span-12 md:col-span-6 grid grid-cols-2 lg:grid-cols-3 gap-3 md:gap-x-[2.5%] md:gap-y-4 mt-8 md:mt-16 text-base md:text-lg">
-                    {categories.map((category) => (
-                        <button
-                            key={category}
-                            onClick={() => scrollToCategory(category)}
-                            className="border border-black pt-2.5 pb-3.5 md:pt-3 md:pb-4.5 text-center font-extrabold hover:bg-black hover:text-white transition-all duration-300"
-                        >
-                            {category}
-                        </button>
-                    ))}
-                </div>
+                <CategoryButtons categories={categories} />
             </div>
 
             {/* Vertical Content Flow */}

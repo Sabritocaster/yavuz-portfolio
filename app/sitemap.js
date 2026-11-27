@@ -2,35 +2,41 @@ export const dynamic = 'force-static';
 
 import { blogPosts } from '@/data/blog';
 import { projects } from '@/data/projects';
+import { SITE_URL, absoluteUrl, projectImage, toIsoDate } from '@/lib/seo';
 
 export default async function sitemap() {
-    const baseUrl = 'https://yavuzdagdelen.com';
-
-    const parseDate = (dateStr) => {
-        if (!dateStr) return new Date();
-        const date = new Date(dateStr);
-        return isNaN(date.getTime()) ? new Date() : date;
-    };
+    const buildDate = new Date().toISOString();
 
     const blogUrls = blogPosts.map((post) => ({
-        url: `${baseUrl}/blog/${post.slug}/`,
-        lastModified: parseDate(post.date).toISOString(),
+        url: `${SITE_URL}/blog/${post.slug}/`,
+        lastModified: toIsoDate(post.date) || buildDate,
+        changeFrequency: 'yearly',
+        priority: 0.7,
+        ...(post.heroImage ? { images: [absoluteUrl(post.heroImage)] } : {}),
     }));
 
-    const projectUrls = projects.map((project) => ({
-        url: `${baseUrl}/work/${project.slug}/`,
-        lastModified: parseDate(project.date).toISOString(),
-    }));
+    // Only projects that actually have a detail page (see generateStaticParams in app/work/[id]).
+    const projectUrls = projects
+        .filter((project) => project.clickable !== false && !project.wip)
+        .map((project) => ({
+            url: `${SITE_URL}/work/${project.slug}/`,
+            lastModified: toIsoDate(project.date) || buildDate,
+            changeFrequency: 'yearly',
+            priority: 0.8,
+            images: [absoluteUrl(projectImage(project))],
+        }));
 
     const staticRoutes = [
-        '',
-        '/about/',
-        '/work/',
-        '/blog/',
-    ].map((route) => ({
-        url: `${baseUrl}${route}`,
-        lastModified: new Date().toISOString(),
+        { route: '/', priority: 1.0, changeFrequency: 'monthly' },
+        { route: '/work/', priority: 0.9, changeFrequency: 'monthly' },
+        { route: '/about/', priority: 0.8, changeFrequency: 'yearly' },
+        { route: '/blog/', priority: 0.8, changeFrequency: 'monthly' },
+    ].map(({ route, priority, changeFrequency }) => ({
+        url: `${SITE_URL}${route}`,
+        lastModified: buildDate,
+        changeFrequency,
+        priority,
     }));
 
-    return [...staticRoutes, ...blogUrls, ...projectUrls];
+    return [...staticRoutes, ...projectUrls, ...blogUrls];
 }

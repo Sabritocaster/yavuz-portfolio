@@ -1,10 +1,40 @@
 import { aboutContent } from '@/data/about';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
+import { SITE_URL, PERSON_ID, WEBSITE_ID, baseOpenGraph, baseTwitter, JsonLd } from '@/lib/seo';
+
+const ABOUT_DESCRIPTION =
+    'About Yavuz Dağdelen, a graphic design student at Bilkent University in Ankara.';
 
 export const metadata = {
     title: 'About — Yavuz Dağdelen',
-    description: 'Learn more about Yavuz Dağdelen, graphic designer and writer.',
+    description: ABOUT_DESCRIPTION,
+    alternates: { canonical: '/about/' },
+    openGraph: {
+        ...baseOpenGraph,
+        type: 'profile',
+        url: '/about/',
+        title: 'About — Yavuz Dağdelen',
+        description: ABOUT_DESCRIPTION,
+        firstName: 'Yavuz',
+        lastName: 'Dağdelen',
+    },
+    twitter: {
+        ...baseTwitter,
+        title: 'About — Yavuz Dağdelen',
+        description: ABOUT_DESCRIPTION,
+    },
+};
+
+const aboutJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'ProfilePage',
+    '@id': `${SITE_URL}/about/#profile`,
+    url: `${SITE_URL}/about/`,
+    name: 'About — Yavuz Dağdelen',
+    description: ABOUT_DESCRIPTION,
+    mainEntity: { '@id': PERSON_ID },
+    isPartOf: { '@id': WEBSITE_ID },
 };
 
 export default function About() {
@@ -12,11 +42,12 @@ export default function About() {
 
     return (
         <div className="w-full min-h-screen bg-white text-black pt-32 md:pt-48 overflow-x-clip font-bold flex flex-col">
+            <JsonLd data={aboutJsonLd} />
             <div className="layout-grid mb-16 md:mb-32">
                 {/* Image Section - Cols 1-4 on Desktop, Full on Mobile */}
                 <div className="w-full col-span-12 lg:col-span-4 mb-8 lg:mb-0">
                     {image?.src ? (
-                        <img className="w-full aspect-square object-cover" src={image.src} alt={image.alt || 'Portrait'} />
+                        <img className="w-full aspect-square object-cover" src={image.src} alt={image.alt || 'Portrait'} fetchPriority="high" />
                     ) : (
                         <div className="w-full aspect-square bg-gray-400"></div>
                     )}

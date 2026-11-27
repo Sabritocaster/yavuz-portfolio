@@ -2,8 +2,19 @@ import { projects } from '@/data/projects';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import { cache } from 'react';
+import { preconnect } from 'react-dom';
 import Footer from '@/components/Footer';
 import ProjectCard from '@/components/ProjectCard';
+import {
+    SITE_URL,
+    SITE_NAME,
+    PERSON_ID,
+    absoluteUrl,
+    projectImage,
+    summarize,
+    baseOpenGraph,
+    JsonLd,
+} from '@/lib/seo';
 
 const DEFAULT_VIDEO_ASPECT_RATIO = '16 / 9';
 
@@ -87,6 +98,45 @@ export async function generateStaticParams() {
     }));
 }
 
+function projectDescription(project) {
+    const base = project.longDescription || project.description || '';
+    return summarize(base) || `${project.title} — ${project.category} project by ${SITE_NAME}.`;
+}
+
+export async function generateMetadata({ params }) {
+    const { id } = await params;
+    const project = projects.find((p) => p.slug === id);
+
+    if (!project) {
+        return { title: 'Project Not Found', robots: { index: false } };
+    }
+
+    const title = `${project.title} — ${project.category} — ${SITE_NAME}`;
+    const description = projectDescription(project);
+    const url = `/work/${project.slug}/`;
+    const image = projectImage(project);
+
+    return {
+        title,
+        description,
+        alternates: { canonical: url },
+        openGraph: {
+            ...baseOpenGraph,
+            type: 'article',
+            url,
+            title,
+            description,
+            images: [{ url: image, alt: project.title }],
+        },
+        twitter: {
+            card: 'summary_large_image',
+            title,
+            description,
+            images: [image],
+        },
+    };
+}
+
 export default async function WorkDetails({ params }) {
     const { id } = await params;
     const project = projects.find((p) => p.slug === id);
@@ -94,6 +144,59 @@ export default async function WorkDetails({ params }) {
     if (!project) {
         notFound();
     }
+
+    const projectUrl = `${SITE_URL}/work/${project.slug}/`;
+    const detailImages = (project.details || [])
+        .filter((item) => item.type === 'image' && item.src)
+        .map((item) => absoluteUrl(item.src));
+    const vimeoVideos = (project.details || []).filter((item) => item.type === 'video' && item.vimeoId);
+
+    if (vimeoVideos.length > 0) {
+        preconnect('https://player.vimeo.com');
+        preconnect('https://i.vimeocdn.com');
+        preconnect('https://f.vimeocdn.com');
+    }
+
+    const projectJsonLd = {
+        '@context': 'https://schema.org',
+        '@graph': [
+            {
+                '@type': 'CreativeWork',
+                '@id': `${projectUrl}#work`,
+                url: projectUrl,
+                name: project.title,
+                headline: project.title,
+                description: projectDescription(project),
+                genre: project.category,
+                ...(project.date ? { dateCreated: String(project.date) } : {}),
+                image: [absoluteUrl(projectImage(project)), ...detailImages].filter(
+                    (src, i, arr) => arr.indexOf(src) === i
+                ),
+                ...(vimeoVideos.length > 0
+                    ? {
+                          video: vimeoVideos.map((v) => ({
+                              '@type': 'VideoObject',
+                              name: v.title || project.title,
+                              description: projectDescription(project),
+                              embedUrl: `https://player.vimeo.com/video/${v.vimeoId}`,
+                              thumbnailUrl: absoluteUrl(projectImage(project)),
+                              ...(project.date ? { uploadDate: `${project.date}-01-01` } : {}),
+                          })),
+                      }
+                    : {}),
+                author: { '@id': PERSON_ID },
+                creator: { '@id': PERSON_ID },
+            },
+            {
+                '@type': 'BreadcrumbList',
+                itemListElement: [
+                    { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE_URL}/` },
+                    { '@type': 'ListItem', position: 2, name: 'Work', item: `${SITE_URL}/work/` },
+                    { '@type': 'ListItem', position: 3, name: project.title, item: projectUrl },
+                ],
+            },
+        ],
+    };
 
     // Get next 3 projects with incrementing ids (wrap around if needed)
     const currentIndex = projects.findIndex(p => p.slug === id);
@@ -111,6 +214,7 @@ export default async function WorkDetails({ params }) {
 
     return (
         <div className="w-full min-h-screen bg-white text-black pt-32 md:pt-48 pb-0 overflow-x-clip">
+            <JsonLd data={projectJsonLd} />
 
             {/* Header & Description Section (Standard Layout with Padding) */}
             <div className="px-5 md:px-[5%] mb-12 md:mb-32">

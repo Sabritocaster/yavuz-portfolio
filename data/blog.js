@@ -5,6 +5,32 @@ export const blogPosts = [
         date: '19 October 2026',
         excerpt: 'Photos taken during the spring of 2026, an amazing season.',
         heroImage: '/images/blog-2026-spring-photos/hero-thumbnail.jpg',
+        // SEO-only fields (not rendered on the page)
+        lang: 'en',
+        seoTitle: 'Spring 2026 Photo Diary: Gdańsk, Venice, Paris & Łeba',
+        seoDescription: 'Spring 2026 photo diary: Gdańsk, Sopot, Malbork, Łeba and Hel in Poland, plus Venice, Florence, Milan, Stuttgart, Paris and Mont-Saint-Michel.',
+        keywords: [
+            'Gdańsk photos',
+            'Sopot photos',
+            'Westerplatte',
+            'Malbork Castle',
+            'Łeba sand dunes',
+            'Hel Peninsula',
+            'Venice photos',
+            'Paris photos',
+            'Mont-Saint-Michel photos',
+            'travel photography',
+            'street photography',
+            'Erasmus travel Europe',
+        ],
+        about: [
+            { type: 'Place', name: 'Gdańsk', sameAs: 'https://en.wikipedia.org/wiki/Gda%C5%84sk' },
+            { type: 'Place', name: 'Łeba' },
+            { type: 'Place', name: 'Venice', sameAs: 'https://en.wikipedia.org/wiki/Venice' },
+            { type: 'Place', name: 'Paris', sameAs: 'https://en.wikipedia.org/wiki/Paris' },
+            { type: 'Place', name: 'Mont-Saint-Michel', sameAs: 'https://en.wikipedia.org/wiki/Mont-Saint-Michel' },
+        ],
+        section: 'Photography',
         content: [
             'Photos taken during the spring of 2026, an amazing season.',
             {
@@ -261,6 +287,49 @@ export const blogPosts = [
         date: '15 June 2026',
         excerpt: '2025-2026 bahar döneminde Academy of Fine Arts in Gdańsk’ta tamamladığım Erasmus sürecime dair hazırlık aşamaları, vize süreçleri, yurt konaklaması, akademi eğitimi ve sosyal hayat tecrübelerimi içeren bir rehber.',
         heroImage: '/images/blog-erasmus-gdansk/erasmus-gdansk-hero.jpg',
+        // SEO-only fields (not rendered on the page)
+        lang: 'tr',
+        seoTitle: 'Gdańsk’ta Erasmus: Güzel Sanatlar Akademisi, Vize ve Yurt Rehberi',
+        seoDescription: 'Gdańsk Güzel Sanatlar Akademisi’nde (ASP) Erasmus deneyimim: Bilkent başvurusu, Polonya vizesi ve VFS randevusu, yurt, dersler, masraflar ve Gdańsk’ta yaşam.',
+        keywords: [
+            'Gdańsk Erasmus',
+            'Gdansk Erasmus',
+            'Polonya Erasmus',
+            'Polonya Erasmus deneyimi',
+            'Erasmus Polonya rehberi',
+            'Academy of Fine Arts in Gdańsk',
+            'Gdańsk Güzel Sanatlar Akademisi',
+            'Akademia Sztuk Pięknych w Gdańsku',
+            'ASP Gdańsk Erasmus',
+            'Bilkent Erasmus',
+            'Bilkent Grafik Tasarım Erasmus',
+            'Polonya öğrenci vizesi',
+            'Polonya vize VFS randevu',
+            'Gdańsk yurt',
+            'Milestone Gdańsk',
+            'Gdańsk’ta yaşam',
+            'Polonya Afiş Okulu',
+            'Erasmus hibe',
+            'Turna Portal',
+        ],
+        about: [
+            { type: 'Place', name: 'Gdańsk', sameAs: 'https://en.wikipedia.org/wiki/Gda%C5%84sk' },
+            { type: 'Country', name: 'Polonya', sameAs: 'https://en.wikipedia.org/wiki/Poland' },
+            {
+                type: 'CollegeOrUniversity',
+                name: 'Academy of Fine Arts in Gdańsk',
+                alternateName: ['Akademia Sztuk Pięknych w Gdańsku', 'ASP Gdańsk', 'Gdańsk Güzel Sanatlar Akademisi'],
+                sameAs: 'https://en.wikipedia.org/wiki/Academy_of_Fine_Arts_in_Gda%C5%84sk',
+            },
+            { type: 'Thing', name: 'Erasmus Programme', sameAs: 'https://en.wikipedia.org/wiki/Erasmus_Programme' },
+        ],
+        mentions: [
+            { type: 'CollegeOrUniversity', name: 'Bilkent Üniversitesi', sameAs: 'https://en.wikipedia.org/wiki/Bilkent_University' },
+            { type: 'Thing', name: 'Polish School of Posters', sameAs: 'https://en.wikipedia.org/wiki/Polish_School_of_Posters' },
+            { type: 'Place', name: 'Łeba' },
+            { type: 'Place', name: 'Malbork Kalesi', sameAs: 'https://en.wikipedia.org/wiki/Malbork_Castle' },
+        ],
+        section: 'Erasmus',
         content: [
             'Merhabalar, 2025-2026 bahar döneminde Academy of Fine Arts in Gdańsk’ta (Gdańsk Güzel Sanatlar Akademisi) Erasmus sürecimi sonlandırmak üzereyim. Derslerim henüz bitmişken ve Türkiye\'deki beyaz yaka hayatıma devam etmeden önce buradaki tecrübelerimi aktardığım ve Erasmus’a gideceklere yol gösterebilecek bir yazı kaleme almak istedim.',
             'Bu yazıda Erasmus’a hazırlık sürecinden Polonya’daki yaşama, Gdańsk’tan Academy of Fine Arts’taki eğitimeme uzanan deneyimimden bahsedeceğim. Yazıyı yazmaktaki temel amacım, hazırlık yaparken karşılaştığım bilgi kirliliğine ve iletişimsizliklere bir nebze de olsa çare bulabilmektir. Buna karşın yazıdaki çoğu noktanın kendi perspektifimden çıkmış öznel yargılar olduğunu da hatırlatmak isterim.',
@@ -274,7 +343,7 @@ export const blogPosts = [
             {
                 type: 'image',
                 src: '/images/blog-erasmus-gdansk/erasmus-presentation.jpg',
-                alt: 'Erasmus Sunumu',
+                alt: 'Bilkent Grafik Tasarım bölümündeki Erasmus kontenjan sorununu anlatan sunum',
                 caption: 'Arkadaşım Melih ile birlikte hazırladığımız sunum.'
             },
             'Tüm bu zorlukların yanında erasmus hayatınızdaki finansal durumlar da var:',
@@ -296,32 +365,32 @@ export const blogPosts = [
             {
                 type: 'image',
                 src: '/images/blog-erasmus-gdansk/frozen-baltic-sea.jpg',
-                alt: 'Donmuş Baltık Denizi',
+                alt: 'Kışın Gdańsk yakınlarında donmuş Baltık Denizi sahili',
                 caption: 'Donmuş Baltık Denizi sahili.'
             },
             'Neyse ki baharın gelmesiyle havalar epey ısındı ve çevrenin güzelliği ortaya çıktı. Gdańsk ve genel olarak Polonya; son derece iyi planlanmış, nizami ve düzenli yerler. Özellikle yaşadığım kuzey bölgesinin (Trójmiasto) ormanlarına ve sahillerine bayıldım. Buranın kumsalları Türkiye’dekinden çok farklı, sahil ve devasa ormanlık alanlar iç içe geçmiş durumda. Łeba’daki kumulları gezmek harika bir deneyimdi.',
             {
                 type: 'image',
                 src: '/images/blog-erasmus-gdansk/gdansk-center-1.jpg',
-                alt: 'Gdańsk Merkezi 1',
+                alt: 'Gdańsk tarihi şehir merkezi, Polonya',
                 caption: 'Gdańsk\'ın şehir merkezi.'
             },
             {
                 type: 'image',
                 src: '/images/blog-erasmus-gdansk/gdansk-center-2.jpg',
-                alt: 'Gdańsk Merkezi 2',
+                alt: 'Gdańsk eski şehirde tuğla binalı sokaklar',
                 caption: 'Tuğla renginin baskın olduğu Gdańsk sokakları.'
             },
             {
                 type: 'image',
                 src: '/images/blog-erasmus-gdansk/leba.jpg',
-                alt: 'Leba Kumulları',
+                alt: 'Polonya Łeba kumulları (Słowiński Milli Parkı)',
                 caption: 'Łeba’daki kumullar.'
             },
             {
                 type: 'image',
                 src: '/images/blog-erasmus-gdansk/malbork-castle.jpg',
-                alt: 'Malbork Kalesi',
+                alt: 'Gdańsk yakınlarındaki Malbork Kalesi',
                 caption: 'Malbork Kalesi çevresi.'
             },
             'Ülkedeki yaşam standartlarına gelirsek, iki büyük avantaj öne çıkıyor:',
@@ -343,7 +412,7 @@ export const blogPosts = [
             {
                 type: 'image',
                 src: '/images/blog-erasmus-gdansk/academy-building.jpg',
-                alt: 'Academy of Fine Arts Binası',
+                alt: 'Academy of Fine Arts in Gdańsk (ASP Gdańsk) binası',
                 caption: 'Academy of Fine Arts in Gdańsk (Gdańsk Güzel Sanatlar Akademisi).'
             },
             'İlk iki hafta sınıfları gezerek, ders içeriklerini inceleyerek ve hocalara portfolyomu göstererek geçirdim. İki hafta sonunda istediğim derslerini ve zorunlu olan Lehçe dersini listeme ekleyebildim. Bu süreçte kişisel web sitemin bana çok büyük katkısı oldu, dersine katılmak istediğim hiçbir hocadan ret yemedim. Gidecek arkadaşlara işlerini PDF veya web sitesi üzerinden sunmalarını önerebilirim.',
@@ -351,7 +420,7 @@ export const blogPosts = [
             {
                 type: 'image',
                 src: '/images/blog-erasmus-gdansk/polish-poster-dictionary.jpg',
-                alt: 'Polonya Afiş Okulu Sözlük Çalışması',
+                alt: 'Polonya Afiş Okulu (Polish School of Posters) sanatçılarını derleyen sözlük çalışması',
                 caption: 'Polonya Afiş Okulu\'nun önemli isimlerini derlediğim sözlük çalışması.'
             },
             'Renk kullanımı, görsel hiyerarşi, ne tasarladığının bilincinde olmak ve optik tipografi gibi konularda Türkiye\'de kolay erişemeyeceğimi düşündüğüm bakış açıları edindim. Ayrıca hocaların benim gösterdiğim ilgi karşısında merakımı tatmin etmek için ne kadar çabaladıklarını görmek büyük bir mutluluktu. Diğer bir yandan bu okulun akademik yoğunluğu Bilkent ile kıyaslanınca oldukça hafif, derslere devam ettiğiniz ve işleriniz haftalık geribildirim aldığınız sürece yüksek notlar almak oldukça ulaşılabilir.',
@@ -363,7 +432,7 @@ export const blogPosts = [
             {
                 type: 'image',
                 src: '/images/blog-erasmus-gdansk/czech-slovak-friends.jpg',
-                alt: 'Çek ve Slovak Arkadaşlarım',
+                alt: 'Gdańsk’ta Erasmus sırasında Çek ve Slovak arkadaşlarla tipografi fotoğrafı',
                 caption: 'Arkadaşlarım ile tipografi, burada "LOVE" yazdığını varsayınız.'
             },
 
@@ -378,6 +447,26 @@ export const blogPosts = [
         date: '2 August 2024',
         excerpt: 'Exploring Higgins\' self-discrepancy theory transformed my perspective on social media and its impact on mental health. Understanding how these platforms distort self-perception has led me to distance myself from them.',
         heroImage: '/images/Blog_SelfDiscrapency.jpg',
+        // SEO-only fields (not rendered on the page)
+        lang: 'en',
+        seoTitle: 'Self-Discrepancy Theory and Social Media Behavior',
+        seoDescription: 'How Higgins’ self-discrepancy theory explains social media behavior: photo editing, social comparison, technostress, avatars and the effects on mental health.',
+        keywords: [
+            'self-discrepancy theory',
+            'Higgins self-discrepancy',
+            'actual ideal ought self',
+            'social media and self-discrepancy',
+            'social media mental health',
+            'social comparison',
+            'photo manipulation social media',
+            'technostress',
+            'avatar creation',
+        ],
+        about: [
+            { type: 'Thing', name: 'Self-discrepancy theory', sameAs: 'https://en.wikipedia.org/wiki/Self-discrepancy_theory' },
+            { type: 'Thing', name: 'Social media', sameAs: 'https://en.wikipedia.org/wiki/Social_media' },
+        ],
+        section: 'Essay',
         content: [
             'In today\'s digital age, social media platforms emerge as digital spaces that allow individuals to communicate, share information, and express themselves. These social platforms offer users "opportunities for producing new realities" through the freedom to meticulously organize their online personas online (Costa 79). Besides, this capability to shape one\'s persona within social media can allow them to interact with their "self-discrepancy," a concept introduced by Higgins (319). Self-discrepancy refers to the gaps between individuals\' "actual self" (how they see themselves), "ideal self" (how they wish to be), and "ought self" (how they think they should be). In addition, Higgins states that the larger an individual\'s self-discrepancy, the more discomfort they will experience (327). Hence, users might want to reduce discrepancies by utilizing social media features that allow them to freely adjust their personas and come closer to their ideal and ought selves; thereby, they can use social media to reduce emotional distress. On the other hand, self-discrepancy can also lead to negative side effects that harm individuals\' social media experiences. Understanding these dynamics between self-discrepancy and social media behavior is essential for raising awareness and addressing possible detrimental effects.',
             'This paper tries to examine how self-discrepancy can affect behaviors on social media. It will discuss how users might use social media to come closer to their ought and ideal selves to reduce the differences. Then, it will explain possible negative behavior outcomes resulting from individuals\' self-discrepancy. For instance, the identity gap may lead users to manipulate images and encourage harmful social comparisons. While the distinction between ideal and actual selves can promote knowledge sharing and ownership, it may also cause competitiveness and technostress from constant connectivity. Additionally, self-discrepancy can drive the creation of customized avatars, resulting in excessive identification and potential video game addiction. Therefore, the ability to freely curate online personas on social media platforms can affect how they interact with the discrepancies between users\' actual, ideal, and ought selves. Accordingly, self-discrepancy can lead to negative consequences for impression management, knowledge contribution, and avatar creation behaviors online.',

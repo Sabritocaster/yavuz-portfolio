@@ -1,8 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
-  // Base path for GitHub Pages project site
-  basePath: '/yavuz-portfolio',
+  // Served from the custom domain root (yavuzdagdelen.com), so no basePath.
   trailingSlash: true,
   images: {
     unoptimized: true,
