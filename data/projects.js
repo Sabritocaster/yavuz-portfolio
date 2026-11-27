@@ -211,7 +211,7 @@ export const projects = [
         description: 'Artist Portfolio Website',
         slug: 'emir-furkan-tekkalmaz',
         date: '2026',
-        image: '/images/UI_UX/Emir_Furkan_Tekkalmaz/Thumb_1.mp4',
+        image: '/images/UI_UX/Emir_Furkan_Tekkalmaz/Thumb_2.mp4',
         colSpan: 6,
         longDescription: 'A minimalist, responsive portfolio website designed and developed for contemporary painter Emir Furkan Tekkalmaz. The platform features fluid typography, dynamic light and dark theme synchronization, custom artwork gallery navigation, and immersive interactive viewports.',
         details: [
@@ -247,26 +247,13 @@ export const projects = [
         description: 'Motion Branding Study',
         slug: 'motion1',
         date: '2025',
-        image: '/images/Motion/1_Sqaurespace/Squarespace_Thumbnail_Motio_GIF.gif',
+        image: '/images/Motion/1_Sqaurespace/Squarespace_Thumb.mp4',
         colSpan: 4,
+        clickable: false,
         longDescription: 'Created for a motion design course, this project focuses on a logo animation that embodies the brand\'s core identity. The animation visualizes the concept of responsiveness across web and mobile platforms, fluidly transforming into the final Squarespace logo. The sound design for this piece was composed by Başarasa.',
         details: [
             { type: 'video', vimeoId: '1157896469', title: 'Squarespace Logo Animation', isFullscreen: false },
             { type: 'image', src: '/images/Motion/1_Sqaurespace/Squarespace1.jpg', isFullscreen: false },
-        ]
-    },
-    {
-        id: 12,
-        title: 'Radiohead\'s Faust Arp',
-        category: 'Motion',
-        description: 'Kinetic Typography Project',
-        slug: 'motion2',
-        date: '2025',
-        image: '/images/Motion/2_KineticTypography/KineticTypography_Thumbnail_Motio_GIF.gif',
-        colSpan: 4,
-        longDescription: 'This project explores the features of Adobe After Effects through a visual reinterpretation of Radiohead\'s "Faust Arp." The design utilizes the England signage font—featured on the original album cover—to create a dynamic, continuous typographic flow that is synchronized with the song\'s rhythm and feeling.',
-        details: [
-            { type: 'video', vimeoId: '1157895724', title: 'Radiohead - Faust Arp | Kinetic Typography', isFullscreen: false },
         ]
     },
     {
