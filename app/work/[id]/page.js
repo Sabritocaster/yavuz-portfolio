@@ -99,7 +99,7 @@ export async function generateStaticParams() {
 }
 
 function projectDescription(project) {
-    const base = project.longDescription || project.description || '';
+    const base = project.seoDescription || project.longDescription || project.description || '';
     return summarize(base) || `${project.title} — ${project.category} project by ${SITE_NAME}.`;
 }
 
@@ -119,6 +119,7 @@ export async function generateMetadata({ params }) {
     return {
         title,
         description,
+        ...(project.keywords ? { keywords: project.keywords } : {}),
         alternates: { canonical: url },
         openGraph: {
             ...baseOpenGraph,
@@ -126,7 +127,7 @@ export async function generateMetadata({ params }) {
             url,
             title,
             description,
-            images: [{ url: image, alt: project.title }],
+            images: [{ url: image, alt: project.imageAlt || project.title }],
         },
         twitter: {
             card: 'summary_large_image',
@@ -168,6 +169,7 @@ export default async function WorkDetails({ params }) {
                 headline: project.title,
                 description: projectDescription(project),
                 genre: project.category,
+                ...(project.keywords ? { keywords: project.keywords.join(', ') } : {}),
                 ...(project.date ? { dateCreated: String(project.date) } : {}),
                 image: [absoluteUrl(projectImage(project)), ...detailImages].filter(
                     (src, i, arr) => arr.indexOf(src) === i
@@ -346,7 +348,7 @@ export default async function WorkDetails({ params }) {
                                 <div key={index} className="w-full block leading-none">
                                     <Image
                                         src={item.src}
-                                        alt={`${project.title} detail ${index + 1}`}
+                                        alt={item.alt || `${project.title} detail ${index + 1}`}
                                         width={0}
                                         height={0}
                                         sizes="100vw"
@@ -367,7 +369,7 @@ export default async function WorkDetails({ params }) {
                                     <div className="w-full">
                                         <Image
                                             src={item.src}
-                                            alt={`${project.title} detail ${index + 1}`}
+                                            alt={item.alt || `${project.title} detail ${index + 1}`}
                                             width={0}
                                             height={0}
                                             sizes="100vw"

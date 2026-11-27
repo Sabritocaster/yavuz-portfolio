@@ -221,15 +221,21 @@ export const projects = [
     },
     {
         id: 21,
-        title: 'Coral Blast',
+        title: 'Cashif',
         category: 'UI/UX',
-        description: 'Casual Mobile Game UI/UX',
-        slug: 'coral-blast',
+        description: 'Fintech Brand Identity & Landing Page',
+        slug: 'cashif',
         date: '2026',
-        image: '/images/UI_UX/Coral_Blast/Coral_Blast_Thumb_WIP.jpg',
+        image: '/images/UI_UX/Cashif/Cashif_Website_Mockup.webp',
+        imageAlt: 'Cashif landing page on an iPad and Cashif Instagram post on an iPhone, with the purple 3D logo',
         colSpan: 6,
-        longDescription: 'UI/UX design and asset development for Coral Blast, an arcade-style casual mobile game.',
-        details: [],
+        seoDescription: 'Brand identity, landing page and social media design for Cashif, a gamified financial literacy and stock market simulation app.',
+        keywords: ['Cashif', 'cashif app', 'fintech branding', 'financial literacy app', 'borsa simülasyonu', 'finansal okuryazarlık', 'landing page design', 'UI/UX design', 'Yavuz Dağdelen'],
+        longDescription: 'Brand identity, landing page and social media design for Cashif, a financial literacy app that turns investing into a daily habit through a simulated stock market and gamified short lessons. The identity is built around a bold purple 3D mark and the line "Finansta kaybolma, cashif\'le keşfet."',
+        details: [
+            { type: 'image', src: '/images/UI_UX/Cashif/Cashif_Website_Mockup.webp', alt: 'Cashif landing page and Instagram post mockup on iPad Pro and iPhone', isFullscreen: true },
+        ],
+        wip: true,
         clickable: false
     },
 
