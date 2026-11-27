@@ -216,8 +216,8 @@ export const projects = [
         longDescription: 'A minimalist, responsive portfolio website designed and developed for contemporary painter Emir Furkan Tekkalmaz. The platform features fluid typography, dynamic light and dark theme synchronization, custom artwork gallery navigation, and immersive interactive viewports.',
         details: [
             { type: 'image', src: '/images/UI_UX/Emir_Furkan_Tekkalmaz/Long_Scroll_3_FULL.jpg', isFullscreen: true },
-            { type: 'video', src: '/images/UI_UX/Emir_Furkan_Tekkalmaz/Showcase.mp4', isFullscreen: false },
             { type: 'video', src: '/images/UI_UX/Emir_Furkan_Tekkalmaz/Mode_4_FULL.mp4', isFullscreen: true },
+            { type: 'video', src: '/images/UI_UX/Emir_Furkan_Tekkalmaz/Showcase.mp4', isFullscreen: false },
         ]
     },
     {
